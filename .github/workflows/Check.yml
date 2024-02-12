@@ -24,10 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install .
 
-      - name: execute py script
+      - name git credentials
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
+      
+      - name: execute py script
         run: |
           echo `pwd`
           python -m packaging
