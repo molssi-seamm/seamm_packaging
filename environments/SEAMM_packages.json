@@ -1,4 +1,10 @@
 {
+    "control-parameters-step": {
+        "channel": "pypi",
+        "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
+        "type": "MolSSI plug-in",
+        "version": "2023.11.15"
+    },
     "crystal-builder-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
@@ -9,7 +15,7 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
         "type": "MolSSI plug-in",
-        "version": "2023.1.1"
+        "version": "2023.12.12"
     },
     "dftbplus-step": {
         "channel": "pypi",
