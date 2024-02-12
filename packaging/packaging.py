@@ -189,7 +189,9 @@ def find_packages(progress=True):
             with path.open("w") as fd:
                 json.dump(packages, fd, indent=4, sort_keys=True)
             with Path("commit_message.txt").open("w") as fd:
-                fd.write("\n".join(message))
+                fd.write("Automatically updated the SEAMM package database\n\n")
+                for i, line in enumerate(message):
+                    fd.write(f"{i:.4f}: {line}\n")
         else:
             print("The packages have not changed.")
             changed = False
