@@ -1,8 +1,9 @@
 import json
 import logging
 from pathlib import Path
-import pkg_resources
 import pprint
+
+import semver
 
 from .conda import Conda
 from .pip import Pip
@@ -85,32 +86,6 @@ development_packages_pip = (
 logger = logging.getLogger("seamm_packages")
 logger.setLevel(logging.DEBUG)
 
-class JSONEncoder(json.JSONEncoder):
-    """Class for handling the package versions in JSON."""
-
-    def default(self, obj):
-        if isinstance(obj, pkg_resources.extern.packaging.version.Version):
-            return {"__type__": "Version", "data": str(obj)}
-        else:
-            return json.JSONEncoder.default(self, obj)
-
-
-class JSONDecoder(json.JSONDecoder):
-    """Class for handling the package versions in JSON."""
-
-    def __init__(self):
-        super().__init__(object_hook=self.dict_to_object)
-
-    def dict_to_object(self, d):
-        if "__type__" in d:
-            type_ = d.pop("__type__")
-            if type_ == "Version":
-                return pkg_resources.parse_version(d["data"])
-            else:
-                # Oops... better put this back together.
-                d["__type__"] = type
-        return d
-
 
 def find_packages(progress=True):
     """Find the Python packages in SEAMM.
@@ -162,7 +137,7 @@ def find_packages(progress=True):
     if progress:
         print("", flush=True)
 
-    if False:
+    if True:
         count = 0
         for package, data in sorted(packages.items(), key=lambda x: x[0]):
             count += 1
@@ -176,7 +151,7 @@ def find_packages(progress=True):
                 continue
 
             tmp = conda_packages[package]
-            if tmp["version"] >= data["version"]:
+            if semver.compare(tmp["version"], data["version"]) == 1:
                 data["version"] = tmp["version"]
                 data["channel"] = tmp["channel"]
                 if "/conda-forge" in data["channel"]:
@@ -195,7 +170,7 @@ def find_packages(progress=True):
     if path.exists():
         with path.open("r") as fd:
             try:
-                old_packages = json.load(fd, cls=JSONDecoder)
+                old_packages = json.load(fd)
             except json.JSONDecodeError:
                 old_packages = None
         if old_packages != packages:
@@ -209,14 +184,14 @@ def find_packages(progress=True):
                         newv = packages[package]["version"]
                         print(f"    Changed package: {package} from {oldv} to {newv}")
             with path.open("w") as fd:
-                json.dump(packages, fd, cls=JSONEncoder, indent=4, sort_keys=True)
+                json.dump(packages, fd, indent=4, sort_keys=True)
         else:
             print("The packages have not changed.")
             changed = False
     else:
         print("The package database does not exist.")
         with path.open("w") as fd:
-            json.dump(packages, fd, cls=JSONEncoder, indent=4, sort_keys=True)
+            json.dump(packages, fd, indent=4, sort_keys=True)
 
     return changed, packages
 

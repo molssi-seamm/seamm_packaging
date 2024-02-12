@@ -3,11 +3,12 @@ import json
 import logging
 import os
 from pathlib import Path
-import pkg_resources
 import shlex
 import subprocess
 import sys
 import warnings
+
+import semver
 
 logger = logging.getLogger("seamm_packages")
 
@@ -93,7 +94,7 @@ class Conda(object):
         for package, data in output.items():
             result[package] = {
                 "channel": data[-1]["channel"],
-                "version": pkg_resources.parse_version(data[-1]["version"]),
+                "version": data[-1]["version"],
                 "description": "not available",
             }
 

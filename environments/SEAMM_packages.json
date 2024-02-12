@@ -3,342 +3,228 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.15"
-        }
+        "version": "2023.11.15"
     },
     "crystal-builder-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2022.7.31"
-        }
+        "version": "2022.7.31"
     },
     "custom-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.12.12"
-        }
+        "version": "2023.12.12"
     },
     "dftbplus-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.18"
-        }
+        "version": "2024.1.18"
     },
     "diffusivity-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for Diffusivity",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.9.4"
-        }
+        "version": "2023.9.4"
     },
     "fhi-aims-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for FHI-aims",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.19"
-        }
+        "version": "2024.1.19"
     },
     "forcefield-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.10"
-        }
+        "version": "2024.1.10"
     },
     "from-smiles-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for creating structures from a SMILES string.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.10"
-        }
+        "version": "2023.11.10"
     },
     "gaussian-step": {
         "channel": "pypi",
         "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.19"
-        }
+        "version": "2024.1.19"
     },
     "geometry-analysis-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for analysis of the geometry of particularly small molecules",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.1.14"
-        }
+        "version": "2023.1.14"
     },
     "lammps-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics code.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.18"
-        }
+        "version": "2024.1.18"
     },
     "loop-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in which provides loops in flowcharts.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.9"
-        }
+        "version": "2023.11.9"
     },
     "molsystem": {
         "channel": "pypi",
         "description": "molsystem",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.19"
-        }
+        "version": "2023.11.19"
     },
     "mopac-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.2.10.1"
-        }
+        "version": "2024.2.10.1"
     },
     "packmol-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.16"
-        }
+        "version": "2024.1.16"
     },
     "properties-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for Properties",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.7.31"
-        }
+        "version": "2023.7.31"
     },
     "psi4-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.11"
-        }
+        "version": "2024.1.11"
     },
     "pyxtal-step": {
         "channel": "pypi",
         "description": "A SEAMM plugin for PyXtal for building atomic and molecular crystals.",
         "type": "3rd-party plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2021.7.29"
-        }
+        "version": "2021.7.29"
     },
     "qcarchive-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for QCArchive",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.3.30"
-        }
+        "version": "2023.3.30"
     },
     "quickmin-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for simple, quick minimization",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.15"
-        }
+        "version": "2023.11.15"
     },
     "rdkit-step": {
         "channel": "pypi",
         "description": "A SEAMM plugin for A SEAMM plug-in for RDKit",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.2.22"
-        }
+        "version": "2023.2.22"
     },
     "read-structure-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in to read common formats in computational chemistry",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.16"
-        }
+        "version": "2023.11.16"
     },
     "reference-handler": {
         "channel": "pypi",
         "description": "no description given",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "0.9.1"
-        }
+        "version": "0.9.1"
     },
     "seamm": {
         "channel": "pypi",
         "description": "The core of the SEAMM environment and graphical interface.",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.2"
-        }
+        "version": "2024.1.2"
     },
     "seamm-dashboard": {
         "channel": "pypi",
         "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.1"
-        }
+        "version": "2024.1.1"
     },
     "seamm-datastore": {
         "channel": "pypi",
         "description": "seamm_datastore",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2022.6.28"
-        }
+        "version": "2022.6.28"
     },
     "seamm-exec": {
         "channel": "pypi",
         "description": "Classes to execute background codes for SEAMM",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.17"
-        }
+        "version": "2024.1.17"
     },
     "seamm-ff-util": {
         "channel": "pypi",
         "description": "seamm_ff_util",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.8.27"
-        }
+        "version": "2023.8.27"
     },
     "seamm-installer": {
         "channel": "pypi",
         "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.3"
-        }
+        "version": "2023.11.3"
     },
     "seamm-jobserver": {
         "channel": "pypi",
         "description": "seamm_jobserver",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.17"
-        }
+        "version": "2024.1.17"
     },
     "seamm-util": {
         "channel": "pypi",
         "description": "seamm_util",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.12"
-        }
+        "version": "2023.11.12"
     },
     "seamm-widgets": {
         "channel": "pypi",
         "description": "seamm_widgets",
         "type": "Core package",
-        "version": {
-            "__type__": "Version",
-            "data": "2022.10.28"
-        }
+        "version": "2022.10.28"
     },
     "set-cell-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for setting the periodic (unit) cell.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2021.10.14"
-        }
+        "version": "2021.10.14"
     },
     "strain-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for straining periodic systems",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2022.11.7"
-        }
+        "version": "2022.11.7"
     },
     "supercell-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for building supercells of periodic systems.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.5"
-        }
+        "version": "2023.11.5"
     },
     "table-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for data tables in a flowchart.",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.11.10"
-        }
+        "version": "2023.11.10"
     },
     "thermal-conductivity-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for Thermal Conductivity",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2024.1.5"
-        }
+        "version": "2024.1.5"
     },
     "torchani-step": {
         "channel": "pypi",
         "description": "A SEAMM plug-in for TorchANI",
         "type": "MolSSI plug-in",
-        "version": {
-            "__type__": "Version",
-            "data": "2023.2.28"
-        }
+        "version": "2023.2.28"
     }
 }

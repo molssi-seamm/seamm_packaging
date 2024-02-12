@@ -9,5 +9,5 @@ from .conda import Conda  # noqa: F401
 from .pip import Pip  # noqa: F401
 # from .packaging import find_packages  # noqa: F401
 
-from ._version import __version__  # noqa: F401
+# from ._version import __version__  # noqa: F401
 

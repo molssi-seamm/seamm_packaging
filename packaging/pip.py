@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
-import pkg_resources
 import pprint
 import re
 import subprocess
 
 import requests
+import semver
 
 logger = logging.getLogger("seamm_packages")
 
@@ -96,7 +96,7 @@ class Pip(object):
                         if len(version) == 0:
                             version = None
                         else:
-                            version = pkg_resources.parse_version(version[0])
+                            version = version[0]
                         if len(description) == 0:
                             description = "no description given"
                         else:
