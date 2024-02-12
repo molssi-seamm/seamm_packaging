@@ -27,6 +27,5 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          cd packaging
           python -m packaging
 
