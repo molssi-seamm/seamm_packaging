@@ -1,5 +1,9 @@
 # -*- mode: gitignore; -*-
 
+## For GitHub actions:
+commit_message.txt
+## end of GitHub actions
+
 ## emacs: https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
 *~
 \#*\#
