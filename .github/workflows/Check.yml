@@ -40,5 +40,9 @@ jobs:
             echo "Changes detected"
             git commit -a -F commit_message.txt
             git push
+            # Create release
+            date=$(date '+%Y-%m-%d')
+            gh create release -F commit_message.txt $date
           fi
-
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

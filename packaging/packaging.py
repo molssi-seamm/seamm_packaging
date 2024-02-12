@@ -191,7 +191,7 @@ def find_packages(progress=True):
             with Path("commit_message.txt").open("w") as fd:
                 fd.write("Automatically updated the SEAMM package database\n\n")
                 for i, line in enumerate(message):
-                    fd.write(f"{i:.4f}: {line}\n")
+                    fd.write(f"{i:4d}: {line}\n")
         else:
             print("The packages have not changed.")
             changed = False
