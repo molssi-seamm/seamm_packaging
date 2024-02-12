@@ -42,7 +42,7 @@ jobs:
             git push
             # Create release
             date=$(date '+%Y-%m-%d')
-            gh create release -F commit_message.txt $date
+            gh release create -F commit_message.txt $date
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
