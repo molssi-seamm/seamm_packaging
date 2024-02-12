@@ -28,4 +28,12 @@ jobs:
         run: |
           echo `pwd`
           python -m packaging
+          git status
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Working directory clean"
+          else
+            echo "Changes detected"
+            git commit -a -F commit_message.txt
+            git push
+          fi
 

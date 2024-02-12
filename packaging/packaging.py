@@ -165,6 +165,7 @@ def find_packages(progress=True):
             data["channel"] = "conda-forge"
 
     # Read the existing package database and see if there are changes
+    message = []
     changed = True
     path = Path("environments") / "SEAMM_packages.json"
     if path.exists():
@@ -179,12 +180,16 @@ def find_packages(progress=True):
                 for package in packages:
                     if package not in old_packages:
                         print(f"    New package: {package}")
+                        message.append(f"{package} added to SEAMM")
                     elif packages[package] != old_packages[package]:
                         oldv = old_packages[package]["version"]
                         newv = packages[package]["version"]
                         print(f"    Changed package: {package} from {oldv} to {newv}")
+                        message.append(f"{package} changed from {oldv} to {newv}")
             with path.open("w") as fd:
                 json.dump(packages, fd, indent=4, sort_keys=True)
+            with Path("commit_message.txt").open("w") as fd:
+                fd.write("\n".join(message))
         else:
             print("The packages have not changed.")
             changed = False
@@ -192,6 +197,8 @@ def find_packages(progress=True):
         print("The package database does not exist.")
         with path.open("w") as fd:
             json.dump(packages, fd, indent=4, sort_keys=True)
+        with Path("commit_message.txt").open("w") as fd:
+            fd.write("Initial commit of the SEAMM package database")
 
     return changed, packages
 
