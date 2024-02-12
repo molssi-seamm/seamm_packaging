@@ -25,5 +25,5 @@ jobs:
           python -m pip install .
 
       - name: execute py script
-        run: packaging
+        run: python -c packaging
 
