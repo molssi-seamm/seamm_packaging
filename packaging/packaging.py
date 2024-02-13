@@ -190,6 +190,7 @@ def find_packages(progress=True):
                 fd.write("Could not read the SEAMM package database, so replacing")
         else:
             for package in packages:
+                print(f"Checking package {package}")
                 if package not in old_packages:
                     changed = True
                     print(f"    New package: {package}")
@@ -201,6 +202,8 @@ def find_packages(progress=True):
                     newchannel = packages[package]["channel"]
                     oldtype = old_packages[package]["type"]
                     newtype = packages[package]["type"]
+                    print(f"    Old version: {oldv} ({oldchannel}) {oldtype}")
+                    print(f"    New version: {newv} ({newchannel}) {newtype}")
                     if oldv != newv:
                         changed = True
                         if oldchannel != newchannel:
