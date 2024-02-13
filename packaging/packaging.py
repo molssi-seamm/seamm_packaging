@@ -166,67 +166,75 @@ def find_packages(progress=True):
 
     # Read the existing package database and see if there are changes
     message = []
-    changed = True
+    changed = False
     path = Path("environments") / "SEAMM_packages.json"
-    if path.exists():
-        with path.open("r") as fd:
-            try:
-                old_packages = json.load(fd)
-            except json.JSONDecodeError:
-                old_packages = None
-        if old_packages != packages:
-            print("The packages have changed!")
-            if old_packages is not None:
-                for package in packages:
-                    if package not in old_packages:
-                        print(f"    New package: {package}")
-                        message.append(f"{package} added to SEAMM")
-                    elif packages[package] != old_packages[package]:
-                        oldv = old_packages[package]["version"]
-                        newv = packages[package]["version"]
-                        oldchannel = old_packages[package]["channel"]
-                        newchannel = packages[package]["channel"]
-                        if oldv != newv:
-                            if oldchannel != newchannel:
-                                print(
-                                    f"    Changed package: {package} from {oldv} "
-                                    f"({oldchannel}) to {newv} ({newchannel})"
-                                )
-                                message.append(
-                                    f"{package} changed from {oldv} ({oldchannel}) to "
-                                    f"{newv} ({newchannel})"
-                                )
-                            else:
-                                print(
-                                    f"    Changed package: {package} from {oldv} to "
-                                    f"{newv}"
-                                )
-                                message.append(
-                                    f"{package} changed from {oldv} to {newv}"
-                                )
-                        elif oldchannel != newchannel:
-                            print(
-                                f"    Changed channel: {package} from {oldchannel} to "
-                                f"{newchannel}"
-                            )
-                            message.append(
-                                f"{package} changed from {oldchannel} to {newchannel}"
-                            )
-            with path.open("w") as fd:
-                json.dump(packages, fd, indent=4, sort_keys=True)
-            with Path("commit_message.txt").open("w") as fd:
-                fd.write("Automatically updated the SEAMM package database\n\n")
-                for i, line in enumerate(message):
-                    fd.write(f"{i}. {line}\n")
-        else:
-            print("The packages have not changed.")
-            changed = False
-    else:
+    if not path.exists():
+        changed = True
         print("The package database does not exist.")
         with path.open("w") as fd:
             json.dump(packages, fd, indent=4, sort_keys=True)
         with Path("commit_message.txt").open("w") as fd:
             fd.write("Initial commit of the SEAMM package database")
+    else:
+        with path.open("r") as fd:
+            try:
+                old_packages = json.load(fd)
+            except json.JSONDecodeError:
+                old_packages = None
+        if old_packages is None:
+            changed = True
+            print("The package database could not be read, so replacing.")
+            with path.open("w") as fd:
+                json.dump(packages, fd, indent=4, sort_keys=True)
+            with Path("commit_message.txt").open("w") as fd:
+                fd.write("Could not read the SEAMM package database, so replacing")
+        else:
+            for package in packages:
+                if package not in old_packages:
+                    print(f"    New package: {package}")
+                    message.append(f"{package} added to SEAMM")
+                elif packages[package] != old_packages[package]:
+                    changed = True
+                    oldv = old_packages[package]["version"]
+                    newv = packages[package]["version"]
+                    oldchannel = old_packages[package]["channel"]
+                    newchannel = packages[package]["channel"]
+                    if oldv != newv:
+                        if oldchannel != newchannel:
+                            print(
+                                f"    Changed package: {package} from {oldv} "
+                                f"({oldchannel}) to {newv} ({newchannel})"
+                            )
+                            message.append(
+                                f"{package} changed from {oldv} ({oldchannel}) to "
+                                f"{newv} ({newchannel})"
+                            )
+                        else:
+                            print(
+                                f"    Changed package: {package} from {oldv} to "
+                                f"{newv}"
+                            )
+                            message.append(
+                                f"{package} changed from {oldv} to {newv}"
+                            )
+                    elif oldchannel != newchannel:
+                        print(
+                            f"    Changed channel: {package} from {oldchannel} to "
+                            f"{newchannel}"
+                        )
+                        message.append(
+                            f"{package} changed from {oldchannel} to {newchannel}"
+                        )
+            if not changed:
+                print("The package database has not changed.")
+            else:
+                print("The package database has changed.")
+                with path.open("w") as fd:
+                    json.dump(packages, fd, indent=4, sort_keys=True)
+                with Path("commit_message.txt").open("w") as fd:
+                    fd.write("New SEAMM package database\n\n")
+                    for i, line in enumerate(message):
+                        fd.write(f"{i}. {line}\n")
 
     return changed, packages
 
