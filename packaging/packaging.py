@@ -191,15 +191,18 @@ def find_packages(progress=True):
         else:
             for package in packages:
                 if package not in old_packages:
+                    changed = True
                     print(f"    New package: {package}")
                     message.append(f"{package} added to SEAMM")
-                elif packages[package] != old_packages[package]:
-                    changed = True
+                else:
                     oldv = old_packages[package]["version"]
                     newv = packages[package]["version"]
                     oldchannel = old_packages[package]["channel"]
                     newchannel = packages[package]["channel"]
+                    oldtype = old_packages[package]["type"]
+                    newtype = packages[package]["type"]
                     if oldv != newv:
+                        changed = True
                         if oldchannel != newchannel:
                             print(
                                 f"    Changed package: {package} from {oldv} "
@@ -218,12 +221,21 @@ def find_packages(progress=True):
                                 f"{package} changed from {oldv} to {newv}"
                             )
                     elif oldchannel != newchannel:
+                        changed = True
                         print(
                             f"    Changed channel: {package} from {oldchannel} to "
                             f"{newchannel}"
                         )
                         message.append(
                             f"{package} changed from {oldchannel} to {newchannel}"
+                        )
+                    if oldtype != newtype:
+                        changed = True
+                        print(
+                            f"    Changed type: {package} from {oldtype} to {newtype}"
+                        )
+                        message.append(
+                            f"{package} changed from {oldtype} to {newtype}"
                         )
             if not changed:
                 print("The package database has not changed.")
