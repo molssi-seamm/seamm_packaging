@@ -137,27 +137,26 @@ def find_packages(progress=True):
     if progress:
         print("", flush=True)
 
-    if True:
-        count = 0
-        for package, data in sorted(packages.items(), key=lambda x: x[0]):
-            count += 1
-            print(f"{count}: ", end="")
-            logger.info(f"    {package}")
-            conda_packages = conda.search(
-                f"{package}>={data['version']}", progress=True, newline=False
-            )
-            print(f"\t{package}")
-            if conda_packages is None:
-                continue
+    count = 0
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        count += 1
+        print(f"{count}: ", end="")
+        logger.info(f"    {package}")
+        conda_packages = conda.search(
+            f"{package}>={data['version']}", progress=True, newline=False
+        )
+        print(f"\t{package}")
+        if conda_packages is None:
+            continue
 
-            tmp = conda_packages[package]
-            if semver.compare(tmp["version"], data["version"]) == 1:
-                data["version"] = tmp["version"]
-                data["channel"] = tmp["channel"]
-                if "/conda-forge" in data["channel"]:
-                    data["channel"] = "conda-forge"
-        if progress:
-            print("", flush=True)
+        tmp = conda_packages[package]
+        if semver.compare(tmp["version"], data["version"]) == 1:
+            data["version"] = tmp["version"]
+            data["channel"] = tmp["channel"]
+            if "/conda-forge" in data["channel"]:
+                data["channel"] = "conda-forge"
+    if progress:
+        print("", flush=True)
 
     # Convert conda-forge url in channel to 'conda-forge'
     for data in packages.values():
@@ -212,6 +211,7 @@ def create_env_files(packages):
     packages : dict(str, dict)
         The packages to create the environment files for.
     """
+    print("Creating the environment files for the packages.")
     lines = [
         """name: seamm
 channels:
@@ -262,3 +262,4 @@ dependencies:
 
     with open("environments/seamm.yml", "w") as fd:
         fd.write("\n".join(lines))
+        print("Wrote environments/seamm.yml")

@@ -42,7 +42,7 @@ jobs:
             # Create release
             version=$(date '+%Y.%m.%d' | sed -e 's/\.0/./g')
             gh release create -F commit_message.txt $version
-            gh workflow run Docker.yml
+            gh workflow run Docker.yaml
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
