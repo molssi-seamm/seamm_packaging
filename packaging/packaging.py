@@ -137,7 +137,7 @@ def find_packages(progress=True):
     if progress:
         print("", flush=True)
 
-    if False:
+    if True:
         count = 0
         for package, data in sorted(packages.items(), key=lambda x: x[0]):
             count += 1
