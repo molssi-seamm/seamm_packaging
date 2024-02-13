@@ -157,7 +157,7 @@ def find_packages(progress=True):
                 f"\t{package} {data['version']} -> {tmp['version']} ({tmp['channel']})"
             )
 
-            if semver.compare(tmp["version"], data["version"]) == 1:
+            if semver.compare(tmp["version"], data["version"]) != 1:
                 print("updating to conda")
                 data["version"] = tmp["version"]
                 data["channel"] = tmp["channel"]
