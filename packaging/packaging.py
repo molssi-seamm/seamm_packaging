@@ -158,6 +158,7 @@ def find_packages(progress=True):
             )
 
             if semver.compare(tmp["version"], data["version"]) == 1:
+                print("updating to conda")
                 data["version"] = tmp["version"]
                 data["channel"] = tmp["channel"]
                 if "/conda-forge" in data["channel"]:
