@@ -38,6 +38,7 @@ jobs:
           else
             echo "Changes detected"
             ls -lR
+            cat environments/seamm.yml
             git commit -a -F commit_message.txt
             git push
             # Create release
