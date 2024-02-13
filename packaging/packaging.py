@@ -146,11 +146,17 @@ def find_packages(progress=True):
             conda_packages = conda.search(
                 f"{package}>={data['version']}", progress=True, newline=False
             )
-            print(f"\t{package}")
+
             if conda_packages is None:
+                print(f"\t{package} not in conda-forge")
                 continue
 
             tmp = conda_packages[package]
+
+            print(
+                f"\t{package} {data['version']} -> {tmp['version']} ({tmp['channel']})"
+            )
+
             if semver.compare(tmp["version"], data["version"]) == 1:
                 data["version"] = tmp["version"]
                 data["channel"] = tmp["channel"]
