@@ -33,7 +33,6 @@ jobs:
         run: |
           echo `pwd`
           python -m packaging
-          git status
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else
@@ -41,8 +40,9 @@ jobs:
             git commit -a -F commit_message.txt
             git push
             # Create release
-            date=$(date '+%Y-%m-%d')
-            gh release create -F commit_message.txt $date
+            version=$(date '+%Y.%m.%d' | sed -e 's/\.0/./g')
+            gh release create -F commit_message.txt $version
+            gh workflow run Docker.yml
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
