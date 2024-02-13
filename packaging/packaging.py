@@ -137,7 +137,7 @@ def find_packages(progress=True):
     if progress:
         print("", flush=True)
 
-    if False:
+    if True:
         count = 0
         for package, data in sorted(packages.items(), key=lambda x: x[0]):
             count += 1
@@ -184,8 +184,34 @@ def find_packages(progress=True):
                     elif packages[package] != old_packages[package]:
                         oldv = old_packages[package]["version"]
                         newv = packages[package]["version"]
-                        print(f"    Changed package: {package} from {oldv} to {newv}")
-                        message.append(f"{package} changed from {oldv} to {newv}")
+                        oldchannel = old_packages[package]["channel"]
+                        newchannel = packages[package]["channel"]
+                        if oldv != newv:
+                            if oldchannel != newchannel:
+                                print(
+                                    f"    Changed package: {package} from {oldv} "
+                                    f"({oldchannel}) to {newv} ({newchannel})"
+                                )
+                                message.append(
+                                    f"{package} changed from {oldv} ({oldchannel}) to "
+                                    f"{newv} ({newchannel})"
+                                )
+                            else:
+                                print(
+                                    f"    Changed package: {package} from {oldv} to "
+                                    f"{newv}"
+                                )
+                                message.append(
+                                    f"{package} changed from {oldv} to {newv}"
+                                )
+                        elif oldchannel != newchannel:
+                            print(
+                                f"    Changed channel: {package} from {oldchannel} to "
+                                f"{newchannel}"
+                            )
+                            message.append(
+                                f"{package} changed from {oldchannel} to {newchannel}"
+                            )
             with path.open("w") as fd:
                 json.dump(packages, fd, indent=4, sort_keys=True)
             with Path("commit_message.txt").open("w") as fd:
