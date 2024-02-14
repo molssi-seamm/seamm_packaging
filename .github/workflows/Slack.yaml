@@ -1,7 +1,6 @@
 name: Slack Notification
 on:
     workflow_dispatch:
-    push:
 jobs:
   slackNotification:
     name: Slack Notification
@@ -23,7 +22,8 @@ jobs:
         uses: slackapi/slack-github-action@v1.25.0
         with:
           channel-id: 'github'
-          slack-message: ${{ env.SLACK_MESSAGE }}
+          slack-message: ${{ github.event.head_commit.message }}
+          # slack-message: ${{ env.SLACK_MESSAGE }}
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
