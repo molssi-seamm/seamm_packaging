@@ -278,6 +278,9 @@ dependencies:
   - pip
   - python
 
+    # From conda-forge because pip can't install
+  - psutil
+
     # Core packages
 """
     ]
