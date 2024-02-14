@@ -10,16 +10,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Get message
+        run: |
+          {
+          echo 'SLACK_MESSAGE<<EOF'
+          cat environments/seamm.yml
+          echo EOF
+          } >> "$GITHUB_ENV"
+          
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.25.0
         with:
-          # Slack channel id, channel name, or user id to post message.
-          # See also: https://api.slack.com/methods/chat.postMessage#channels
-          # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
           channel-id: 'github'
-          # For posting a simple plain text message
-          slack-message: "Release status: ${{ job.status }}\nTest message\nFrom GitHub Actions"
+          slack-message: ${{ env.SLACK_MESSAGE }}
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
