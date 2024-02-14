@@ -1,4 +1,7 @@
-on: push
+on:
+    workflow_dispatch:
+    push:
+      
 name: Slack Notification
 jobs:
   slackNotification:
@@ -6,10 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_TITLE: "Test Notification"
-        SLACK_COLOR: ${{ job.status }}
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.25.0
+        with:
+          # Slack channel id, channel name, or user id to post message.
+          # See also: https://api.slack.com/methods/chat.postMessage#channels
+          # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
+    channel-id: 'github'
+    # For posting a simple plain text message
+    slack-message: "Release status: ${{ job.status }}\nTest message\nFrom GitHub Actions"
+  env:
+    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
