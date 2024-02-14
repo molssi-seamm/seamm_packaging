@@ -13,7 +13,7 @@ jobs:
         run: |
           {
           echo 'SLACK_MESSAGE<<EOF'
-          cat environments/seamm.yml
+          git log -1 | sed 1,4d
           echo EOF
           } >> "$GITHUB_ENV"
           
@@ -22,8 +22,7 @@ jobs:
         uses: slackapi/slack-github-action@v1.25.0
         with:
           channel-id: 'github'
-          slack-message: ${{ github.event.head_commit.message }}
-          # slack-message: ${{ env.SLACK_MESSAGE }}
+          slack-message: ${{ env.SLACK_MESSAGE }}
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
