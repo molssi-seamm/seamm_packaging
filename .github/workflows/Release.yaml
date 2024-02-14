@@ -64,7 +64,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.25.0
         with:
-          channel-id: 'general'
+          channel-id: 'github'
           slack-message: ${{ env.SLACK_MESSAGE }}
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
