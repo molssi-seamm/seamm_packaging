@@ -52,4 +52,21 @@ jobs:
           annotations: ${{ steps.meta.outputs.annotations }}
           labels: ${{ steps.meta.outputs.labels }}
 
+      - name: Get message
+        run: |
+          {
+          echo 'SLACK_MESSAGE<<EOF'
+          git log -1 | sed 1,4d
+          echo EOF
+          } >> "$GITHUB_ENV"
+          
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.25.0
+        with:
+          channel-id: 'general'
+          slack-message: ${{ env.SLACK_MESSAGE }}
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
 
