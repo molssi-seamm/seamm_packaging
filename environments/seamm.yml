@@ -6,8 +6,9 @@ dependencies:
   - pip
   - python
 
+    # From conda-forge because pip can't install
   - psutil
-  
+
     # Core packages
 
   - molsystem==2023.11.19
@@ -27,7 +28,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.1.17
+    - seamm-exec==2024.2.15
     - seamm-jobserver==2024.1.17
 
     # MolSSI plug-ins
