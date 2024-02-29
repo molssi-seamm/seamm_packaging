@@ -28,7 +28,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.2.15
+    - seamm-exec==2024.2.29
     - seamm-jobserver==2024.1.17
 
     # MolSSI plug-ins
@@ -47,7 +47,7 @@ dependencies:
     - mopac-step==2024.2.10.1
     - packmol-step==2024.1.16
     - properties-step==2023.7.31
-    - psi4-step==2024.1.11
+    - psi4-step==2024.2.29
     - qcarchive-step==2023.3.30
     - quickmin-step==2023.11.15
     - rdkit-step==2023.2.22

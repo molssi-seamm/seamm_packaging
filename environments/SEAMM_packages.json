@@ -99,7 +99,7 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
         "type": "MolSSI plug-in",
-        "version": "2024.1.11"
+        "version": "2024.2.29"
     },
     "pyxtal-step": {
         "channel": "pypi",
@@ -159,7 +159,7 @@
         "channel": "pypi",
         "description": "Classes to execute background codes for SEAMM",
         "type": "Core package",
-        "version": "2024.2.15"
+        "version": "2024.2.29"
     },
     "seamm-ff-util": {
         "channel": "conda-forge",
