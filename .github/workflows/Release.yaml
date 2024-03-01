@@ -37,6 +37,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/molssi-seamm/seamm
+          tags:
+            type=semver,pattern={{version}}
           annotations: |
             org.opencontainers.image.description=SEAMM environment
           labels: |
