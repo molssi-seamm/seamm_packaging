@@ -23,6 +23,9 @@ jobs:
       - name: Echo version
         run: echo $GIT_VERSION
         
+      - name: Echo version again
+        run: echo ${{env.GIT_VERSION}}
+        
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
         
@@ -42,7 +45,7 @@ jobs:
         with:
           images: ghcr.io/molssi-seamm/seamm
           tags:
-            type=semver,pattern={{version}},value={{ env.GIT_VERSION }}
+            type=semver,pattern={{version}},value=${{ env.GIT_VERSION }}
           annotations: |
             org.opencontainers.image.description=SEAMM environment
             org.opencontainers.image.title=SEAMM
