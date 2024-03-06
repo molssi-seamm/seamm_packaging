@@ -177,7 +177,7 @@
         "channel": "pypi",
         "description": "seamm_jobserver",
         "type": "Core package",
-        "version": "2024.1.17"
+        "version": "2024.4.5"
     },
     "seamm-util": {
         "channel": "conda-forge",

@@ -29,7 +29,7 @@ dependencies:
   - pip:
     # Core packages
     - seamm-exec==2024.2.29
-    - seamm-jobserver==2024.1.17
+    - seamm-jobserver==2024.4.5
 
     # MolSSI plug-ins
     - control-parameters-step==2023.11.15
