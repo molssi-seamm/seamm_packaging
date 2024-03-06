@@ -42,11 +42,15 @@ jobs:
         with:
           images: ghcr.io/molssi-seamm/seamm
           tags:
-            type=semver,pattern={{version}},value={{GIT_VERSION}}
+            type=semver,pattern={{version}},value={{ env.GIT_VERSION }}
           annotations: |
             org.opencontainers.image.description=SEAMM environment
+            org.opencontainers.image.title=SEAMM
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
           labels: |
             org.opencontainers.image.description=SEAMM environment
+            org.opencontainers.image.title=SEAMM
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
 
       - name: Build and push
         uses: docker/build-push-action@v5
