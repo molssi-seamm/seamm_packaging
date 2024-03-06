@@ -1,12 +1,6 @@
 name: Release
 
 on:
-  release:
-    types: [published]
-    branches:
-      - "main"
-  push:
-    tags:
   workflow_dispatch:
 
 jobs:
