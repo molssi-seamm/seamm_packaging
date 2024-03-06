@@ -21,6 +21,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Get git version
+        run: echo "GIT_VERSION=$(git describe --tags)" >> $GITHUB_ENV
+          
+      - name: Echo version
+        run: echo $GIT_VERSION
+        
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
         
@@ -40,7 +46,7 @@ jobs:
         with:
           images: ghcr.io/molssi-seamm/seamm
           tags:
-            type=semver,pattern={{version}}
+            type=semver,pattern={{version}},value={{GIT_VERSION}}
           annotations: |
             org.opencontainers.image.description=SEAMM environment
           labels: |
