@@ -159,7 +159,7 @@
         "channel": "pypi",
         "description": "Classes to execute background codes for SEAMM",
         "type": "Core package",
-        "version": "2024.3.6"
+        "version": "2024.3.7"
     },
     "seamm-ff-util": {
         "channel": "conda-forge",
