@@ -40,7 +40,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker meta for SEAMM
-        id: meta
+        id: meta-seamm
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/molssi-seamm/seamm
@@ -62,12 +62,12 @@ jobs:
           file: ./environments/SEAMM_Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-seamm.outputs.tags }}
+          annotations: ${{ steps.meta-seamm.outputs.annotations }}
+          labels: ${{ steps.meta-seamm.outputs.labels }}
 
       - name: Docker meta for RunFlowchart
-        id: meta
+        id: meta-runflowchart
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/molssi-seamm/run_flowchart
@@ -89,12 +89,12 @@ jobs:
           file: ./environments/RunFlowchart_Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-runflowchart.outputs.tags }}
+          annotations: ${{ steps.meta-runflowchart.outputs.annotations }}
+          labels: ${{ steps.meta-runflowchart.outputs.labels }}
 
       - name: Docker meta for JobServer
-        id: meta
+        id: meta-jobserver
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/molssi-seamm/jobserver
@@ -116,12 +116,12 @@ jobs:
           file: ./environments/JobServer_Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-jobserver.outputs.tags }}
+          annotations: ${{ steps.meta-jobserver.outputs.annotations }}
+          labels: ${{ steps.meta-jobserver.outputs.labels }}
 
       - name: Docker meta for Dashboard
-        id: meta
+        id: meta-dashboard
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/molssi-seamm/dashboard
@@ -143,9 +143,9 @@ jobs:
           file: ./environments/Dashboard_Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta-dashboard.outputs.tags }}
+          annotations: ${{ steps.meta-dashboard.outputs.annotations }}
+          labels: ${{ steps.meta-dashboard.outputs.labels }}
 
       - name: Get message
         run: |
