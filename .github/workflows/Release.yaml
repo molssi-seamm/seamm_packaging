@@ -39,7 +39,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Docker meta
+      - name: Docker meta for SEAMM
         id: meta
         uses: docker/metadata-action@v5
         with:
@@ -47,18 +47,100 @@ jobs:
           tags:
             type=semver,pattern={{version}},value=${{ env.GIT_VERSION }}
           annotations: |
-            org.opencontainers.image.description=SEAMM environment
+            org.opencontainers.image.description=SEAMM Graphical User Interface
             org.opencontainers.image.title=SEAMM
             org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
           labels: |
-            org.opencontainers.image.description=SEAMM environment
+            org.opencontainers.image.description=SEAMM Graphical User Interface
             org.opencontainers.image.title=SEAMM
             org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
 
-      - name: Build and push
+      - name: Build and push SEAMM
         uses: docker/build-push-action@v5
         with:
           context: ./environments
+          file: ./environments/SEAMM_Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Docker meta for RunFlowchart
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/molssi-seamm/run_flowchart
+          tags:
+            type=semver,pattern={{version}},value=${{ env.GIT_VERSION }}
+          annotations: |
+            org.opencontainers.image.description=Container to run SEAMM flowcharts
+            org.opencontainers.image.title=RunFlowchart
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+          labels: |
+            org.opencontainers.image.description=Container to run SEAMM flowcharts
+            org.opencontainers.image.title=RunFlowchart
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+
+      - name: Build and push RunFlowchart
+        uses: docker/build-push-action@v5
+        with:
+          context: ./environments
+          file: ./environments/RunFlowchart_Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Docker meta for JobServer
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/molssi-seamm/jobserver
+          tags:
+            type=semver,pattern={{version}},value=${{ env.GIT_VERSION }}
+          annotations: |
+            org.opencontainers.image.description=The JobServer for SEAMM
+            org.opencontainers.image.title=JobServer
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+          labels: |
+            org.opencontainers.image.description=The JobServer for SEAMM
+            org.opencontainers.image.title=JobServer
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+
+      - name: Build and push JobServer
+        uses: docker/build-push-action@v5
+        with:
+          context: ./environments
+          file: ./environments/JobServer_Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Docker meta for Dashboard
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/molssi-seamm/dashboard
+          tags:
+            type=semver,pattern={{version}},value=${{ env.GIT_VERSION }}
+          annotations: |
+            org.opencontainers.image.description=The Dashboard for SEAMM
+            org.opencontainers.image.title=Dashboard
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+          labels: |
+            org.opencontainers.image.description=The Dashboard for SEAMM
+            org.opencontainers.image.title=Dashboard
+            org.opencontainers.image.authors=Paul Saxe <psaxe@vt.edu>
+
+      - name: Build and push Dashboard
+        uses: docker/build-push-action@v5
+        with:
+          context: ./environments
+          file: ./environments/Dashboard_Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
