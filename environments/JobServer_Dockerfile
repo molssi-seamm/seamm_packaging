@@ -2,7 +2,7 @@
 
 FROM       ghcr.io/molssi-seamm/seamm
 LABEL      org.opencontainers.image.authors="Paul Saxe <psaxe@vt.edu>"
-LABEL      org.opencontainers.image.description=The JobServer for SEAMM
+LABEL      org.opencontainers.image.description="The JobServer for SEAMM"
 LABEL      org.opencontainers.image.title=JobServer
 COPY       seamm.yml /root/seamm.yml
 ENV        SEAMM_ENVIRONMENT=docker

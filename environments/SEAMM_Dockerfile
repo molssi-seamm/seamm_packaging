@@ -2,7 +2,7 @@
 
 FROM       molssi/mamba141
 LABEL      org.opencontainers.image.authors="Paul Saxe <psaxe@vt.edu>"
-LABEL      org.opencontainers.image.description=SEAMM Graphical User Interface
+LABEL      org.opencontainers.image.description="SEAMM Graphical User Interface"
 LABEL      org.opencontainers.image.title=SEAMM
 RUN        apt-get install -qy curl && curl -sSL https://get.docker.com/ | sh
 COPY       seamm.yml /root/seamm.yml
