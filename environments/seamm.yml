@@ -17,7 +17,6 @@ dependencies:
   - seamm-dashboard==2024.1.1
   - seamm-datastore==2022.6.28
   - seamm-ff-util==2023.8.27
-  - seamm-installer==2023.11.3
   - seamm-util==2023.11.12
   - seamm-widgets==2022.10.28
 
@@ -29,7 +28,8 @@ dependencies:
   - pip:
     # Core packages
     - seamm-exec==2024.3.10
-    - seamm-jobserver==2024.4.5
+    - seamm-installer==2024.3.11
+    - seamm-jobserver==2024.3.11
 
     # MolSSI plug-ins
     - control-parameters-step==2023.11.15
