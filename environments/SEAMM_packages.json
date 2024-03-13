@@ -153,7 +153,7 @@
         "channel": "conda-forge",
         "description": "seamm_datastore",
         "type": "Core package",
-        "version": "2022.6.28"
+        "version": "2024.3.12"
     },
     "seamm-exec": {
         "channel": "pypi",
@@ -168,7 +168,7 @@
         "version": "2023.8.27"
     },
     "seamm-installer": {
-        "channel": "pypi",
+        "channel": "conda-forge",
         "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
         "type": "Core package",
         "version": "2024.3.11"
@@ -177,7 +177,7 @@
         "channel": "pypi",
         "description": "The JobServer for the SEAMM environment.",
         "type": "Core package",
-        "version": "2024.3.11"
+        "version": "2024.3.12"
     },
     "seamm-util": {
         "channel": "conda-forge",
