@@ -75,7 +75,7 @@
         "channel": "conda-forge",
         "description": "molsystem",
         "type": "Core package",
-        "version": "2023.11.19"
+        "version": "2024.3.13"
     },
     "mopac-step": {
         "channel": "pypi",
@@ -153,7 +153,7 @@
         "channel": "conda-forge",
         "description": "seamm_datastore",
         "type": "Core package",
-        "version": "2024.3.12"
+        "version": "2024.3.13"
     },
     "seamm-exec": {
         "channel": "pypi",

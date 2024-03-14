@@ -11,11 +11,11 @@ dependencies:
 
     # Core packages
 
-  - molsystem==2023.11.19
+  - molsystem==2024.3.13
   - reference-handler==0.9.1
   - seamm==2024.1.2
   - seamm-dashboard==2024.1.1
-  - seamm-datastore==2024.3.12
+  - seamm-datastore==2024.3.13
   - seamm-ff-util==2023.8.27
   - seamm-installer==2024.3.11
   - seamm-util==2023.11.12
