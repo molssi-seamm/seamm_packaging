@@ -81,7 +81,7 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
         "type": "MolSSI plug-in",
-        "version": "2024.2.10.1"
+        "version": "2024.3.17"
     },
     "packmol-step": {
         "channel": "pypi",
@@ -99,7 +99,7 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
         "type": "MolSSI plug-in",
-        "version": "2024.3.4"
+        "version": "2024.3.17"
     },
     "pyxtal-step": {
         "channel": "pypi",
@@ -171,7 +171,7 @@
         "channel": "conda-forge",
         "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
         "type": "Core package",
-        "version": "2024.3.11"
+        "version": "2024.3.17"
     },
     "seamm-jobserver": {
         "channel": "pypi",
