@@ -45,7 +45,7 @@ dependencies:
     - lammps-step==2024.1.18
     - loop-step==2023.11.9
     - mopac-step==2024.3.17
-    - packmol-step==2024.1.16
+    - packmol-step==2024.3.19
     - properties-step==2023.7.31
     - psi4-step==2024.3.17
     - qcarchive-step==2023.3.30
