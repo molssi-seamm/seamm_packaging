@@ -1,7 +1,9 @@
+import datetime
 import json
 import logging
 from pathlib import Path
 import pprint
+import timezone
 
 import semver
 
@@ -251,8 +253,14 @@ def find_packages(progress=True):
                 print("The package database has not changed.")
             else:
                 print("The package database has changed.")
+
+                plist = {
+                    "date": datetime.now(timezone.utc),
+                    "doi": "10.5281/zenodo.7860696",
+                    "packages": packages,
+                }
                 with path.open("w") as fd:
-                    json.dump(packages, fd, indent=4, sort_keys=True)
+                    json.dump(plist, fd, indent=4, sort_keys=True)
                 with Path("commit_message.txt").open("w") as fd:
                     fd.write("New SEAMM package database\n\n")
                     for i, line in enumerate(message):
@@ -280,6 +288,8 @@ dependencies:
 
     # From conda-forge because pip can't install
   - psutil
+    # The Dashboard fails with newer versions, so until fixed.
+  - connexion<3.0
 
     # Core packages
 """
