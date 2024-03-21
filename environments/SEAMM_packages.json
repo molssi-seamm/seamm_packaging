@@ -87,7 +87,7 @@
         "channel": "pypi",
         "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
         "type": "MolSSI plug-in",
-        "version": "2024.3.19"
+        "version": "2024.3.20.2"
     },
     "properties-step": {
         "channel": "pypi",
