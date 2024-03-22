@@ -254,7 +254,7 @@ def find_packages(progress=True):
                 print("The package database has changed.")
 
                 plist = {
-                    "date": datetime.now(timezone.utc),
+                    "date": datetime.now(timezone.utc).isoformat(),
                     "doi": "10.5281/zenodo.7860696",
                     "packages": packages,
                 }
