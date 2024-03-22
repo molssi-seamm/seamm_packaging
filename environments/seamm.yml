@@ -8,6 +8,8 @@ dependencies:
 
     # From conda-forge because pip can't install
   - psutil
+    # The Dashboard fails with newer versions, so until fixed.
+  - connexion<3.0
 
     # Core packages
 
@@ -28,7 +30,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.3.10
+    - seamm-exec==2024.3.21
     - seamm-jobserver==2024.3.12
 
     # MolSSI plug-ins
@@ -42,7 +44,7 @@ dependencies:
     - from-smiles-step==2023.11.10
     - gaussian-step==2024.1.19
     - geometry-analysis-step==2023.1.14
-    - lammps-step==2024.1.18
+    - lammps-step==2024.3.21
     - loop-step==2023.11.9
     - mopac-step==2024.3.17
     - packmol-step==2024.3.20.2
