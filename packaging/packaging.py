@@ -3,7 +3,6 @@ import json
 import logging
 from pathlib import Path
 import pprint
-import timezone
 
 import semver
 
@@ -255,7 +254,7 @@ def find_packages(progress=True):
                 print("The package database has changed.")
 
                 plist = {
-                    "date": datetime.now(timezone.utc),
+                    "date": datetime.now(datetime.timezone.utc),
                     "doi": "10.5281/zenodo.7860696",
                     "packages": packages,
                 }
