@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import json
 import logging
 from pathlib import Path
@@ -254,7 +254,7 @@ def find_packages(progress=True):
                 print("The package database has changed.")
 
                 plist = {
-                    "date": datetime.now(datetime.timezone.utc),
+                    "date": datetime.now(timezone.utc),
                     "doi": "10.5281/zenodo.7860696",
                     "packages": packages,
                 }
