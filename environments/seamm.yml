@@ -44,7 +44,7 @@ dependencies:
     - from-smiles-step==2023.11.10
     - gaussian-step==2024.1.19
     - geometry-analysis-step==2023.1.14
-    - lammps-step==2024.3.21
+    - lammps-step==2024.3.22
     - loop-step==2023.11.9
     - mopac-step==2024.3.17
     - packmol-step==2024.3.20.2
@@ -58,7 +58,7 @@ dependencies:
     - strain-step==2022.11.7
     - supercell-step==2023.11.5
     - table-step==2023.11.10
-    - thermal-conductivity-step==2024.1.5
+    - thermal-conductivity-step==2024.3.22
     - torchani-step==2023.2.28
 
     # 3rd-party plug-ins
