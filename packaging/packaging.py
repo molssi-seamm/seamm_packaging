@@ -179,24 +179,37 @@ def find_packages(progress=True):
     if not path.exists():
         changed = True
         print("The package database does not exist.")
+
+        plist = {
+            "date": datetime.now(timezone.utc).isoformat(),
+            "doi": "10.5281/zenodo.7860696",
+            "packages": packages,
+        }
         with path.open("w") as fd:
-            json.dump(packages, fd, indent=4, sort_keys=True)
+            json.dump(plist, fd, indent=4, sort_keys=True)
         with Path("commit_message.txt").open("w") as fd:
             fd.write("Initial commit of the SEAMM package database")
     else:
         with path.open("r") as fd:
             try:
-                old_packages = json.load(fd)
+                plist = json.load(fd)
             except json.JSONDecodeError:
-                old_packages = None
-        if old_packages is None:
+                plist = None
+        if plist is None:
             changed = True
             print("The package database could not be read, so replacing.")
+
+            plist = {
+                "date": datetime.now(timezone.utc).isoformat(),
+                "doi": "10.5281/zenodo.7860696",
+                "packages": packages,
+            }
             with path.open("w") as fd:
-                json.dump(packages, fd, indent=4, sort_keys=True)
+                json.dump(plist, fd, indent=4, sort_keys=True)
             with Path("commit_message.txt").open("w") as fd:
                 fd.write("Could not read the SEAMM package database, so replacing")
         else:
+            old_packages = plist["packages"]
             for package in packages:
                 print(f"Checking package {package}")
                 if package not in old_packages:
@@ -276,7 +289,7 @@ def create_env_files(packages):
         The packages to create the environment files for.
     """
     print("Creating the environment files for the packages.")
-    lines = [
+    prelines = [
         """name: seamm
 channels:
   - conda-forge
@@ -293,7 +306,9 @@ dependencies:
     # Core packages
 """
     ]
-
+    # Creating the environment file with versions pinned
+    lines = []
+    lines.extend(prelines)
     # Core SEAMM packages
     for package, data in sorted(packages.items(), key=lambda x: x[0]):
         if data["type"] == "Core package" and data["channel"] == "conda-forge":
@@ -329,6 +344,48 @@ dependencies:
         if data["type"] == "3rd-party plug-in" and data["channel"] == "pypi":
             lines.append(f"    - {package}=={data['version']}")
 
-    with open("environments/seamm.yml", "w") as fd:
+    with open("environments/seamm_pinned.yml", "w") as fd:
         fd.write("\n".join(lines))
-        print("Wrote environments/seamm.yml")
+        print("Wrote environments/seamm_pinned.yml")
+
+    # Creating the environment file with versions not pinned
+    lines = []
+    lines.extend(prelines)
+    # Core SEAMM packages
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "Core package" and data["channel"] == "conda-forge":
+            lines.append(f"  - {package}")
+    lines.append("")
+
+    lines.append("    # MolSSI plug-ins")
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "MolSSI plug-in" and data["channel"] == "conda-forge":
+            lines.append(f"  - {package}")
+    lines.append("")
+
+    lines.append("    # 3rd-party plug-ins")
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "3rd-party plug-in" and data["channel"] == "conda-forge":
+            lines.append(f"  - {package}")
+    lines.append("")
+
+    lines.append("    # PyPi packages")
+    lines.append("  - pip:")
+    lines.append("    # Core packages")
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "Core package" and data["channel"] == "pypi":
+            lines.append(f"    - {package}")
+    lines.append("")
+    lines.append("    # MolSSI plug-ins")
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "MolSSI plug-in" and data["channel"] == "pypi":
+            lines.append(f"    - {package}")
+    lines.append("")
+    lines.append("    # 3rd-party plug-ins")
+    for package, data in sorted(packages.items(), key=lambda x: x[0]):
+        if data["type"] == "3rd-party plug-in" and data["channel"] == "pypi":
+            lines.append(f"    - {package}")
+
+    with open("environments/seamm_pinned.yml", "w") as fd:
+        fd.write("\n".join(lines))
+        print("Wrote environments/seamm_pinned.yml")
