@@ -29,7 +29,7 @@ The container is run with the following command:
 
 .. code-block:: bash
 
-    docker run --rm -v $PWD:/home ghcr.io/molssi-seamm/seamm-mopac:<version> seamm ?flowchart?
+    docker run --rm -v $PWD:/home ghcr.io/molssi-seamm/seamm:<version> ?flowchart?
 
 where `flowchart` is an optional flowchart to load into SEAMM.
 
