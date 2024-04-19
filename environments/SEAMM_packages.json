@@ -1,12 +1,12 @@
 {
-    "date": "2024-04-06T05:32:58.753922+00:00",
+    "date": "2024-04-19T16:17:36.631416+00:00",
     "doi": "10.5281/zenodo.7860696",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": ""
+            "version": "2023.11.15"
         },
         "crystal-builder-step": {
             "channel": "pypi",
