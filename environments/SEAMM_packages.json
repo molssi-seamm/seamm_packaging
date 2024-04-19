@@ -6,7 +6,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.15"
+            "version": ""
         },
         "crystal-builder-step": {
             "channel": "pypi",
