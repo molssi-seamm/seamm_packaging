@@ -4,7 +4,6 @@ FROM       ghcr.io/molssi-seamm/seamm
 LABEL      org.opencontainers.image.authors="Paul Saxe <psaxe@vt.edu>"
 LABEL      org.opencontainers.image.description="The Dashboard for SEAMM"
 LABEL      org.opencontainers.image.title=Dashboard
-COPY       seamm.yml /root/seamm.yml
 ENV        SEAMM_ENVIRONMENT=docker
 ENTRYPOINT ["seamm-dashboard"]
 WORKDIR    /root

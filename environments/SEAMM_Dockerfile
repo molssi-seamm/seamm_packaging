@@ -5,8 +5,8 @@ LABEL      org.opencontainers.image.authors="Paul Saxe <psaxe@vt.edu>"
 LABEL      org.opencontainers.image.description="SEAMM Graphical User Interface"
 LABEL      org.opencontainers.image.title=SEAMM
 RUN        apt-get install -qy curl && curl -sSL https://get.docker.com/ | sh
-COPY       seamm.yml /root/seamm.yml
-RUN        mamba env update --name base --file /root/seamm.yml
+COPY       seamm_pinned.yml /root/seamm_pinned.yml
+RUN        mamba env update --name base --file /root/seamm_pinned.yml
 ENV        SEAMM_ENVIRONMENT=docker
 ENTRYPOINT ["seamm"]
 WORKDIR    /home

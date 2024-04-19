@@ -1,0 +1,8 @@
+#!/bin/bash
+# Make the SEAMM directory if it doesn't exist
+directory=~/SEAMM
+if [ ! -d $directory ]; then
+mkdir -p $directory
+fi
+
+/usr/local/bin/docker run --pull always --rm --name SEAMM -e "DISPLAY=host.docker.internal:0" -v ~/SEAMM:/root/SEAMM ghcr.io/molssi-seamm/seamm:latest &

@@ -1,0 +1,40 @@
+version: "3.8"
+name: seamm-environment
+services:
+  dashboard:
+    container_name: Dashboard
+    image: ghcr.io/molssi-seamm/dashboard:latest
+    command: --dashboard-name "SEAMM (Docker)"
+    restart: unless-stopped
+    ports:
+      - '55055:55055'
+    networks:
+      - seamm-network
+    volumes:
+      - type: bind
+        source: ~/SEAMM
+        target: /root/SEAMM
+        
+    # flask requires SIGINT to stop gracefully
+    # (default stop signal from Compose is SIGTERM)
+    stop_signal: SIGINT
+
+  jobserver:
+    container_name: JobServer
+    image: ghcr.io/molssi-seamm/jobserver:latest
+    command: JobServer --no-windows
+    restart: unless-stopped
+    # environment:
+    #   - DISPLAY=host.docker.internal:0
+    volumes:
+      - type: bind
+        source: ~/SEAMM
+        target: /root/SEAMM
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+
+networks:
+  seamm-network:
+    driver: bridge
+    name: seamm-network

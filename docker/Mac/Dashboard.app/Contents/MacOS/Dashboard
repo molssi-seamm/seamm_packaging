@@ -1,0 +1,8 @@
+#!/bin/bash
+# Make the SEAMM directory if it doesn't exist
+directory=~/SEAMM
+if [ ! -d $directory ]; then
+mkdir -p $directory
+fi
+
+/usr/local/bin/docker compose --file ~/Applications/Dashboard.app/Contents/Resources/seamm-environment.yaml up -d 

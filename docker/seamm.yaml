@@ -1,0 +1,22 @@
+version: "3.8"
+name: seamm
+services:
+  seamm:
+    container_name: SEAMM
+    image: ghcr.io/molssi-seamm/seamm:latest
+    environment:
+      - DISPLAY=host.docker.internal:0
+    restart: none
+    networks:
+      - seamm-network
+    volumes:
+      - type: bind
+        source: ~/SEAMM
+        target: /root/SEAMM
+    deploy:
+      mode: global
+
+networks:
+  seamm-network:
+    name: seamm-network
+    external: true

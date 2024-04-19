@@ -386,6 +386,6 @@ dependencies:
         if data["type"] == "3rd-party plug-in" and data["channel"] == "pypi":
             lines.append(f"    - {package}")
 
-    with open("environments/seamm_pinned.yml", "w") as fd:
+    with open("environments/seamm.yml", "w") as fd:
         fd.write("\n".join(lines))
         print("Wrote environments/seamm_pinned.yml")
