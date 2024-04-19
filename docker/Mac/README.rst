@@ -17,7 +17,6 @@ Dashboard for MacOS. The files are
 
       + **Dashboard** This is the executable file for the application. It is a shell script.
 
-
     - **Resources/** This directory contains the icon for the application.
 
       + **Dashboard.icns** This is the icon for the application. It is used by MacOS to display
@@ -32,18 +31,22 @@ Dashboard for MacOS. The files are
 
   - **Contents/**
 
-    - **Info.plist** This file contains the information about the application, such as the
+    - **Info.plist**
+      This file contains the information about the application, such as the
       name, version, and the icon to use. This file is used by MacOS to display the
       application in the Finder and in the Dock.
 
-    - **MacOS/** This directory contains the executable file for the application.
+    - **MacOS/**
+      This directory contains the executable file for the application.
 
-      - **SEAMM** This is the executable file for the application. It is a shell script.
+      - **SEAMM**
+	This is the executable file for the application. It is a shell script.
 
+    - **Resources/**
+      This directory contains the icon for the application.
 
-    - **Resources/** This directory contains the icon for the application.
-
-      - **SEAMM.icns** This is the icon for the application. It is used by MacOS to display
+      - **SEAMM.icns**
+	This is the icon for the application. It is used by MacOS to display
 	the application in the Finder and in the Dock.
 
 	
