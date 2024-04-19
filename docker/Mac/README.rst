@@ -5,19 +5,19 @@ Support for MacOS
 This directory containes the necessary files to add applications for SEAMM and the
 Dashboard for MacOS. The files are
 
-- **Dashboard.app/**
+- **Dashboard.app**
 
-  * **Contents/**
+  * **Contents**
 
     - **Info.plist** This file contains the information about the application, such as the
       name, version, and the icon to use. This file is used by MacOS to display the
       application in the Finder and in the Dock.
 
-    - **MacOS/** This directory contains the executable file for the application.
+    - **MacOS** This directory contains the executable file for the application.
 
       + **Dashboard** This is the executable file for the application. It is a shell script.
 
-    - **Resources/** This directory contains the icon for the application.
+    - **Resources** This directory contains the icon for the application.
 
       + **Dashboard.icns** This is the icon for the application. It is used by MacOS to display
 	the application in the Finder and in the Dock.
@@ -27,22 +27,22 @@ Dashboard for MacOS. The files are
 
 - **Makefile** This file contains targets to make the ZIP files for the documentation.
 
-- **SEAMM.app/**
+- **SEAMM.app**
 
-  - **Contents/**
+  - **Contents**
 
     - **Info.plist**
       This file contains the information about the application, such as the
       name, version, and the icon to use. This file is used by MacOS to display the
       application in the Finder and in the Dock.
 
-    - **MacOS/**
+    - **MacOS**
       This directory contains the executable file for the application.
 
       - **SEAMM**
 	This is the executable file for the application. It is a shell script.
 
-    - **Resources/**
+    - **Resources**
       This directory contains the icon for the application.
 
       - **SEAMM.icns**
