@@ -37,7 +37,10 @@ jobs:
           else
             echo "Changes detected"
             ls -lR
+            echo "seamm.yml file:"
             cat environments/seamm.yml
+            echo "\nseamm_pinned.yml file:"
+            cat environments/seamm_pinned.yml
             git commit -a -F commit_message.txt
             git push
             # Create release
