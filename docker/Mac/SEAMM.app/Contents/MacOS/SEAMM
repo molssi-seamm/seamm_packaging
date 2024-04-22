@@ -6,12 +6,11 @@ if [ ! -d $directory ]; then
     mkdir -p $directory
 fi
 
-# And the ~/.seamm directory
-directory=~/.seamm
-if [ ! -d $directory ]; then
-    mkdir -p $directory
+# And the ~/.seamm.d directory
+if [ ! -d ~/.seamm.d ]; then
+    mkdir -p ~/.seamm.d
     if [ ! -f ~/.seammrc ]; then
-	mv ~/.seammrc ~/.seamm/seammrc
+	mv ~/.seammrc ~/.seamm.d/seammrc
     fi
 fi
 
@@ -19,5 +18,5 @@ fi
 		      --env "DISPLAY=host.docker.internal:0" \
 		      --network seamm-network \
 		      -v ~/SEAMM:/root/SEAMM \
-		      -v ~/.seamm:/root/.seamm \
+		      -v ~/.seamm.d:/root/.seamm.d \
 		      ghcr.io/molssi-seamm/seamm:latest &
