@@ -1,5 +1,5 @@
 {
-    "date": "2024-04-19T16:17:36.631416+00:00",
+    "date": "2024-04-23T05:32:38.609564+00:00",
     "doi": "10.5281/zenodo.7860696",
     "packages": {
         "control-parameters-step": {
@@ -144,7 +144,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.1.2"
+            "version": "2024.4.22"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -162,7 +162,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.3.21"
+            "version": "2024.4.22"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -174,7 +174,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2024.3.17"
+            "version": "2024.4.22"
         },
         "seamm-jobserver": {
             "channel": "pypi",
@@ -186,7 +186,7 @@
             "channel": "conda-forge",
             "description": "seamm_util",
             "type": "Core package",
-            "version": "2023.11.12"
+            "version": "2024.4.22"
         },
         "seamm-widgets": {
             "channel": "conda-forge",
