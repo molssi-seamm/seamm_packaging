@@ -30,14 +30,14 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.4.22
+    - seamm-exec==2024.4.24
     - seamm-jobserver==2024.3.12
 
     # MolSSI plug-ins
     - control-parameters-step==2023.11.15
     - crystal-builder-step==2022.7.31
     - custom-step==2023.12.12
-    - dftbplus-step==2024.1.18
+    - dftbplus-step==2024.4.24
     - diffusivity-step==2023.9.4
     - fhi-aims-step==2024.1.19
     - forcefield-step==2024.1.10
