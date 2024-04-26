@@ -1,5 +1,5 @@
 {
-    "date": "2024-04-25T05:33:24.267877+00:00",
+    "date": "2024-04-26T05:31:54.089586+00:00",
     "doi": "10.5281/zenodo.7860696",
     "packages": {
         "control-parameters-step": {
@@ -162,7 +162,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.4.24"
+            "version": "2024.4.25.3"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",

@@ -30,7 +30,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.4.24
+    - seamm-exec==2024.4.25.3
     - seamm-jobserver==2024.3.12
 
     # MolSSI plug-ins
