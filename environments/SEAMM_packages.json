@@ -1,5 +1,5 @@
 {
-    "date": "2024-04-26T05:31:54.089586+00:00",
+    "date": "2024-04-27T05:32:54.402098+00:00",
     "doi": "10.5281/zenodo.7860696",
     "packages": {
         "control-parameters-step": {
@@ -186,7 +186,7 @@
             "channel": "conda-forge",
             "description": "seamm_util",
             "type": "Core package",
-            "version": "2024.4.22"
+            "version": "2024.4.26"
         },
         "seamm-widgets": {
             "channel": "conda-forge",
