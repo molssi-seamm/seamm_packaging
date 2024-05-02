@@ -1,5 +1,5 @@
 {
-    "date": "2024-05-01T05:32:59.828342+00:00",
+    "date": "2024-05-02T05:34:39.454261+00:00",
     "doi": "10.5281/zenodo.7860696",
     "packages": {
         "control-parameters-step": {
@@ -144,7 +144,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.4.22"
+            "version": "2024.5.1"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -192,7 +192,7 @@
             "channel": "conda-forge",
             "description": "seamm_widgets",
             "type": "Core package",
-            "version": "2022.10.28"
+            "version": "2024.5.1"
         },
         "set-cell-step": {
             "channel": "pypi",

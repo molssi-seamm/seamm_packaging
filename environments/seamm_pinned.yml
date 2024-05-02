@@ -15,13 +15,13 @@ dependencies:
 
   - molsystem==2024.4.5
   - reference-handler==0.9.1
-  - seamm==2024.4.22
+  - seamm==2024.5.1
   - seamm-dashboard==2024.3.27
   - seamm-datastore==2024.3.13
   - seamm-ff-util==2023.8.27
   - seamm-installer==2024.4.22
   - seamm-util==2024.4.30
-  - seamm-widgets==2022.10.28
+  - seamm-widgets==2024.5.1
 
     # MolSSI plug-ins
 
