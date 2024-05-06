@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 # Self-descriptive entries which should always be present
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
 [project]
-name = "packaging"
+name = "seamm-packaging"
 description = "Tools to handle packaging SEAMM"
 dynamic = ["version"]
 readme = "README.rst"
