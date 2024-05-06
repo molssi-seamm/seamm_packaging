@@ -31,7 +31,7 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          python -m packaging
+          python -m seamm_packaging
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else
@@ -50,3 +50,5 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+
