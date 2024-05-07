@@ -443,9 +443,7 @@ def upload_to_zenodo():
 
 def add_version(_id="10891078"):
     """Create a new record object for uploading a new version to Zenodo."""
-    print("in add_version")
     token = os.environ["ZENODO_TOKEN"]
-    print(f"{token=}")
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
@@ -453,13 +451,13 @@ def add_version(_id="10891078"):
 
     url = f"https://zenodo.org/api/deposit/depositions/{_id}/actions/newversion"
 
-    print(f"add_version {url=}")
-    print(headers)
+    logger.debug(f"add_version {url=}")
+    logger.debug(headers)
 
     response = requests.post(url, headers=headers)
 
-    print(f"{response.status_code=}")
-    print(f"\n{pprint.pformat(response.json())}")
+    logger.debug(f"{response.status_code=}")
+    logger.debug(f"\n{pprint.pformat(response.json())}")
 
     if response.status_code != 201:
         raise RuntimeError(
