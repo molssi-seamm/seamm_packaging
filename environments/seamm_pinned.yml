@@ -13,9 +13,9 @@ dependencies:
 
     # Core packages
 
-  - molsystem==2024.4.5
+  - molsystem==2024.5.6
   - reference-handler==0.9.1
-  - seamm==2024.5.1
+  - seamm==2024.5.3.1
   - seamm-dashboard==2024.3.27
   - seamm-datastore==2024.3.13
   - seamm-ff-util==2023.8.27
@@ -51,7 +51,7 @@ dependencies:
     - properties-step==2023.7.31
     - psi4-step==2024.3.17
     - qcarchive-step==2023.3.30
-    - quickmin-step==2023.11.15
+    - quickmin-step==2024.5.3
     - rdkit-step==2023.2.22
     - read-structure-step==2023.11.16
     - set-cell-step==2021.10.14

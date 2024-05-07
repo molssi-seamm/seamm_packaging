@@ -1,6 +1,7 @@
 {
-    "date": "2024-05-02T05:34:39.454261+00:00",
-    "doi": "10.5281/zenodo.7860696",
+    "conceptdoi": "10.5281/zenodo.7789853",
+    "date": "2024-05-07T09:02:21.032230+00:00",
+    "doi": "10.5281/zenodo.11125178",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -78,7 +79,7 @@
             "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.4.5"
+            "version": "2024.5.6"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -120,7 +121,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for simple, quick minimization",
             "type": "MolSSI plug-in",
-            "version": "2023.11.15"
+            "version": "2024.5.3"
         },
         "rdkit-step": {
             "channel": "pypi",
@@ -144,7 +145,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.5.1"
+            "version": "2024.5.3.1"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
