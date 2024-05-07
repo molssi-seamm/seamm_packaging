@@ -1,14 +1,10 @@
 # -*- coding: utf-8 -*-
 import json
 import logging
-import os
-from pathlib import Path
 import shlex
 import subprocess
 import sys
-import warnings
 
-import semver
 
 logger = logging.getLogger("seamm_packages")
 
