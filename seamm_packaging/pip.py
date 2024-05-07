@@ -2,10 +2,8 @@
 import logging
 import pprint
 import re
-import subprocess
 
 import requests
-import semver
 
 logger = logging.getLogger("seamm_packages")
 
