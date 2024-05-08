@@ -51,7 +51,7 @@ dependencies:
     - properties-step==2023.7.31
     - psi4-step==2024.3.17
     - qcarchive-step==2023.3.30
-    - quickmin-step==2024.5.3
+    - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
     - read-structure-step==2023.11.16
     - set-cell-step==2021.10.14

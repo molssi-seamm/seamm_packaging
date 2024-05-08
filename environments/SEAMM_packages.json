@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-05-07T09:02:21.032230+00:00",
-    "doi": "10.5281/zenodo.11125178",
+    "date": "2024-05-08T05:33:04.401245+00:00",
+    "doi": "10.5281/zenodo.11141315",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -121,7 +121,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for simple, quick minimization",
             "type": "MolSSI plug-in",
-            "version": "2024.5.3"
+            "version": "2024.5.7"
         },
         "rdkit-step": {
             "channel": "pypi",
