@@ -59,7 +59,7 @@ dependencies:
     - supercell-step==2023.11.5
     - table-step==2023.11.10
     - thermal-conductivity-step==2024.3.22
-    - torchani-step==2024.5.12
+    - torchani-step==2024.5.12.1
 
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
