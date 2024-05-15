@@ -46,7 +46,7 @@ dependencies:
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.3.22
     - loop-step==2023.11.9
-    - mopac-step==2024.3.17
+    - mopac-step==2024.5.14.2
     - packmol-step==2024.3.20.2
     - properties-step==2023.7.31
     - psi4-step==2024.3.17

@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-05-13T05:35:15.213474+00:00",
-    "doi": "10.5281/zenodo.11183385",
+    "date": "2024-05-15T05:34:19.970911+00:00",
+    "doi": "10.5281/zenodo.11195263",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -85,7 +85,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.3.17"
+            "version": "2024.5.14.2"
         },
         "packmol-step": {
             "channel": "pypi",
