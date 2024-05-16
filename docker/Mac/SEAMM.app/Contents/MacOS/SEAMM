@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Make the SEAMM directory if it doesn't exist
 directory=~/SEAMM
@@ -14,9 +14,38 @@ if [ ! -d ~/.seamm.d ]; then
     fi
 fi
 
-/usr/local/bin/docker run --pull always --rm --name SEAMM \
-		      --env "DISPLAY=host.docker.internal:0" \
-		      --network seamm-network \
-		      -v ~/SEAMM:/root/SEAMM \
-		      -v ~/.seamm.d:/root/.seamm.d \
-		      ghcr.io/molssi-seamm/seamm:latest &
+HAVE_NETWORK=$(/usr/local/bin/docker network ls | grep seamm-network)
+
+if [ "$PWD" == "/" ]; then
+    if [ -n "$HAVE_NETWORK" ]; then
+	/usr/local/bin/docker run --pull always --rm --name SEAMM \
+			      --env "DISPLAY=host.docker.internal:0" \
+			      --network seamm-network \
+			      -v ~/SEAMM:/root/SEAMM \
+			      -v ~/.seamm.d:/root/.seamm.d \
+			      ghcr.io/molssi-seamm/seamm:latest &
+    else
+	/usr/local/bin/docker run --pull always --rm --name SEAMM_Standalone \
+			      --env "DISPLAY=host.docker.internal:0" \
+			      -v ~/SEAMM:/root/SEAMM \
+			      -v ~/.seamm.d:/root/.seamm.d \
+			      ghcr.io/molssi-seamm/seamm:latest &
+    fi
+else
+    if [ -n "$HAVE_NETWORK" ]; then
+	/usr/local/bin/docker run --pull always --rm --name SEAMM \
+			      --env "DISPLAY=host.docker.internal:0" \
+			      --network seamm-network \
+			      -v ~/SEAMM:/root/SEAMM \
+			      -v ~/.seamm.d:/root/.seamm.d \
+			      -v $PWD:/home \
+			      ghcr.io/molssi-seamm/seamm:latest "$@"
+    else
+	/usr/local/bin/docker run --pull always --rm --name SEAMM_Standalone \
+			      --env "DISPLAY=host.docker.internal:0" \
+			      -v ~/SEAMM:/root/SEAMM \
+			      -v ~/.seamm.d:/root/.seamm.d \
+			      -v $PWD:/home \
+			      ghcr.io/molssi-seamm/seamm:latest "$@"
+    fi
+fi
