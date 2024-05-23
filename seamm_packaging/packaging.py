@@ -46,6 +46,7 @@ molssi_plug_ins = (
     "custom-step",
     "diffusivity-step",
     "dftbplus-step",
+    "energy-scan-step",
     "forcefield-step",
     "geometry-analysis-step",
     "fhi-aims-step",
