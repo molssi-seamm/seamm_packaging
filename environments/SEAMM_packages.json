@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-05-15T05:34:19.970911+00:00",
-    "doi": "10.5281/zenodo.11195263",
+    "date": "2024-05-23T19:24:47.685131+00:00",
+    "doi": "10.5281/zenodo.11266597",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -32,6 +32,12 @@
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
             "version": "2023.9.4"
+        },
+        "energy-scan-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
+            "type": "MolSSI plug-in",
+            "version": "2024.5.23"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -103,7 +109,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2024.3.17"
+            "version": "2024.5.23.2"
         },
         "pyxtal-step": {
             "channel": "pypi",

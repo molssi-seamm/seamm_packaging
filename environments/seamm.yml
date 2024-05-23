@@ -39,6 +39,7 @@ dependencies:
     - custom-step
     - dftbplus-step
     - diffusivity-step
+    - energy-scan-step
     - fhi-aims-step
     - forcefield-step
     - from-smiles-step
