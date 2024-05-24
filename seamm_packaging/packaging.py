@@ -322,14 +322,20 @@ dependencies:
   - psutil
     # The Dashboard fails with newer versions, so until fixed.
   - connexion<3.0
-
-    # Core packages
 """
-    ]
+]
+    if "qcarchive-step" in packages:
+        prelines += (
+            "    # qcportal requires apsw, which needs compiling and hence problems.\n"
+            "  - qcportal\n"
+        )
+
     # Creating the environment file with versions pinned
     lines = []
     lines.extend(prelines)
+
     # Core SEAMM packages
+    lines.append("\n# Core packages")
     for package, data in sorted(packages.items(), key=lambda x: x[0]):
         if data["type"] == "Core package" and data["channel"] == "conda-forge":
             lines.append(f"  - {package}=={data['version']}")
