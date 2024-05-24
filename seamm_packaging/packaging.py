@@ -443,6 +443,10 @@ def upload_to_zenodo():
         text = path.read_text()
         record.add_file(name, contents=text)
 
+    # Update the version in the deposit
+    version = int(record.version)
+    record.version = str(version + 1)
+
     # And, finally, can publish!
     record.publish()
 
@@ -651,6 +655,20 @@ class Record(collections.abc.Mapping):
                 f"{', '.join(upload_types.keys())}"
             )
         self.metadata["upload_type"] = value
+
+    @property
+    def version(self):
+        """The version for the record."""
+        if "version" not in self.metadata:
+            if "version" in self.data["metadata"]:
+                self.metadata["version"] = self.data["metadata"]["version"]
+            else:
+                return None
+        return self.metadata["version"]
+
+    @version.setter
+    def version(self, value):
+        self.metadata["version"] = value
 
     def add_creator(self, name, affiliation=None, orcid=None, ignore_duplicates=False):
         """Add a creator (author) to the record.
