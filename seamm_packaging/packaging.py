@@ -444,8 +444,10 @@ def upload_to_zenodo():
         record.add_file(name, contents=text)
 
     # Update the version in the deposit
-    version = int(record.version)
-    record.version = str(version + 1)
+    # version = int(record.version)
+    # record.version = str(version + 1)
+    # For some reason the version doesn't work...let's see what the record looks like.
+    print(record)
 
     # And, finally, can publish!
     record.publish()
