@@ -447,8 +447,8 @@ def upload_to_zenodo():
     print(record)
 
     # Update the version in the deposit
-    version = int(record.version)
-    record.version = str(version + 1)
+    # version = int(record.version)
+    # record.version = str(version + 1)
 
     # And, finally, can publish!
     record.publish()
