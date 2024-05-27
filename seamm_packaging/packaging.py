@@ -443,11 +443,12 @@ def upload_to_zenodo():
         text = path.read_text()
         record.add_file(name, contents=text)
 
-    # Update the version in the deposit
-    # version = int(record.version)
-    # record.version = str(version + 1)
     # For some reason the version doesn't work...let's see what the record looks like.
     print(record)
+
+    # Update the version in the deposit
+    version = int(record.version)
+    record.version = str(version + 1)
 
     # And, finally, can publish!
     record.publish()
@@ -479,6 +480,10 @@ def add_version(_id="10891078"):
         )
 
     result = response.json()
+
+    print("\n\n\nInitial response in add_version")
+    print(pprint.pformat(result))
+    print("\n\n\n")
 
     # The result is for the original DOI, so get the data for the new one
     url = result["links"]["latest_draft"]
@@ -941,3 +946,4 @@ class Record(collections.abc.Mapping):
 
         self.data = response.json()
         self.metadata = {}
+    
