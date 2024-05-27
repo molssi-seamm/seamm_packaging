@@ -325,7 +325,7 @@ dependencies:
 """
 ]
     if "qcarchive-step" in packages:
-        prelines += (
+        prelines.append(
             "    # qcportal requires apsw, which needs compiling and hence problems.\n"
             "  - qcportal\n"
         )
