@@ -10,13 +10,15 @@ dependencies:
   - psutil
     # The Dashboard fails with newer versions, so until fixed.
   - connexion<3.0
-  # qcportal requires apsw, which needs compiling and hence problems.
+
+    # qcportal requires apsw, which needs compiling and hence problems.
   - qcportal
+
 
 # Core packages
   - molsystem==2024.5.8
   - reference-handler==0.9.1
-  - seamm==2024.5.26
+  - seamm==2024.5.27
   - seamm-dashboard==2024.5.24
   - seamm-datastore==2024.3.13
   - seamm-ff-util==2023.8.27
@@ -44,7 +46,7 @@ dependencies:
     - fhi-aims-step==2024.1.19
     - forcefield-step==2024.1.10
     - from-smiles-step==2023.11.10
-    - gaussian-step==2024.5.8
+    - gaussian-step==2024.5.27
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.3.22
     - loop-step==2023.11.9

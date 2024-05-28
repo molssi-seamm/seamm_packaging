@@ -10,9 +10,10 @@ dependencies:
   - psutil
     # The Dashboard fails with newer versions, so until fixed.
   - connexion<3.0
-  # qcportal requires apsw, which needs compiling and hence problems.
+
+    # qcportal requires apsw, which needs compiling and hence problems.
   - qcportal
- 
+
   - molsystem
   - reference-handler
   - seamm
