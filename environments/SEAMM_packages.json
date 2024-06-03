@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-06-01T05:35:07.639264+00:00",
-    "doi": "10.5281/zenodo.11407414",
+    "date": "2024-06-03T05:37:18.067001+00:00",
+    "doi": "10.5281/zenodo.11438548",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -154,16 +154,16 @@
             "version": "2024.5.27"
         },
         "seamm-dashboard": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2024.5.24"
+            "version": "2024.6.2"
         },
         "seamm-datastore": {
             "channel": "conda-forge",
             "description": "seamm_datastore",
             "type": "Core package",
-            "version": "2024.3.13"
+            "version": "2024.6.2"
         },
         "seamm-exec": {
             "channel": "pypi",
