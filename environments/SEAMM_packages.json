@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-06-03T05:37:18.067001+00:00",
-    "doi": "10.5281/zenodo.11438548",
+    "date": "2024-06-04T05:37:35.533525+00:00",
+    "doi": "10.5281/zenodo.11467137",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -31,7 +31,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.5.26"
+            "version": "2024.6.3"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -154,7 +154,7 @@
             "version": "2024.5.27"
         },
         "seamm-dashboard": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
             "version": "2024.6.2"
@@ -229,7 +229,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Thermal Conductivity",
             "type": "MolSSI plug-in",
-            "version": "2024.3.22"
+            "version": "2024.6.3"
         },
         "torchani-step": {
             "channel": "pypi",

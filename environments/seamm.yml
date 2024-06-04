@@ -17,6 +17,7 @@ dependencies:
   - molsystem
   - reference-handler
   - seamm
+  - seamm-dashboard
   - seamm-datastore
   - seamm-ff-util
   - seamm-installer
@@ -30,7 +31,6 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-dashboard
     - seamm-exec
     - seamm-jobserver
 
