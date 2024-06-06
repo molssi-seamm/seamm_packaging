@@ -23,7 +23,7 @@ dependencies:
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2023.8.27
   - seamm-installer==2024.4.22
-  - seamm-util==2024.4.30
+  - seamm-util==2024.6.5
   - seamm-widgets==2024.5.1
 
     # MolSSI plug-ins
@@ -33,7 +33,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm-exec==2024.4.25.3
+    - seamm-exec==2024.6.5
     - seamm-jobserver==2024.3.12
 
     # MolSSI plug-ins
@@ -46,7 +46,7 @@ dependencies:
     - fhi-aims-step==2024.1.19
     - forcefield-step==2024.1.10
     - from-smiles-step==2023.11.10
-    - gaussian-step==2024.5.31
+    - gaussian-step==2024.6.5
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.3.22
     - loop-step==2023.11.9

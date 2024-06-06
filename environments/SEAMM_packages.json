@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-06-04T05:37:35.533525+00:00",
-    "doi": "10.5281/zenodo.11467137",
+    "date": "2024-06-06T05:36:16.858234+00:00",
+    "doi": "10.5281/zenodo.11499004",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.5.31"
+            "version": "2024.6.5"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -169,7 +169,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.4.25.3"
+            "version": "2024.6.5"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -193,7 +193,7 @@
             "channel": "conda-forge",
             "description": "seamm_util",
             "type": "Core package",
-            "version": "2024.4.30"
+            "version": "2024.6.5"
         },
         "seamm-widgets": {
             "channel": "conda-forge",
