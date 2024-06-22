@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-06-06T05:36:16.858234+00:00",
-    "doi": "10.5281/zenodo.11499004",
+    "date": "2024-06-22T05:36:50.032276+00:00",
+    "doi": "10.5281/zenodo.12221535",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -85,7 +85,7 @@
             "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.5.8"
+            "version": "2024.6.21"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -97,7 +97,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2024.3.20.2"
+            "version": "2024.6.21.2"
         },
         "properties-step": {
             "channel": "pypi",
