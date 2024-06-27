@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-06-22T05:36:50.032276+00:00",
-    "doi": "10.5281/zenodo.12221535",
+    "date": "2024-06-27T05:36:50.719117+00:00",
+    "doi": "10.5281/zenodo.12563002",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -148,10 +148,10 @@
             "version": "0.9.1"
         },
         "seamm": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.5.27"
+            "version": "2024.6.27"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -169,7 +169,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.6.5"
+            "version": "2024.6.27"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
