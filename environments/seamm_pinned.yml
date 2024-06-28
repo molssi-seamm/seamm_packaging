@@ -18,11 +18,12 @@ dependencies:
 # Core packages
   - molsystem==2024.6.21
   - reference-handler==0.9.1
+  - seamm==2024.6.27
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2023.8.27
   - seamm-installer==2024.4.22
-  - seamm-util==2024.6.5
+  - seamm-util==2024.6.27
   - seamm-widgets==2024.5.1
 
     # MolSSI plug-ins
@@ -32,7 +33,6 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm==2024.6.27
     - seamm-exec==2024.6.27
     - seamm-jobserver==2024.3.12
 
