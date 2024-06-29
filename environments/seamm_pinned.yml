@@ -21,7 +21,7 @@ dependencies:
   - seamm==2024.6.27
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
-  - seamm-ff-util==2023.8.27
+  - seamm-ff-util==2024.6.27
   - seamm-installer==2024.4.22
   - seamm-util==2024.6.27
   - seamm-widgets==2024.5.1
@@ -48,7 +48,7 @@ dependencies:
     - from-smiles-step==2023.11.10
     - gaussian-step==2024.6.5
     - geometry-analysis-step==2023.1.14
-    - lammps-step==2024.3.22
+    - lammps-step==2024.6.28.1
     - loop-step==2023.11.9
     - mopac-step==2024.5.14.2
     - packmol-step==2024.6.21.2
