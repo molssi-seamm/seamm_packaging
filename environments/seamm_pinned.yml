@@ -44,14 +44,14 @@ dependencies:
     - diffusivity-step==2024.6.3
     - energy-scan-step==2024.5.23
     - fhi-aims-step==2024.1.19
-    - forcefield-step==2024.1.10
+    - forcefield-step==2024.6.29.1
     - from-smiles-step==2023.11.10
     - gaussian-step==2024.6.5
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.6.28.1
     - loop-step==2023.11.9
     - mopac-step==2024.5.14.2
-    - packmol-step==2024.6.21.2
+    - packmol-step==2024.6.29
     - properties-step==2023.7.31
     - psi4-step==2024.5.23.3
     - qcarchive-step==2023.3.30
