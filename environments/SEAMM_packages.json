@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-01T05:36:24.661776+00:00",
-    "doi": "10.5281/zenodo.12603772",
+    "date": "2024-07-05T05:33:38.519162+00:00",
+    "doi": "10.5281/zenodo.12662230",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -31,7 +31,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.6.3"
+            "version": "2024.7.4"
         },
         "energy-scan-step": {
             "channel": "pypi",
