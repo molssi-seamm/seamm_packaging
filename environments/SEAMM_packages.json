@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-16T05:32:38.734309+00:00",
-    "doi": "10.5281/zenodo.12747707",
+    "date": "2024-07-22T05:34:24.577034+00:00",
+    "doi": "10.5281/zenodo.12792449",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -31,7 +31,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.7.15"
+            "version": "2024.7.21"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -73,7 +73,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics code.",
             "type": "MolSSI plug-in",
-            "version": "2024.6.28.1"
+            "version": "2024.7.21.1"
         },
         "loop-step": {
             "channel": "pypi",
@@ -151,7 +151,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.6.27"
+            "version": "2024.7.21"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -199,7 +199,7 @@
             "channel": "conda-forge",
             "description": "seamm_widgets",
             "type": "Core package",
-            "version": "2024.5.1"
+            "version": "2024.7.21"
         },
         "set-cell-step": {
             "channel": "pypi",
