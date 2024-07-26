@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-22T05:34:24.577034+00:00",
-    "doi": "10.5281/zenodo.12792449",
+    "date": "2024-07-26T05:34:20.589357+00:00",
+    "doi": "10.5281/zenodo.12890258",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -73,7 +73,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics code.",
             "type": "MolSSI plug-in",
-            "version": "2024.7.21.1"
+            "version": "2024.7.25"
         },
         "loop-step": {
             "channel": "pypi",
@@ -97,7 +97,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2024.6.29"
+            "version": "2024.7.25"
         },
         "properties-step": {
             "channel": "pypi",
@@ -169,7 +169,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.6.27"
+            "version": "2024.7.25"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -193,7 +193,7 @@
             "channel": "conda-forge",
             "description": "seamm_util",
             "type": "Core package",
-            "version": "2024.7.15"
+            "version": "2024.7.25"
         },
         "seamm-widgets": {
             "channel": "conda-forge",
