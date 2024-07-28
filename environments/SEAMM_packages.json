@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-26T05:34:20.589357+00:00",
-    "doi": "10.5281/zenodo.12890258",
+    "date": "2024-07-28T05:34:57.034292+00:00",
+    "doi": "10.5281/zenodo.13118054",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.6.5"
+            "version": "2024.7.27"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -142,7 +142,7 @@
             "version": "2023.11.16"
         },
         "reference-handler": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "no description given",
             "type": "Core package",
             "version": "0.9.1"

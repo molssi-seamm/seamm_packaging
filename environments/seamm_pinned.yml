@@ -17,7 +17,6 @@ dependencies:
 
 # Core packages
   - molsystem==2024.6.21
-  - reference-handler==0.9.1
   - seamm==2024.7.21
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -33,6 +32,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
+    - reference-handler==0.9.1
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
 
@@ -46,7 +46,7 @@ dependencies:
     - fhi-aims-step==2024.1.19
     - forcefield-step==2024.6.30
     - from-smiles-step==2023.11.10
-    - gaussian-step==2024.6.5
+    - gaussian-step==2024.7.27
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.25
     - loop-step==2023.11.9

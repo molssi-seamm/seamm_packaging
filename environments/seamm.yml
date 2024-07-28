@@ -15,7 +15,6 @@ dependencies:
   - qcportal
 
   - molsystem
-  - reference-handler
   - seamm
   - seamm-dashboard
   - seamm-datastore
@@ -31,6 +30,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
+    - reference-handler
     - seamm-exec
     - seamm-jobserver
 
