@@ -60,7 +60,7 @@ jobs:
         with:
           context: ./environments
           file: ./environments/SEAMM_Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ${{ steps.meta-seamm.outputs.tags }}
           annotations: ${{ steps.meta-seamm.outputs.annotations }}
@@ -87,7 +87,7 @@ jobs:
         with:
           context: ./environments
           file: ./environments/RunFlowchart_Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ${{ steps.meta-runflowchart.outputs.tags }}
           annotations: ${{ steps.meta-runflowchart.outputs.annotations }}
@@ -114,7 +114,7 @@ jobs:
         with:
           context: ./environments
           file: ./environments/JobServer_Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ${{ steps.meta-jobserver.outputs.tags }}
           annotations: ${{ steps.meta-jobserver.outputs.annotations }}
@@ -141,7 +141,7 @@ jobs:
         with:
           context: ./environments
           file: ./environments/Dashboard_Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: ${{ steps.meta-dashboard.outputs.tags }}
           annotations: ${{ steps.meta-dashboard.outputs.annotations }}
