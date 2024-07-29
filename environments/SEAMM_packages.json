@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-28T05:34:57.034292+00:00",
-    "doi": "10.5281/zenodo.13118054",
+    "date": "2024-07-29T05:35:02.746988+00:00",
+    "doi": "10.5281/zenodo.13120060",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.9"
+            "version": "2024.7.28"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -139,10 +139,10 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read common formats in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2023.11.16"
+            "version": "2024.7.28"
         },
         "reference-handler": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "no description given",
             "type": "Core package",
             "version": "0.9.1"
@@ -151,7 +151,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.7.21"
+            "version": "2024.7.28"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",

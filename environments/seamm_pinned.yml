@@ -17,7 +17,8 @@ dependencies:
 
 # Core packages
   - molsystem==2024.6.21
-  - seamm==2024.7.21
+  - reference-handler==0.9.1
+  - seamm==2024.7.28
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
@@ -32,7 +33,6 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - reference-handler==0.9.1
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
 
@@ -49,7 +49,7 @@ dependencies:
     - gaussian-step==2024.7.27
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.25
-    - loop-step==2023.11.9
+    - loop-step==2024.7.28
     - mopac-step==2024.5.14.2
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
@@ -57,7 +57,7 @@ dependencies:
     - qcarchive-step==2023.3.30
     - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
-    - read-structure-step==2023.11.16
+    - read-structure-step==2024.7.28
     - set-cell-step==2021.10.14
     - strain-step==2022.11.7
     - supercell-step==2023.11.5
