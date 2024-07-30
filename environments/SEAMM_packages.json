@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-29T05:35:02.746988+00:00",
-    "doi": "10.5281/zenodo.13120060",
+    "date": "2024-07-30T05:34:48.979345+00:00",
+    "doi": "10.5281/zenodo.13131974",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -25,7 +25,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2024.4.24"
+            "version": "2024.7.29"
         },
         "diffusivity-step": {
             "channel": "pypi",
@@ -91,7 +91,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.5.14.2"
+            "version": "2024.7.29"
         },
         "packmol-step": {
             "channel": "pypi",

@@ -40,7 +40,7 @@ dependencies:
     - control-parameters-step==2023.11.15
     - crystal-builder-step==2022.7.31
     - custom-step==2023.12.12
-    - dftbplus-step==2024.4.24
+    - dftbplus-step==2024.7.29
     - diffusivity-step==2024.7.21
     - energy-scan-step==2024.5.23
     - fhi-aims-step==2024.1.19
@@ -50,7 +50,7 @@ dependencies:
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.25
     - loop-step==2024.7.28
-    - mopac-step==2024.5.14.2
+    - mopac-step==2024.7.29
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
     - psi4-step==2024.5.23.3
