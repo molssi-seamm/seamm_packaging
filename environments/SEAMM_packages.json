@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-07-30T05:34:48.979345+00:00",
-    "doi": "10.5281/zenodo.13131974",
+    "date": "2024-07-31T05:32:41.970871+00:00",
+    "doi": "10.5281/zenodo.13140587",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -25,13 +25,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2024.7.29"
+            "version": "2024.7.30"
         },
         "diffusivity-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.7.21"
+            "version": "2024.7.30.1"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -43,7 +43,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for FHI-aims",
             "type": "MolSSI plug-in",
-            "version": "2024.1.19"
+            "version": "2024.7.30"
         },
         "forcefield-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.7.28"
+            "version": "2024.7.30"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -109,7 +109,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2024.5.23.3"
+            "version": "2024.7.30"
         },
         "pyxtal-step": {
             "channel": "pypi",
