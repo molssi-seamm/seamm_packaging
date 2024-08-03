@@ -23,7 +23,6 @@ dependencies:
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
   - seamm-installer==2024.4.22
-  - seamm-util==2024.7.25
   - seamm-widgets==2024.7.21
 
     # MolSSI plug-ins
@@ -35,6 +34,7 @@ dependencies:
     # Core packages
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
+    - seamm-util==2024.8.1
 
     # MolSSI plug-ins
     - control-parameters-step==2023.11.15
@@ -67,3 +67,4 @@ dependencies:
 
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
+    - seamm-ase==2024.8.2.1
