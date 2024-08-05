@@ -66,3 +66,4 @@ dependencies:
     # 3rd-party plug-ins
     - pyxtal-step
     - seamm-ase
+    - structure-step

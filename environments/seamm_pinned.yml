@@ -68,3 +68,4 @@ dependencies:
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
     - seamm-ase==2024.8.2.1
+    - structure-step==2024.8.4
