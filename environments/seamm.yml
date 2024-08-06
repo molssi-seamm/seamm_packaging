@@ -14,7 +14,6 @@ dependencies:
     # qcportal requires apsw, which needs compiling and hence problems.
   - qcportal
 
-  - molsystem
   - reference-handler
   - seamm
   - seamm-dashboard
@@ -31,6 +30,7 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
+    - molsystem
     - seamm-exec
     - seamm-jobserver
 
