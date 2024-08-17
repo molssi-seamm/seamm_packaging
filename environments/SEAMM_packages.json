@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-08-06T05:37:11.860021+00:00",
-    "doi": "10.5281/zenodo.13234105",
+    "date": "2024-08-17T05:37:39.372894+00:00",
+    "doi": "10.5281/zenodo.13334934",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30"
+            "version": "2024.8.16"
         },
         "molsystem": {
             "channel": "pypi",

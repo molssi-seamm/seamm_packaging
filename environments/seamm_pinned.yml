@@ -49,7 +49,7 @@ dependencies:
     - gaussian-step==2024.7.27
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.31
-    - loop-step==2024.7.30
+    - loop-step==2024.8.16
     - mopac-step==2024.7.29
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
