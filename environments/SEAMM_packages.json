@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-08-17T05:37:39.372894+00:00",
-    "doi": "10.5281/zenodo.13334934",
+    "date": "2024-08-18T05:37:20.279041+00:00",
+    "doi": "10.5281/zenodo.13337187",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -85,13 +85,13 @@
             "channel": "pypi",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.8.5"
+            "version": "2024.8.17"
         },
         "mopac-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.7.29"
+            "version": "2024.8.17"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -148,16 +148,16 @@
             "version": "0.9.1"
         },
         "seamm": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.7.28"
+            "version": "2024.8.17"
         },
         "seamm-ase": {
             "channel": "pypi",
             "description": "Connector between SEAMM and ASE",
             "type": "3rd-party plug-in",
-            "version": "2024.8.2.1"
+            "version": "2024.8.17"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",

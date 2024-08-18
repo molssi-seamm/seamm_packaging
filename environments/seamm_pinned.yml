@@ -17,7 +17,6 @@ dependencies:
 
 # Core packages
   - reference-handler==0.9.1
-  - seamm==2024.7.28
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
@@ -32,7 +31,8 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - molsystem==2024.8.5
+    - molsystem==2024.8.17
+    - seamm==2024.8.17
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
 
@@ -50,7 +50,7 @@ dependencies:
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.31
     - loop-step==2024.8.16
-    - mopac-step==2024.7.29
+    - mopac-step==2024.8.17
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
     - psi4-step==2024.7.30
@@ -67,5 +67,5 @@ dependencies:
 
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
-    - seamm-ase==2024.8.2.1
+    - seamm-ase==2024.8.17
     - structure-step==2024.8.4
