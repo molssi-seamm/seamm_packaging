@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-08-18T05:37:20.279041+00:00",
-    "doi": "10.5281/zenodo.13337187",
+    "date": "2024-08-19T05:35:48.355145+00:00",
+    "doi": "10.5281/zenodo.13340579",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -82,7 +82,7 @@
             "version": "2024.8.16"
         },
         "molsystem": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
             "version": "2024.8.17"
@@ -148,7 +148,7 @@
             "version": "0.9.1"
         },
         "seamm": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
             "version": "2024.8.17"
