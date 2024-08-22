@@ -18,7 +18,7 @@ dependencies:
 # Core packages
   - molsystem==2024.8.17
   - reference-handler==0.9.1
-  - seamm==2024.8.17
+  - seamm==2024.8.21
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
@@ -49,8 +49,8 @@ dependencies:
     - gaussian-step==2024.7.27
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.7.31
-    - loop-step==2024.8.16
-    - mopac-step==2024.8.17
+    - loop-step==2024.8.21
+    - mopac-step==2024.8.21
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
     - psi4-step==2024.7.30
