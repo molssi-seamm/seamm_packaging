@@ -23,7 +23,7 @@ dependencies:
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
   - seamm-installer==2024.4.22
-  - seamm-util==2024.8.1
+  - seamm-util==2024.8.22
   - seamm-widgets==2024.7.21
 
     # MolSSI plug-ins
@@ -48,7 +48,7 @@ dependencies:
     - from-smiles-step==2023.11.10
     - gaussian-step==2024.7.27
     - geometry-analysis-step==2023.1.14
-    - lammps-step==2024.7.31
+    - lammps-step==2024.8.22
     - loop-step==2024.8.21
     - mopac-step==2024.8.21
     - packmol-step==2024.7.25
