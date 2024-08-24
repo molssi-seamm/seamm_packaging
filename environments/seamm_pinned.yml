@@ -46,10 +46,10 @@ dependencies:
     - fhi-aims-step==2024.7.30
     - forcefield-step==2024.6.30
     - from-smiles-step==2023.11.10
-    - gaussian-step==2024.7.27
+    - gaussian-step==2024.8.23
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.8.22
-    - loop-step==2024.8.21
+    - loop-step==2024.8.23
     - mopac-step==2024.8.21
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
@@ -57,7 +57,7 @@ dependencies:
     - qcarchive-step==2023.3.30
     - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
-    - read-structure-step==2024.7.28
+    - read-structure-step==2024.8.23
     - set-cell-step==2021.10.14
     - strain-step==2022.11.7
     - supercell-step==2023.11.5
