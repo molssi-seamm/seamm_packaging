@@ -53,7 +53,7 @@ dependencies:
     - mopac-step==2024.8.21
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
-    - psi4-step==2024.7.30
+    - psi4-step==2024.10.5
     - qcarchive-step==2023.3.30
     - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
