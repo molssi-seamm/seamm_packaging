@@ -18,7 +18,7 @@ dependencies:
 # Core packages
   - molsystem==2024.10.1
   - reference-handler==0.9.1
-  - seamm==2024.8.21
+  - seamm==2024.10.13
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
@@ -68,4 +68,5 @@ dependencies:
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
     - seamm-ase==2024.8.17
-    - structure-step==2024.8.4
+    - seamm-geometric==2024.10.13
+    - structure-step==2024.10.13
