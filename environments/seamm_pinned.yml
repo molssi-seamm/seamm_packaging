@@ -46,14 +46,14 @@ dependencies:
     - fhi-aims-step==2024.7.30
     - forcefield-step==2024.6.30
     - from-smiles-step==2023.11.10
-    - gaussian-step==2024.10.10
+    - gaussian-step==2024.10.15
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.8.22
-    - loop-step==2024.8.23
-    - mopac-step==2024.8.21
+    - loop-step==2024.10.15
+    - mopac-step==2024.10.15
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
-    - psi4-step==2024.10.5
+    - psi4-step==2024.10.15
     - qcarchive-step==2023.3.30
     - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
@@ -63,10 +63,10 @@ dependencies:
     - supercell-step==2023.11.5
     - table-step==2023.11.10
     - thermal-conductivity-step==2024.6.3
-    - torchani-step==2024.5.12.1
+    - torchani-step==2024.10.15
 
     # 3rd-party plug-ins
     - pyxtal-step==2021.7.29
     - seamm-ase==2024.8.17
-    - seamm-geometric==2024.10.13
-    - structure-step==2024.10.13
+    - seamm-geometric==2024.10.15
+    - structure-step==2024.10.15

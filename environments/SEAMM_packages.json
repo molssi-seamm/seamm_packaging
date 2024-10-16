@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-10-14T05:39:19.860599+00:00",
-    "doi": "10.5281/zenodo.13927313",
+    "date": "2024-10-16T05:39:33.613636+00:00",
+    "doi": "10.5281/zenodo.13937939",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.10.10"
+            "version": "2024.10.15"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.8.23"
+            "version": "2024.10.15"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -91,7 +91,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.8.21"
+            "version": "2024.10.15"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -109,7 +109,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2024.10.5"
+            "version": "2024.10.15"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -187,7 +187,7 @@
             "channel": "pypi",
             "description": "geomeTRIC connector for SEAMM",
             "type": "3rd-party plug-in",
-            "version": "2024.10.13"
+            "version": "2024.10.15"
         },
         "seamm-installer": {
             "channel": "conda-forge",
@@ -229,7 +229,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for energy optimized structures",
             "type": "3rd-party plug-in",
-            "version": "2024.10.13"
+            "version": "2024.10.15"
         },
         "supercell-step": {
             "channel": "pypi",
@@ -253,7 +253,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for TorchANI",
             "type": "MolSSI plug-in",
-            "version": "2024.5.12.1"
+            "version": "2024.10.15"
         }
     }
 }
