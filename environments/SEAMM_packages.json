@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-10-16T05:39:33.613636+00:00",
-    "doi": "10.5281/zenodo.13937939",
+    "date": "2024-10-21T05:39:35.784853+00:00",
+    "doi": "10.5281/zenodo.13959100",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -25,7 +25,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30"
+            "version": "2024.10.20"
         },
         "diffusivity-step": {
             "channel": "pypi",
@@ -151,13 +151,13 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.10.13"
+            "version": "2024.10.20"
         },
         "seamm-ase": {
             "channel": "pypi",
             "description": "Connector between SEAMM and ASE",
             "type": "3rd-party plug-in",
-            "version": "2024.8.17"
+            "version": "2024.10.20"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -187,7 +187,7 @@
             "channel": "pypi",
             "description": "geomeTRIC connector for SEAMM",
             "type": "3rd-party plug-in",
-            "version": "2024.10.15"
+            "version": "2024.10.20"
         },
         "seamm-installer": {
             "channel": "conda-forge",
@@ -202,7 +202,7 @@
             "version": "2024.3.12"
         },
         "seamm-util": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "seamm_util",
             "type": "Core package",
             "version": "2024.8.22"
@@ -229,7 +229,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for energy optimized structures",
             "type": "3rd-party plug-in",
-            "version": "2024.10.15"
+            "version": "2024.10.24"
         },
         "supercell-step": {
             "channel": "pypi",
