@@ -21,6 +21,7 @@ dependencies:
   - seamm-datastore
   - seamm-ff-util
   - seamm-installer
+  - seamm-util
   - seamm-widgets
 
     # MolSSI plug-ins
@@ -32,7 +33,6 @@ dependencies:
     # Core packages
     - seamm-exec
     - seamm-jobserver
-    - seamm-util
 
     # MolSSI plug-ins
     - control-parameters-step

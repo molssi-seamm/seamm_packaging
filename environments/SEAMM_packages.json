@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-10-21T05:39:35.784853+00:00",
-    "doi": "10.5281/zenodo.13959100",
+    "date": "2024-10-22T05:38:50.275301+00:00",
+    "doi": "10.5281/zenodo.13968537",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -202,7 +202,7 @@
             "version": "2024.3.12"
         },
         "seamm-util": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "seamm_util",
             "type": "Core package",
             "version": "2024.8.22"

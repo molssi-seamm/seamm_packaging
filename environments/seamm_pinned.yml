@@ -23,6 +23,7 @@ dependencies:
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
   - seamm-installer==2024.4.22
+  - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
 
     # MolSSI plug-ins
@@ -34,7 +35,6 @@ dependencies:
     # Core packages
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
-    - seamm-util==2024.8.22
 
     # MolSSI plug-ins
     - control-parameters-step==2023.11.15
