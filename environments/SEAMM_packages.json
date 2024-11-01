@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-10-22T05:38:50.275301+00:00",
-    "doi": "10.5281/zenodo.13968537",
+    "date": "2024-11-01T05:40:15.686134+00:00",
+    "doi": "10.5281/zenodo.14020998",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -43,7 +43,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for FHI-aims",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30"
+            "version": "2024.10.31"
         },
         "forcefield-step": {
             "channel": "pypi",
@@ -55,7 +55,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for creating structures from a SMILES string.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.10"
+            "version": "2024.10.31"
         },
         "gaussian-step": {
             "channel": "pypi",

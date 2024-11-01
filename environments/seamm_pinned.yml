@@ -43,9 +43,9 @@ dependencies:
     - dftbplus-step==2024.10.20
     - diffusivity-step==2024.7.30.1
     - energy-scan-step==2024.5.23
-    - fhi-aims-step==2024.7.30
+    - fhi-aims-step==2024.10.31
     - forcefield-step==2024.6.30
-    - from-smiles-step==2023.11.10
+    - from-smiles-step==2024.10.31
     - gaussian-step==2024.10.15
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.8.22
