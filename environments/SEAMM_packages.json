@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-01T05:40:15.686134+00:00",
-    "doi": "10.5281/zenodo.14020998",
+    "date": "2024-11-02T05:39:03.991692+00:00",
+    "doi": "10.5281/zenodo.14027774",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -148,10 +148,10 @@
             "version": "0.9.1"
         },
         "seamm": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.10.20"
+            "version": "2024.11.1"
         },
         "seamm-ase": {
             "channel": "pypi",
