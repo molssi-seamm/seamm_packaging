@@ -18,6 +18,7 @@ dependencies:
 # Core packages
   - molsystem==2024.10.1
   - reference-handler==0.9.1
+  - seamm==2024.11.3
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2024.6.27
@@ -32,7 +33,6 @@ dependencies:
     # PyPi packages
   - pip:
     # Core packages
-    - seamm==2024.11.1
     - seamm-exec==2024.7.25
     - seamm-jobserver==2024.3.12
 
@@ -57,7 +57,7 @@ dependencies:
     - qcarchive-step==2023.3.30
     - quickmin-step==2024.5.7
     - rdkit-step==2023.2.22
-    - read-structure-step==2024.8.23
+    - read-structure-step==2024.11.3
     - set-cell-step==2021.10.14
     - strain-step==2022.11.7
     - supercell-step==2023.11.5

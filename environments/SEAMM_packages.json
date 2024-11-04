@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-02T05:39:03.991692+00:00",
-    "doi": "10.5281/zenodo.14027774",
+    "date": "2024-11-04T05:40:07.668644+00:00",
+    "doi": "10.5281/zenodo.14032538",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -139,7 +139,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read common formats in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2024.8.23"
+            "version": "2024.11.3"
         },
         "reference-handler": {
             "channel": "conda-forge",
@@ -148,10 +148,10 @@
             "version": "0.9.1"
         },
         "seamm": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.11.1"
+            "version": "2024.11.3"
         },
         "seamm-ase": {
             "channel": "pypi",
