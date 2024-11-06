@@ -68,3 +68,4 @@ dependencies:
     - seamm-ase
     - seamm-geometric
     - structure-step
+    - subflowchart-step

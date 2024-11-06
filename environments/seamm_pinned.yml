@@ -70,3 +70,4 @@ dependencies:
     - seamm-ase==2024.10.20
     - seamm-geometric==2024.10.20
     - structure-step==2024.10.24
+    - subflowchart-step==2024.11.5

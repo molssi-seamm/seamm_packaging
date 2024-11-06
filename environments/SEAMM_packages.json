@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-04T05:40:07.668644+00:00",
-    "doi": "10.5281/zenodo.14032538",
+    "date": "2024-11-06T05:39:55.852628+00:00",
+    "doi": "10.5281/zenodo.14043499",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -230,6 +230,12 @@
             "description": "A SEAMM plug-in for energy optimized structures",
             "type": "3rd-party plug-in",
             "version": "2024.10.24"
+        },
+        "subflowchart-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for subflowcharts",
+            "type": "3rd-party plug-in",
+            "version": "2024.11.5"
         },
         "supercell-step": {
             "channel": "pypi",
