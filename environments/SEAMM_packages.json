@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-06T05:39:55.852628+00:00",
-    "doi": "10.5281/zenodo.14043499",
+    "date": "2024-11-14T05:39:47.384779+00:00",
+    "doi": "10.5281/zenodo.14160119",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -85,7 +85,7 @@
             "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.10.1"
+            "version": "2024.11.12"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -139,7 +139,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read common formats in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2024.11.3"
+            "version": "2024.11.13"
         },
         "reference-handler": {
             "channel": "conda-forge",
