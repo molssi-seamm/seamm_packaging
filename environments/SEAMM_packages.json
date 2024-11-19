@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-15T05:40:05.967080+00:00",
-    "doi": "10.5281/zenodo.14166900",
+    "date": "2024-11-19T05:39:56.409265+00:00",
+    "doi": "10.5281/zenodo.14184184",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.11.14"
+            "version": "2024.11.18"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -235,7 +235,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for subflowcharts",
             "type": "3rd-party plug-in",
-            "version": "2024.11.5"
+            "version": "2024.11.18"
         },
         "supercell-step": {
             "channel": "pypi",
