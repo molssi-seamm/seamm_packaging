@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-19T05:39:56.409265+00:00",
-    "doi": "10.5281/zenodo.14184184",
+    "date": "2024-11-20T05:39:39.986054+00:00",
+    "doi": "10.5281/zenodo.14189962",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.10.15"
+            "version": "2024.11.18"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -79,7 +79,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.11.18"
+            "version": "2024.11.19"
         },
         "molsystem": {
             "channel": "conda-forge",

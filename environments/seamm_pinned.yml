@@ -46,10 +46,10 @@ dependencies:
     - fhi-aims-step==2024.10.31
     - forcefield-step==2024.6.30
     - from-smiles-step==2024.10.31
-    - gaussian-step==2024.10.15
+    - gaussian-step==2024.11.18
     - geometry-analysis-step==2023.1.14
     - lammps-step==2024.8.22
-    - loop-step==2024.11.18
+    - loop-step==2024.11.19
     - mopac-step==2024.10.15
     - packmol-step==2024.7.25
     - properties-step==2023.7.31
