@@ -16,7 +16,7 @@ dependencies:
 
 
 # Core packages
-  - molsystem==2024.11.23
+  - molsystem==2024.11.27.1
   - reference-handler==0.9.1
   - seamm==2024.11.3
   - seamm-dashboard==2024.6.2

@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-25T05:40:45.710064+00:00",
-    "doi": "10.5281/zenodo.14214101",
+    "date": "2024-11-28T05:41:48.165685+00:00",
+    "doi": "10.5281/zenodo.14233549",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -85,7 +85,7 @@
             "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.11.23"
+            "version": "2024.11.27.1"
         },
         "mopac-step": {
             "channel": "pypi",
