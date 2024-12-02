@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-11-30T05:39:35.399661+00:00",
-    "doi": "10.5281/zenodo.14249269",
+    "date": "2024-12-02T05:41:08.909305+00:00",
+    "doi": "10.5281/zenodo.14257716",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.11.18"
+            "version": "2024.12.1.1"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
