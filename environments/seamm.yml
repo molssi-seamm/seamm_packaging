@@ -15,11 +15,8 @@ dependencies:
   - qcportal
 
   - molsystem
-  - reference-handler
   - seamm
-  - seamm-dashboard
   - seamm-datastore
-  - seamm-ff-util
   - seamm-installer
   - seamm-util
   - seamm-widgets
@@ -27,11 +24,14 @@ dependencies:
     # MolSSI plug-ins
 
     # 3rd-party plug-ins
+  - seamm-dashboard
 
     # PyPi packages
   - pip:
     # Core packages
     - seamm-exec
+    - seamm-ff-util
+    - seamm-geometric
     - seamm-jobserver
 
     # MolSSI plug-ins
@@ -58,6 +58,8 @@ dependencies:
     - read-structure-step
     - set-cell-step
     - strain-step
+    - structure-step
+    - subflowchart-step
     - supercell-step
     - table-step
     - thermal-conductivity-step
@@ -66,6 +68,3 @@ dependencies:
     # 3rd-party plug-ins
     - pyxtal-step
     - seamm-ase
-    - seamm-geometric
-    - structure-step
-    - subflowchart-step

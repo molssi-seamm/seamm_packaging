@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-12-02T05:41:08.909305+00:00",
-    "doi": "10.5281/zenodo.14257716",
+    "date": "2024-12-10T16:13:48.379586+00:00",
+    "doi": "10.5281/zenodo.14363822",
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -13,7 +13,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
             "type": "MolSSI plug-in",
-            "version": "2022.7.31"
+            "version": "2022.8.1"
         },
         "custom-step": {
             "channel": "pypi",
@@ -31,7 +31,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30.1"
+            "version": "2024.7.30"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -61,7 +61,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.12.1.1"
+            "version": "2024.12.9"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -85,13 +85,13 @@
             "channel": "conda-forge",
             "description": "molsystem",
             "type": "Core package",
-            "version": "2024.11.27.1"
+            "version": "2024.12.7"
         },
         "mopac-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.10.15"
+            "version": "2024.12.9"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -109,7 +109,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2024.10.15"
+            "version": "2024.12.7"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -139,13 +139,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read common formats in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2024.11.29"
-        },
-        "reference-handler": {
-            "channel": "conda-forge",
-            "description": "no description given",
-            "type": "Core package",
-            "version": "0.9.1"
+            "version": "2024.12.7"
         },
         "seamm": {
             "channel": "conda-forge",
@@ -162,7 +156,7 @@
         "seamm-dashboard": {
             "channel": "conda-forge",
             "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
-            "type": "Core package",
+            "type": "3rd-party plug-in",
             "version": "2024.6.2"
         },
         "seamm-datastore": {
@@ -178,15 +172,15 @@
             "version": "2024.7.25"
         },
         "seamm-ff-util": {
-            "channel": "conda-forge",
+            "channel": "pypi",
             "description": "seamm_ff_util",
             "type": "Core package",
-            "version": "2024.6.27"
+            "version": "2024.6.28"
         },
         "seamm-geometric": {
             "channel": "pypi",
             "description": "geomeTRIC connector for SEAMM",
-            "type": "3rd-party plug-in",
+            "type": "Core package",
             "version": "2024.10.20"
         },
         "seamm-installer": {
@@ -228,13 +222,13 @@
         "structure-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for energy optimized structures",
-            "type": "3rd-party plug-in",
-            "version": "2024.10.24"
+            "type": "MolSSI plug-in",
+            "version": "2024.10.20"
         },
         "subflowchart-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for subflowcharts",
-            "type": "3rd-party plug-in",
+            "type": "MolSSI plug-in",
             "version": "2024.11.18"
         },
         "supercell-step": {

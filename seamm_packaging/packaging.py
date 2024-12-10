@@ -31,10 +31,12 @@ core_packages = (
     "molsystem",
     "reference-handler",
     "seamm",
+    "seamm-ase"
     "seamm-dashboard",
     "seamm-datastore",
     "seamm-exec",
     "seamm-ff-util",
+    "seamm-geometric",
     "seamm-installer",
     "seamm-jobserver",
     "seamm-util",
@@ -65,12 +67,16 @@ molssi_plug_ins = (
     "read-structure-step",
     "set-cell-step",
     "strain-step",
+    "structure-step",
+    "subflowchart-step",
     "supercell-step",
     "torchani-step",
     "table-step",
     "thermal-conductivity-step",
 )
-external_plug_ins = []
+external_plug_ins = [
+    "pyxtal-step",
+]
 
 excluded_plug_ins = (
     "chemical-formula",
@@ -124,8 +130,52 @@ def find_packages(progress=True):
     pip = Pip()
     conda = Conda()
 
-    # Use pip to find possible packages.
-    packages = pip.search(query="SEAMM", progress=progress, newline=False)
+    # Use pip to find possible packages. -- no longer works!!!!
+    packages = {}
+    try:
+        packages = pip.search(query="SEAMM", progress=progress, newline=False)
+    except Exception:
+        pass
+    
+    if len(packages) == 0:
+        print("Failed to find packages using pip.search.")
+        try:
+            packages = {}
+            for package in core_packages:
+                data = pip.get_package_info(package)
+                package[package] = {
+                    "channel": "pypi",
+                    "version": data["version"],
+                    "description": data["description"],
+                    "type": "Core package",
+                }
+            for package in molssi_plug_ins:
+                data = pip.get_package_info(package)
+                package[package] = {
+                    "channel": "pypi",
+                    "version": data["version"],
+                    "description": data["description"],
+                    "type": "MolSSI plug-in",
+                }
+            for package in external_plug_ins:
+                data = pip.get_package_info(package)
+                package[package] = {
+                    "channel": "pypi",
+                    "version": data["version"],
+                    "description": data["description"],
+                    "type": "3rd-party plug-in",
+                }
+        except Exception:
+            print("Failed to find packages using pip.get_package_info.")
+            packages = {}
+
+        if len(packages) == 0:
+            # Try downloded web pages.
+            data = ""
+            path = Path.home() / "Downloads"
+            for tmp in path.glob("search*.html"):
+                data += tmp.read_text()
+            packages = pip.parse_search(data)
 
     print(f"Found {len(packages)} packages.")
 
@@ -467,6 +517,8 @@ def add_version(_id="10891078"):
 
     logger.debug(f"add_version {url=}")
     logger.debug(headers)
+    print(f"add_version {url=}")
+    print(headers)
 
     response = requests.post(url, headers=headers)
 

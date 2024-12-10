@@ -12,6 +12,9 @@ SNIPPET_RE = re.compile(r"<a class=\"package-snippet\".*>")
 NAME_RE = re.compile(r"<span class=\"package-snippet__name\">(.+)</span>")
 VERSION_RE = re.compile(r".*<span class=\"package-snippet__version\">(.+)</span>")
 DESCRIPTION_RE = re.compile(r".*<p class=\"package-snippet__description\">(.+)</p>")
+CREATED_RE = re.compile(
+    r".*<span class=\"package-snippet__created\"><time datetime=\"(.+)T"
+)
 NEXT_RE = re.compile(
     r'<a href="/search/.*page=(.+)" ' 'class="button button-group__button">Next</a>'
 )
@@ -133,3 +136,66 @@ class Pip(object):
 
         return result
 
+    def get_package_info(self, project):
+        """Get the information for a project.
+
+        Parameters
+        ----------
+        project : str
+            The name of the project to get the information for.
+
+        Returns
+        -------
+        dict
+            A dictionary of the information about the project.
+        """
+        headers = {'user-agent': 'SEAMM, psaxe@vt.edu'}
+        response = requests.get(
+            self._base_url + f"/pypi/{project}/json", headers=headers
+        )
+        return response.json()
+
+    def parse_search(self, data, result = {}):
+        """Parse the PyPi search results.
+
+        Parameters
+        ----------
+        data : str
+            The text of the web page
+        result : dict
+            The dictionary to add the results to
+
+        Returns
+        -------
+        dict
+            The result dictionary
+        """
+        snippets = SNIPPET_RE.split(data)
+
+        for snippet in snippets:
+            name = NAME_RE.findall(snippet)
+            version = VERSION_RE.findall(snippet)
+            description = DESCRIPTION_RE.findall(snippet)
+            created = CREATED_RE.findall(snippet)
+
+            # Ignore any snippets without data, e.g. the first one.
+            if len(name) > 0:
+                if len(version) == 0:
+                    if len(created) > 0:
+                        version = created[0].replace("-", ".")
+                        version = version.replace(".0", ".")
+                    else:
+                        version = None
+                else:
+                    version = version[0]
+                if len(description) == 0:
+                    description = "no description given"
+                else:
+                    description = description[0]
+                result[name[0]] = {
+                    "channel": "pypi",
+                    "version": version,
+                    "description": description,
+                }
+
+        return result
