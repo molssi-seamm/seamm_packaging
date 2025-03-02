@@ -27,11 +27,27 @@ jobs:
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: create environment file
+        run: |
+          echo `pwd`
+          create_full_environment_file()
+
+      # More info on options: https://github.com/conda-incubator/setup-miniconda
+      - name: create conda environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          python-version: "3.12"
+          environment-file: test.yaml
+          activate-environment: seamm
+          auto-update-conda: false
+          auto-activate-base: false
+          show-channel-urls: true
       
       - name: execute py script
         run: |
           echo `pwd`
-          python -m seamm_packaging
+          changed = check_for_changes()
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else

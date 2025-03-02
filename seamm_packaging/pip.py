@@ -149,13 +149,13 @@ class Pip(object):
         dict
             A dictionary of the information about the project.
         """
-        headers = {'user-agent': 'SEAMM, psaxe@vt.edu'}
+        headers = {"user-agent": "SEAMM, psaxe@vt.edu"}
         response = requests.get(
             self._base_url + f"/pypi/{project}/json", headers=headers
         )
         return response.json()
 
-    def parse_search(self, data, result = {}):
+    def parse_search(self, data, result={}):
         """Parse the PyPi search results.
 
         Parameters

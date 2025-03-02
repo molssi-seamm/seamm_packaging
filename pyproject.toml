@@ -37,7 +37,8 @@ test = [
 ]
 
 [project.scripts]
-#run_flowchart = "seamm_exec:run"
+create_full_environment_file = "seamm_packaging:create_full_environment_file"
+check_for_changes = "seamm_packaging:check_for_changes"
 
 [tool.setuptools]
 # This subkey is a beta stage development and keys may change in the future, see https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html for more details

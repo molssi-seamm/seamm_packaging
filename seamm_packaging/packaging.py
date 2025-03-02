@@ -8,10 +8,10 @@ import pprint
 import os
 
 import requests
-import packaging.version as pkgVersion
+import packaging.version as pkgVersion  # noqa: F401
 
 from .conda import Conda
-from .pip import Pip
+from .metadata import metadata
 
 upload_types = {
     "publication": "Publication",
@@ -27,97 +27,18 @@ upload_types = {
 }
 
 
-core_packages = (
-    "molsystem",
-    "reference-handler",
-    "seamm",
-    "seamm-ase"
-    "seamm-dashboard",
-    "seamm-datastore",
-    "seamm-exec",
-    "seamm-ff-util",
-    "seamm-geometric",
-    "seamm-installer",
-    "seamm-jobserver",
-    "seamm-util",
-    "seamm-widgets",
-)
-molssi_plug_ins = (
-    "control-parameters-step",
-    "crystal-builder-step",
-    "custom-step",
-    "diffusivity-step",
-    "dftbplus-step",
-    "energy-scan-step",
-    "forcefield-step",
-    "geometry-analysis-step",
-    "fhi-aims-step",
-    "from-smiles-step",
-    "gaussian-step",
-    "lammps-step",
-    "loop-step",
-    "mopac-step",
-    "nwchem-step",
-    "packmol-step",
-    "properties-step",
-    "psi4-step",
-    "qcarchive-step",
-    "quickmin-step",
-    "rdkit-step",
-    "read-structure-step",
-    "set-cell-step",
-    "strain-step",
-    "structure-step",
-    "subflowchart-step",
-    "supercell-step",
-    "torchani-step",
-    "table-step",
-    "thermal-conductivity-step",
-)
-external_plug_ins = [
-    "pyxtal-step",
-]
-
-excluded_plug_ins = (
-    "chemical-formula",
-    "cms-plots",
-    "seamm-dashboard-client",
-    "seamm-cookiecutter",
-    "cassandra-step",
-    "solvate-step",
-)
-development_packages = (
-    "black",
-    "codecov",
-    "flake8",
-    "nodejs",
-    "pydata-sphinx-theme",
-    "pytest",
-    "pytest-cov",
-    "pygments",
-    "sphinx",
-    "sphinx-design",
-    "twine",
-    "watchdog",
-)
-development_packages_pip = (
-    "build",
-    "rinohtype",
-    "seamm-cookiecutter",
-    "sphinx-copybutton",
-    "sphinx-rtd-theme",
-    "pystemmer",
-)
-
 logger = logging.getLogger("seamm_packages")
 logger.setLevel(logging.DEBUG)
+logger.setLevel(0)
 
 
-def find_packages(progress=True):
+def create_full_environment(environment_file, progress=True):
     """Find the Python packages in SEAMM.
 
     Parameters
     ----------
+    environment_file : str or pathlib.Path
+        The environment file
     progress : bool = True
         Whether to print out dots to show progress.
 
@@ -127,124 +48,138 @@ def find_packages(progress=True):
         A dictionary with information about the packages.
     """
     print("Finding all the packages that make up SEAMM. This may take several minutes.")
-    pip = Pip()
-    conda = Conda()
 
-    # Use pip to find possible packages. -- no longer works!!!!
+    conda = Conda(logger=logger)
+
+    print("Creating a new conda environment 'SEAMM_Packages'")
+    result = conda.create_environment(
+        str(environment_file), name="SEAMM_Packages", force=True
+    )
+
+    # Check for errors
+    if "exception_name" in result:
+        message = (
+            "Conda env create failed:\n"
+            "   encountered exception result['exception_name']\n"
+        )
+        if "message" in result:
+            message += "\n"
+            message += result["message"]
+            message += "\n"
+        print(message)
+        raise RuntimeError(message)
+
+    if "success" in result and not result["success"]:
+        message = (
+            "Conda env create failed:\n" "   'success' not in result, or not true.\n"
+        )
+        if "message" in result:
+            message += "\n"
+            message += result["message"]
+            message += "\n"
+        if "error" in result:
+            message += "\n"
+            message += result["error"]
+            message += "\n"
+        print(message)
+        raise RuntimeError(message)
+
     packages = {}
-    try:
-        packages = pip.search(query="SEAMM", progress=progress, newline=False)
-    except Exception:
-        pass
-    
-    if len(packages) == 0:
-        print("Failed to find packages using pip.search.")
-        try:
-            packages = {}
-            for package in core_packages:
-                data = pip.get_package_info(package)
-                package[package] = {
-                    "channel": "pypi",
-                    "version": data["version"],
-                    "description": data["description"],
-                    "type": "Core package",
-                }
-            for package in molssi_plug_ins:
-                data = pip.get_package_info(package)
-                package[package] = {
-                    "channel": "pypi",
-                    "version": data["version"],
-                    "description": data["description"],
-                    "type": "MolSSI plug-in",
-                }
-            for package in external_plug_ins:
-                data = pip.get_package_info(package)
-                package[package] = {
-                    "channel": "pypi",
-                    "version": data["version"],
-                    "description": data["description"],
-                    "type": "3rd-party plug-in",
-                }
-        except Exception:
-            print("Failed to find packages using pip.get_package_info.")
-            packages = {}
-
-        if len(packages) == 0:
-            # Try downloded web pages.
-            data = ""
-            path = Path.home() / "Downloads"
-            for tmp in path.glob("search*.html"):
-                data += tmp.read_text()
-            packages = pip.parse_search(data)
-
-    print(f"Found {len(packages)} packages.")
-
-    for package in excluded_plug_ins:
-        if package in packages:
-            del packages[package]
-
-    # Need to add molsystem and reference-handler by hand
-    for package in core_packages:
-        if package not in packages:
-            tmp = pip.search(query=package, exact=True, progress=True, newline=False)
-            logger.debug(f"Query for package {package}\n{pprint.pformat(tmp)}\n")
-            if package in tmp:
-                packages[package] = tmp[package]
-
-    print(f"After including and excluding packages there are {len(packages)} packages.")
-
-    # Set the type
-    for package in packages:
-        if package in core_packages:
-            packages[package]["type"] = "Core package"
-        elif package in molssi_plug_ins:
-            packages[package]["type"] = "MolSSI plug-in"
+    for item in result["actions"]["LINK"]:
+        package = item["name"]
+        if package in metadata["Core package"]:
+            _type = "Core package"
+            data = metadata["Core package"][package]
+        elif package in metadata["MolSSI plug-in"]:
+            _type = "MolSSI plug-in"
+            data = metadata["MolSSI plug-in"][package]
+        elif package in metadata["3rd-party plug-in"]:
+            _type = "3rd-party plug-in"
+            data = metadata["3rd-party plug-in"][package]
         else:
-            packages[package]["type"] = "3rd-party plug-in"
+            _type = None
+        if _type is not None:
+            packages[package] = {
+                "channel": "conda-forge",
+                "description": data["description"],
+                "type": _type,
+                "version": item["version"],
+            }
+    for item in result["actions"]["PIP"]:
+        tmp = item.split("-")
+        package = "-".join(tmp[0:-1])
+        version = tmp[-1]
+        if package in metadata["Core package"]:
+            _type = "Core package"
+            data = metadata["Core package"][package]
+        elif package in metadata["MolSSI plug-in"]:
+            _type = "MolSSI plug-in"
+            data = metadata["MolSSI plug-in"][package]
+        elif package in metadata["3rd-party plug-in"]:
+            _type = "3rd-party plug-in"
+            data = metadata["3rd-party plug-in"][package]
+        else:
+            _type = None
+        if _type is not None:
+            packages[package] = {
+                "channel": "pypi",
+                "description": data["description"],
+                "type": _type,
+                "version": version,
+            }
 
-    # Check the versions on conda, and prefer those...
-    logger.info("Find packages: checking for conda versions")
-    if progress:
-        print("", flush=True)
+    return packages
 
-    if True:
-        count = 0
-        for package, data in sorted(packages.items(), key=lambda x: x[0]):
-            count += 1
-            print(f"{count}: ", end="")
-            logger.info(f"    {package}")
-            conda_packages = conda.search(
-                f"{package}>={data['version']}", progress=True, newline=False
-            )
 
-            if conda_packages is None:
-                print(f"\t{package} not in conda-forge")
-                continue
+def list_packages(environment=None):
+    """Return the package list using Conda list"""
+    conda = Conda(logger=logger)
 
-            tmp = conda_packages[package]
+    result = conda.list(environment=environment)
 
-            print(
-                f"\t{package} {data['version']} -> {tmp['version']} ({tmp['channel']})"
-            )
+    packages = {}
+    for package, data in result.items():
+        if package in metadata["Core package"]:
+            _type = "Core package"
+            mdata = metadata["Core package"][package]
+        elif package in metadata["MolSSI plug-in"]:
+            _type = "MolSSI plug-in"
+            mdata = metadata["MolSSI plug-in"][package]
+        elif package in metadata["3rd-party plug-in"]:
+            _type = "3rd-party plug-in"
+            mdata = metadata["3rd-party plug-in"][package]
+        else:
+            _type = None
+        if _type is not None:
+            packages[package] = {
+                "channel": data["channel"],
+                "description": mdata["description"],
+                "type": _type,
+                "version": data["version"],
+            }
 
-            if pkgVersion.parse(tmp["version"]) >= pkgVersion.parse(data["version"]):
-                print("updating to conda")
-                data["version"] = tmp["version"]
-                data["channel"] = tmp["channel"]
-                if "/conda-forge" in data["channel"]:
-                    data["channel"] = "conda-forge"
-        if progress:
-            print("", flush=True)
+    return packages
 
-    # Convert conda-forge url in channel to 'conda-forge'
-    for data in packages.values():
-        if "/conda-forge" in data["channel"]:
-            data["channel"] = "conda-forge"
 
+def update_package_list(packages, environments="environments"):
+    """Update the package list for any changes
+
+    Parameters
+    ----------
+    packages : {str: str}
+        The new list of packages
+    environments : str or pathlib.Path
+        Path to environments/ directory
+
+    Returns
+    -------
+    dict(str, str)
+        A dictionary with information about the packages.
+    """
     # Read the existing package database and see if there are changes
     message = []
     changed = False
-    path = Path("environments") / "SEAMM_packages.json"
+    path = environments / "SEAMM_packages.json"
     if not path.exists():
         changed = True
         print("The package database does not exist.")
@@ -252,6 +187,7 @@ def find_packages(progress=True):
         plist = {
             "date": datetime.now(timezone.utc).isoformat(),
             "doi": "10.5281/zenodo.7860696",
+            "metadata": metadata,
             "packages": packages,
         }
         with path.open("w") as fd:
@@ -269,8 +205,10 @@ def find_packages(progress=True):
             print("The package database could not be read, so replacing.")
 
             plist = {
+                "conceptdoi": "10.5281/zenodo.7789853",
                 "date": datetime.now(timezone.utc).isoformat(),
                 "doi": "10.5281/zenodo.7860696",
+                "metadata": metadata,
                 "packages": packages,
             }
             with path.open("w") as fd:
@@ -278,27 +216,28 @@ def find_packages(progress=True):
             with Path("commit_message.txt").open("w") as fd:
                 fd.write("Could not read the SEAMM package database, so replacing")
         else:
+            print("Checking for changes in SEAMM")
             old_packages = plist["packages"]
             for package in packages:
-                print(f"Checking package {package}")
+                logger.debug(f"Checking package {package}")
+                newv = packages[package]["version"]
                 if package not in old_packages:
                     changed = True
-                    print(f"    New package: {package}")
+                    print(f"  New package: {package} {newv}")
                     message.append(f"{package} added to SEAMM")
                 else:
                     oldv = old_packages[package]["version"]
-                    newv = packages[package]["version"]
                     oldchannel = old_packages[package]["channel"]
                     newchannel = packages[package]["channel"]
                     oldtype = old_packages[package]["type"]
                     newtype = packages[package]["type"]
-                    print(f"    Old version: {oldv} ({oldchannel}) {oldtype}")
-                    print(f"    New version: {newv} ({newchannel}) {newtype}")
+                    logger.debug(f"    Old version: {oldv} ({oldchannel}) {oldtype}")
+                    logger.debug(f"    New version: {newv} ({newchannel}) {newtype}")
                     if oldv != newv:
                         changed = True
                         if oldchannel != newchannel:
                             print(
-                                f"    Changed package: {package} from {oldv} "
+                                f"  {package}: changed from {oldv} "
                                 f"({oldchannel}) to {newv} ({newchannel})"
                             )
                             message.append(
@@ -306,39 +245,28 @@ def find_packages(progress=True):
                                 f"{newv} ({newchannel})"
                             )
                         else:
-                            print(
-                                f"    Changed package: {package} from {oldv} to "
-                                f"{newv}"
-                            )
-                            message.append(
-                                f"{package} changed from {oldv} to {newv}"
-                            )
+                            print(f"  {package}: from {oldv} to {newv}")
+                            message.append(f"{package} changed from {oldv} to {newv}")
                     elif oldchannel != newchannel:
                         changed = True
-                        print(
-                            f"    Changed channel: {package} from {oldchannel} to "
-                            f"{newchannel}"
-                        )
+                        print(f"  {package}: from {oldchannel} to {newchannel}")
                         message.append(
                             f"{package} changed from {oldchannel} to {newchannel}"
                         )
                     if oldtype != newtype:
                         changed = True
-                        print(
-                            f"    Changed type: {package} from {oldtype} to {newtype}"
-                        )
-                        message.append(
-                            f"{package} changed from {oldtype} to {newtype}"
-                        )
+                        print(f"  {package}: from {oldtype} to {newtype}")
+                        message.append(f"{package} changed from {oldtype} to {newtype}")
             if not changed:
                 print("The package database has not changed.")
             else:
                 print("The package database has changed.")
 
                 plist = {
+                    "conceptdoi": "10.5281/zenodo.7789853",
                     "date": datetime.now(timezone.utc).isoformat(),
                     "doi": "",
-                    "conceptdoi": "10.5281/zenodo.7789853",
+                    "metadata": metadata,
                     "packages": packages,
                 }
                 with path.open("w") as fd:
@@ -350,15 +278,21 @@ def find_packages(progress=True):
 
     return changed, packages
 
-def create_env_files(packages):
+
+def create_env(packages, pinned=False):
     """Create the environment files for the packages.
 
     Parameters
     ----------
     packages : dict(str, dict)
         The packages to create the environment files for.
+    pinned : bool = False
+        Whether to pin the versions
     """
-    print("Creating the environment files for the packages.")
+    if pinned:
+        print("Creating the pinned environment file for the packages.")
+    else:
+        print("Creating the environment file for the packages.")
     prelines = [
         """name: seamm
 channels:
@@ -367,104 +301,118 @@ channels:
 dependencies:
   - pip
   - python
-
-    # From conda-forge because pip can't install
-  - psutil
-    # The Dashboard fails with newer versions, so until fixed.
-  - connexion<3.0
 """
-]
-    if "qcarchive-step" in packages:
-        prelines.append(
-            "    # qcportal requires apsw, which needs compiling and hence problems.\n"
-            "  - qcportal\n"
-        )
-
+    ]
     # Creating the environment file with versions pinned
     lines = []
-    lines.extend(prelines)
+    # First the conda installable packages, including any dependencies
+    for repo in ("conda-forge", "pypi"):
+        if repo == "conda-forge":
+            lines.extend(prelines)
+            spc = 2 * " "
+        else:
+            lines.append("  # PyPi packages")
+            lines.append("  - pip:")
+            spc = 6 * " "
 
-    # Core SEAMM packages
-    lines.append("\n# Core packages")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "Core package" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}=={data['version']}")
-    lines.append("")
+        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
+            lines.append(f"{spc}# {_type}s")
+            for package in sorted(metadata[_type].keys()):
+                if package in packages:
+                    data = packages[package]
+                    if data["channel"] == repo:
+                        if pinned:
+                            lines.append(f"{spc}- {package}=={data['version']}")
+                        else:
+                            lines.append(f"{spc}- {package}")
+            lines.append("")
 
-    lines.append("    # MolSSI plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "MolSSI plug-in" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}=={data['version']}")
-    lines.append("")
+        # Are there any dependencies that require conda installs?
+        dependencies = []
+        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
+            for package, meta in metadata[_type].items():
+                if package in packages and "dependencies" in meta:
+                    for dependency, depdata in meta["dependencies"].items():
+                        if depdata["repository"] == repo:
+                            dependencies.append(
+                                f"{spc}# {package}: {depdata['comment']}"
+                            )
+                            if "pinning" in depdata and depdata["pinning"] != "":
+                                dependencies.append(
+                                    f"{spc}- {dependency}{depdata['pinning']}"
+                                )
+                            else:
+                                dependencies.append(f"{spc}- {dependency}")
 
-    lines.append("    # 3rd-party plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "3rd-party plug-in" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}=={data['version']}")
-    lines.append("")
+        if len(dependencies) > 0:
+            lines.append(f"{spc}# Dependencies that require special handling\n")
+            lines.extend(dependencies)
+            lines.append("")
 
-    lines.append("    # PyPi packages")
-    lines.append("  - pip:")
-    lines.append("    # Core packages")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "Core package" and data["channel"] == "pypi":
-            lines.append(f"    - {package}=={data['version']}")
-    lines.append("")
-    lines.append("    # MolSSI plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "MolSSI plug-in" and data["channel"] == "pypi":
-            lines.append(f"    - {package}=={data['version']}")
-    lines.append("")
-    lines.append("    # 3rd-party plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "3rd-party plug-in" and data["channel"] == "pypi":
-            lines.append(f"    - {package}=={data['version']}")
+    return "\n".join(lines)
 
-    with open("environments/seamm_pinned.yml", "w") as fd:
-        fd.write("\n".join(lines))
-        print("Wrote environments/seamm_pinned.yml")
 
-    # Creating the environment file with versions not pinned
+def create_full_env():
+    """Create the full environment file from the metadata.
+
+    Parameters
+    ----------
+    """
+    print("Creating the full environment file from the metadata.")
+    prelines = [
+        """name: seamm
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python
+"""
+    ]
+    # Creating the environment file
     lines = []
-    lines.extend(prelines)
-    # Core SEAMM packages
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "Core package" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}")
-    lines.append("")
 
-    lines.append("    # MolSSI plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "MolSSI plug-in" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}")
-    lines.append("")
+    # First the conda installable packages, including any dependencies
+    for repo in ("conda-forge", "pypi"):
+        if repo == "conda-forge":
+            lines.extend(prelines)
+            spc = 2 * " "
+        else:
+            lines.append("  # PyPi packages")
+            lines.append("  - pip:")
+            spc = 6 * " "
 
-    lines.append("    # 3rd-party plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "3rd-party plug-in" and data["channel"] == "conda-forge":
-            lines.append(f"  - {package}")
-    lines.append("")
+        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
+            lines.append(f"{spc}# {_type}s")
+            for package, data in sorted(metadata[_type].items(), key=lambda x: x[0]):
+                if data["repository"] == repo:
+                    lines.append(f"{spc}- {package}")
+            lines.append("")
 
-    lines.append("    # PyPi packages")
-    lines.append("  - pip:")
-    lines.append("    # Core packages")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "Core package" and data["channel"] == "pypi":
-            lines.append(f"    - {package}")
-    lines.append("")
-    lines.append("    # MolSSI plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "MolSSI plug-in" and data["channel"] == "pypi":
-            lines.append(f"    - {package}")
-    lines.append("")
-    lines.append("    # 3rd-party plug-ins")
-    for package, data in sorted(packages.items(), key=lambda x: x[0]):
-        if data["type"] == "3rd-party plug-in" and data["channel"] == "pypi":
-            lines.append(f"    - {package}")
+        # Are there any dependencies that require conda installs?
+        dependencies = []
+        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
+            for package, meta in metadata[_type].items():
+                if "dependencies" in meta:
+                    for dependency, depdata in meta["dependencies"].items():
+                        if depdata["repository"] == repo:
+                            dependencies.append(
+                                f"{spc}# {package}: {depdata['comment']}"
+                            )
+                            if "pinning" in depdata and depdata["pinning"] != "":
+                                dependencies.append(
+                                    f"{spc}- {dependency}{depdata['pinning']}"
+                                )
+                            else:
+                                dependencies.append(f"{spc}- {dependency}")
 
-    with open("environments/seamm.yml", "w") as fd:
-        fd.write("\n".join(lines))
-        print("Wrote environments/seamm.yml")
+        if len(dependencies) > 0:
+            lines.append(f"{spc}# Dependencies that require special handling\n")
+            lines.extend(dependencies)
+            lines.append("")
+
+    return "\n".join(lines)
+
 
 def upload_to_zenodo():
     """Upload the packaging files to Zenodo."""
@@ -494,7 +442,7 @@ def upload_to_zenodo():
         record.add_file(name, contents=text)
 
     # For some reason the version doesn't work...let's see what the record looks like.
-    print(record)
+    # print(record)
 
     # Update the version in the deposit
     # version = int(record.version)
@@ -504,6 +452,7 @@ def upload_to_zenodo():
     record.publish()
 
     return doi
+
 
 def add_version(_id="10891078"):
     """Create a new record object for uploading a new version to Zenodo."""
@@ -517,8 +466,6 @@ def add_version(_id="10891078"):
 
     logger.debug(f"add_version {url=}")
     logger.debug(headers)
-    print(f"add_version {url=}")
-    print(headers)
 
     response = requests.post(url, headers=headers)
 
@@ -532,10 +479,6 @@ def add_version(_id="10891078"):
         )
 
     result = response.json()
-
-    print("\n\n\nInitial response in add_version")
-    print(pprint.pformat(result))
-    print("\n\n\n")
 
     # The result is for the original DOI, so get the data for the new one
     url = result["links"]["latest_draft"]
@@ -552,6 +495,7 @@ def add_version(_id="10891078"):
     metadata = {**result["metadata"]}
 
     return Record(result, token, metadata=metadata)
+
 
 class Record(collections.abc.Mapping):
     """A class for handling uploading a record to Zenodo.
@@ -998,4 +942,3 @@ class Record(collections.abc.Mapping):
 
         self.data = response.json()
         self.metadata = {}
-    
