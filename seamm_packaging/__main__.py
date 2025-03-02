@@ -18,7 +18,7 @@ def create_full_environment_file(filename="test.yml"):
     Path(filename).write_text(environment)
 
 
-def check_for_changes(environment=None, environments="environment"):
+def check_for_changes(environment=None, environments="environments"):
     packages = list_packages(environment=environment)
     changed, packages = update_package_list(packages, environments=environments)
 
