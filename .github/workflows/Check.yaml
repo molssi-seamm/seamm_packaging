@@ -31,15 +31,17 @@ jobs:
       - name: create environment file
         run: |
           echo `pwd`
-          ls -lR
+          ls -l
           create_full_environment_file
+
+          cat test.yml
 
       # More info on options: https://github.com/conda-incubator/setup-miniconda
       - name: create conda environment
         uses: conda-incubator/setup-miniconda@v3
         with:
           python-version: "3.12"
-          environment-file: test.yaml
+          environment-file: test.yml
           activate-environment: seamm
           auto-update-conda: false
           auto-activate-base: false
@@ -48,7 +50,7 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          ls -lR
+          ls -l
           check_for_changes
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
