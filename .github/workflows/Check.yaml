@@ -31,7 +31,8 @@ jobs:
       - name: create environment file
         run: |
           echo `pwd`
-          create_full_environment_file()
+          ls -lR
+          create_full_environment_file
 
       # More info on options: https://github.com/conda-incubator/setup-miniconda
       - name: create conda environment
@@ -47,7 +48,8 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          changed = check_for_changes()
+          ls -lR
+          check_for_changes
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else
