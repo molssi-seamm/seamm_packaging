@@ -179,7 +179,7 @@ def update_package_list(packages, environments="environments"):
     # Read the existing package database and see if there are changes
     message = []
     changed = False
-    path = environments / "SEAMM_packages.json"
+    path = Path(environments) / "SEAMM_packages.json"
     if not path.exists():
         changed = True
         print("The package database does not exist.")
