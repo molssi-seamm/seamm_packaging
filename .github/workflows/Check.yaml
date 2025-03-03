@@ -31,6 +31,8 @@ jobs:
       - name: create environment file
         run: |
           echo `pwd`
+          cd 
+          echo `pwd`
           ls -l
           create_full_environment_file
 
@@ -50,8 +52,12 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
+          cd seamm_packaging/seamm_packaging
+          echo `pwd`
           ls -l
+
           check_for_changes
+
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else
