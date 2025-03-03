@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-03T22:03:54.236696+00:00",
-    "doi": "10.5281/zenodo.14963199",
+    "date": "2025-03-03T22:36:56.075180+00:00",
+    "doi": "10.5281/zenodo.14963255",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -273,7 +273,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2025.2.7"
+            "version": "2025.3.3"
         },
         "diffusivity-step": {
             "channel": "pypi",
