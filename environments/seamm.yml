@@ -6,65 +6,74 @@ dependencies:
   - pip
   - python
 
-    # From conda-forge because pip can't install
-  - psutil
-    # The Dashboard fails with newer versions, so until fixed.
-  - connexion<3.0
-
-    # qcportal requires apsw, which needs compiling and hence problems.
-  - qcportal
-
+  # Core packages
   - molsystem
   - seamm
+  - seamm-dashboard
   - seamm-datastore
   - seamm-installer
   - seamm-util
   - seamm-widgets
 
-    # MolSSI plug-ins
+  # MolSSI plug-ins
 
-    # 3rd-party plug-ins
-  - seamm-dashboard
+  # 3rd-party plug-ins
 
-    # PyPi packages
+  # Dependencies that require special handling
+
+  # molsystem: libsqlite version 3.49.1 is badly broken!
+  - libsqlite!=3.49.1
+  # seamm: pip cannot install, so insist on conda
+  - psutil
+  # seamm-dashboard: Dashboard fails with version 3, so...
+  - connexion<3.0
+  # seamm-dashboard: Later version caused problems logging in
+  - flask-jwt-extended=4.5.3
+  # seamm-dashboard: Later version caused problems logging in
+  - pyjwt=2.9.0
+  # qcarchive-step: qcportal requires apsw, which must be compiled if using pip.
+  - qcportal
+
+  # PyPi packages
   - pip:
-    # Core packages
-    - seamm-exec
-    - seamm-ff-util
-    - seamm-geometric
-    - seamm-jobserver
+      # Core packages
+      - seamm-ase
+      - seamm-exec
+      - seamm-ff-util
+      - seamm-geometric
+      - seamm-jobserver
 
-    # MolSSI plug-ins
-    - control-parameters-step
-    - crystal-builder-step
-    - custom-step
-    - dftbplus-step
-    - diffusivity-step
-    - energy-scan-step
-    - fhi-aims-step
-    - forcefield-step
-    - from-smiles-step
-    - gaussian-step
-    - geometry-analysis-step
-    - lammps-step
-    - loop-step
-    - mopac-step
-    - packmol-step
-    - properties-step
-    - psi4-step
-    - qcarchive-step
-    - quickmin-step
-    - rdkit-step
-    - read-structure-step
-    - set-cell-step
-    - strain-step
-    - structure-step
-    - subflowchart-step
-    - supercell-step
-    - table-step
-    - thermal-conductivity-step
-    - torchani-step
+      # MolSSI plug-ins
+      - control-parameters-step
+      - crystal-builder-step
+      - custom-step
+      - dftbplus-step
+      - diffusivity-step
+      - energy-scan-step
+      - fhi-aims-step
+      - forcefield-step
+      - from-smiles-step
+      - gaussian-step
+      - geometry-analysis-step
+      - lammps-step
+      - loop-step
+      - mopac-step
+      - packmol-step
+      - psi4-step
+      - qcarchive-step
+      - quickmin-step
+      - rdkit-step
+      - reaction-path-step
+      - read-structure-step
+      - set-cell-step
+      - strain-step
+      - structure-step
+      - subflowchart-step
+      - supercell-step
+      - table-step
+      - thermal-conductivity-step
+      - thermochemistry-step
+      - torchani-step
 
-    # 3rd-party plug-ins
-    - pyxtal-step
-    - seamm-ase
+      # 3rd-party plug-ins
+      - pyxtal-step
