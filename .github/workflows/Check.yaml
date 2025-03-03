@@ -52,8 +52,12 @@ jobs:
       
       - name: execute py script
         run: |
+          ls -l ~/
+          echo "#############################"
           echo `pwd`
+          echo "#############################"
           ls -l
+          echo "#############################"
 
           check_for_changes
 
