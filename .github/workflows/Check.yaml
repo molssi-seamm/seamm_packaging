@@ -42,6 +42,7 @@ jobs:
       - name: create conda environment
         uses: conda-incubator/setup-miniconda@v3
         with:
+          installation-dir: ~/
           python-version: "3.12"
           environment-file: test.yml
           activate-environment: seamm
@@ -52,7 +53,7 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          cd seamm_packaging/seamm_packaging
+          cd work/seamm_packaging/seamm_packaging
           echo `pwd`
           ls -l
 
