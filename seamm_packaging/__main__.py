@@ -24,6 +24,7 @@ def check_for_changes(environment=None, environments="environments"):
 
     if changed:
         print("Packages have changed, updating environment files")
+        environments = Path(environments)
 
         env = create_env(packages)
         (environments / "seamm.yml").write_text(env)
