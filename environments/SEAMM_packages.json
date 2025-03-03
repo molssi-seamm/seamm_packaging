@@ -1,7 +1,255 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2024-12-10T16:13:48.379586+00:00",
-    "doi": "10.5281/zenodo.14363822",
+    "date": "2025-03-03T21:56:54.635792+00:00",
+    "doi": "",
+    "metadata": {
+        "3rd-party plug-in": {
+            "pyxtal-step": {
+                "description": "A SEAMM plug-in for PyXtal, which builds atomic and molecular crystals.",
+                "repository": "pypi"
+            }
+        },
+        "Core package": {
+            "molsystem": {
+                "dependencies": {
+                    "libsqlite": {
+                        "comment": "libsqlite version 3.49.1 is badly broken!",
+                        "pinning": "!=3.49.1",
+                        "repository": "conda-forge"
+                    }
+                },
+                "description": "The molecular/crystal data model for SEAMM",
+                "repository": "conda-forge"
+            },
+            "seamm": {
+                "dependencies": {
+                    "psutil": {
+                        "comment": "pip cannot install, so insist on conda",
+                        "repository": "conda-forge"
+                    }
+                },
+                "description": "The core of the SEAMM environment and graphical interface.",
+                "repository": "conda-forge"
+            },
+            "seamm-ase": {
+                "description": "Connector between SEAMM and ASE",
+                "repository": "pypi"
+            },
+            "seamm-dashboard": {
+                "dependencies": {
+                    "connexion": {
+                        "comment": "Dashboard fails with version 3, so...",
+                        "pinning": "<3.0",
+                        "repository": "conda-forge"
+                    },
+                    "flask-jwt-extended": {
+                        "comment": "Later version caused problems logging in",
+                        "pinning": "=4.5.3",
+                        "repository": "conda-forge"
+                    },
+                    "pyjwt": {
+                        "comment": "Later version caused problems logging in",
+                        "pinning": "=2.9.0",
+                        "repository": "conda-forge"
+                    }
+                },
+                "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
+                "repository": "conda-forge"
+            },
+            "seamm-datastore": {
+                "description": "Manages the data in the datastore for the SEAMM Dashboard",
+                "repository": "conda-forge"
+            },
+            "seamm-exec": {
+                "description": "Classes to execute background codes for SEAMM",
+                "repository": "pypi"
+            },
+            "seamm-ff-util": {
+                "description": "Utility routines for handling forcefields in SEAMM",
+                "repository": "pypi"
+            },
+            "seamm-geometric": {
+                "description": "Connectro between geomeTRIC and SEAMM",
+                "repository": "pypi"
+            },
+            "seamm-installer": {
+                "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
+                "repository": "conda-forge"
+            },
+            "seamm-jobserver": {
+                "description": "The JobServer for the SEAMM environment.",
+                "repository": "pypi"
+            },
+            "seamm-util": {
+                "description": "Utility methods for the SEAMM environment",
+                "repository": "conda-forge"
+            },
+            "seamm-widgets": {
+                "description": "Specialized tkinter widgets for SEAMM",
+                "repository": "conda-forge"
+            }
+        },
+        "MolSSI plug-in": {
+            "control-parameters-step": {
+                "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
+                "repository": "pypi"
+            },
+            "crystal-builder-step": {
+                "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
+                "repository": "pypi"
+            },
+            "custom-step": {
+                "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
+                "repository": "pypi"
+            },
+            "dftbplus-step": {
+                "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
+                "repository": "pypi"
+            },
+            "diffusivity-step": {
+                "description": "A SEAMM plug-in for calculating diffusivity",
+                "repository": "pypi"
+            },
+            "energy-scan-step": {
+                "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
+                "repository": "pypi"
+            },
+            "fhi-aims-step": {
+                "description": "A SEAMM plug-in for FHI-aims",
+                "repository": "pypi"
+            },
+            "forcefield-step": {
+                "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
+                "repository": "pypi"
+            },
+            "from-smiles-step": {
+                "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
+                "repository": "pypi"
+            },
+            "gaussian-step": {
+                "description": "A SEAMM plug-in for Gaussian",
+                "repository": "pypi"
+            },
+            "geometry-analysis-step": {
+                "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
+                "repository": "pypi"
+            },
+            "lammps-step": {
+                "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
+                "repository": "pypi"
+            },
+            "loop-step": {
+                "description": "A SEAMM plug-in which provides loops in flowcharts.",
+                "repository": "pypi"
+            },
+            "mopac-step": {
+                "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
+                "repository": "pypi"
+            },
+            "packmol-step": {
+                "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
+                "repository": "pypi"
+            },
+            "psi4-step": {
+                "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
+                "repository": "pypi"
+            },
+            "qcarchive-step": {
+                "dependencies": {
+                    "qcportal": {
+                        "comment": "qcportal requires apsw, which must be compiled if using pip.",
+                        "repository": "conda-forge"
+                    }
+                },
+                "description": "A SEAMM plug-in for connecting with QCArchive",
+                "repository": "pypi"
+            },
+            "quickmin-step": {
+                "description": "A SEAMM plug-in for simple, quick minimization using a forcefield",
+                "repository": "pypi"
+            },
+            "rdkit-step": {
+                "description": "A SEAMM plug-in for RDKit descriptors/features",
+                "repository": "pypi"
+            },
+            "reaction-path-step": {
+                "description": "A SEAMM plugin for finding transition states and reaction paths",
+                "repository": "pypi"
+            },
+            "read-structure-step": {
+                "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
+                "repository": "pypi"
+            },
+            "set-cell-step": {
+                "description": "A SEAMM plug-in for setting the periodic (unit) cell.",
+                "repository": "pypi"
+            },
+            "strain-step": {
+                "description": "A SEAMM plug-in for straining periodic systems",
+                "repository": "pypi"
+            },
+            "structure-step": {
+                "description": "A SEAMM plug-in for optimizing structures based on energy",
+                "repository": "pypi"
+            },
+            "subflowchart-step": {
+                "description": "A SEAMM plug-in for subflowcharts",
+                "repository": "pypi"
+            },
+            "supercell-step": {
+                "description": "A SEAMM plug-in for building supercells of periodic systems.",
+                "repository": "pypi"
+            },
+            "table-step": {
+                "description": "A SEAMM plug-in for data tables in a flowchart.",
+                "repository": "pypi"
+            },
+            "thermal-conductivity-step": {
+                "description": "A SEAMM plug-in for calculating thermal conductivity",
+                "repository": "pypi"
+            },
+            "thermochemistry-step": {
+                "description": "A SEAMM plug-in for calculating thermochemical functions",
+                "repository": "pypi"
+            },
+            "torchani-step": {
+                "description": "A SEAMM plug-in for the TorchANI ML models",
+                "repository": "pypi"
+            }
+        },
+        "conda development packages": [
+            "black",
+            "codecov",
+            "flake8",
+            "nodejs",
+            "pydata-sphinx-theme",
+            "pytest",
+            "pytest-cov",
+            "pygments",
+            "sphinx",
+            "sphinx-design",
+            "twine",
+            "watchdog"
+        ],
+        "excluded plug-ins": [
+            "cassandra-step",
+            "chemical-formula",
+            "cms-plots",
+            "seamm-cookiecutter",
+            "seamm-dashboard-client",
+            "solvate-step",
+            "nwchem-step",
+            "properties-step"
+        ],
+        "pypi development packages": [
+            "build",
+            "rinohtype",
+            "seamm-cookiecutter",
+            "sphinx-copybutton",
+            "sphinx-rtd-theme",
+            "pystemmer"
+        ]
+    },
     "packages": {
         "control-parameters-step": {
             "channel": "pypi",
@@ -13,7 +261,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
             "type": "MolSSI plug-in",
-            "version": "2022.8.1"
+            "version": "2022.7.31"
         },
         "custom-step": {
             "channel": "pypi",
@@ -25,19 +273,19 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2024.10.20"
+            "version": "2025.3.3"
         },
         "diffusivity-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for Diffusivity",
+            "description": "A SEAMM plug-in for calculating diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30"
+            "version": "2024.7.30.1"
         },
         "energy-scan-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2024.5.23"
+            "version": "2024.12.14"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -49,61 +297,55 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2024.6.30"
+            "version": "2024.12.14"
         },
         "from-smiles-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for creating structures from a SMILES string.",
+            "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
             "type": "MolSSI plug-in",
-            "version": "2024.10.31"
+            "version": "2025.2.24"
         },
         "gaussian-step": {
             "channel": "pypi",
-            "description": "A SEAMM plugin for A SEAMM plug-in for Gaussian",
+            "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2024.12.9"
+            "version": "2025.1.31"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for analysis of the geometry of particularly small molecules",
+            "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
             "type": "MolSSI plug-in",
-            "version": "2023.1.14"
+            "version": "2025.2.9"
         },
         "lammps-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics code.",
+            "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2024.8.22"
+            "version": "2025.2.7"
         },
         "loop-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.11.19"
+            "version": "2024.12.23"
         },
         "molsystem": {
             "channel": "conda-forge",
-            "description": "molsystem",
+            "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2024.12.7"
+            "version": "2025.2.23"
         },
         "mopac-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2024.12.9"
+            "version": "2025.2.23"
         },
         "packmol-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2024.7.25"
-        },
-        "properties-step": {
-            "channel": "pypi",
-            "description": "A SEAMM plug-in for Properties",
-            "type": "MolSSI plug-in",
-            "version": "2023.7.31"
+            "version": "2025.1.29"
         },
         "psi4-step": {
             "channel": "pypi",
@@ -113,55 +355,61 @@
         },
         "pyxtal-step": {
             "channel": "pypi",
-            "description": "A SEAMM plugin for PyXtal for building atomic and molecular crystals.",
+            "description": "A SEAMM plug-in for PyXtal, which builds atomic and molecular crystals.",
             "type": "3rd-party plug-in",
             "version": "2021.7.29"
         },
         "qcarchive-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for QCArchive",
+            "description": "A SEAMM plug-in for connecting with QCArchive",
             "type": "MolSSI plug-in",
             "version": "2023.3.30"
         },
         "quickmin-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for simple, quick minimization",
+            "description": "A SEAMM plug-in for simple, quick minimization using a forcefield",
             "type": "MolSSI plug-in",
-            "version": "2024.5.7"
+            "version": "2025.2.24"
         },
         "rdkit-step": {
             "channel": "pypi",
-            "description": "A SEAMM plugin for A SEAMM plug-in for RDKit",
+            "description": "A SEAMM plug-in for RDKit descriptors/features",
             "type": "MolSSI plug-in",
             "version": "2023.2.22"
         },
+        "reaction-path-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plugin for finding transition states and reaction paths",
+            "type": "MolSSI plug-in",
+            "version": "2024.12.14"
+        },
         "read-structure-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in to read common formats in computational chemistry",
+            "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2024.12.7"
+            "version": "2025.1.15"
         },
         "seamm": {
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2024.11.29"
+            "version": "2025.2.24"
         },
         "seamm-ase": {
             "channel": "pypi",
             "description": "Connector between SEAMM and ASE",
-            "type": "3rd-party plug-in",
-            "version": "2024.10.20"
+            "type": "Core package",
+            "version": "2025.2.7"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
             "description": "The Web Dashboard for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
-            "type": "3rd-party plug-in",
+            "type": "Core package",
             "version": "2024.6.2"
         },
         "seamm-datastore": {
             "channel": "conda-forge",
-            "description": "seamm_datastore",
+            "description": "Manages the data in the datastore for the SEAMM Dashboard",
             "type": "Core package",
             "version": "2024.6.2"
         },
@@ -169,19 +417,19 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2024.7.25"
+            "version": "2025.1.3"
         },
         "seamm-ff-util": {
             "channel": "pypi",
-            "description": "seamm_ff_util",
+            "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2024.6.28"
+            "version": "2025.1.21"
         },
         "seamm-geometric": {
             "channel": "pypi",
-            "description": "geomeTRIC connector for SEAMM",
+            "description": "Connectro between geomeTRIC and SEAMM",
             "type": "Core package",
-            "version": "2024.10.20"
+            "version": "2025.2.7"
         },
         "seamm-installer": {
             "channel": "conda-forge",
@@ -197,13 +445,13 @@
         },
         "seamm-util": {
             "channel": "conda-forge",
-            "description": "seamm_util",
+            "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
             "version": "2024.8.22"
         },
         "seamm-widgets": {
             "channel": "conda-forge",
-            "description": "seamm_widgets",
+            "description": "Specialized tkinter widgets for SEAMM",
             "type": "Core package",
             "version": "2024.10.10"
         },
@@ -221,9 +469,9 @@
         },
         "structure-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for energy optimized structures",
+            "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2024.10.20"
+            "version": "2024.10.24"
         },
         "subflowchart-step": {
             "channel": "pypi",
@@ -245,15 +493,21 @@
         },
         "thermal-conductivity-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for Thermal Conductivity",
+            "description": "A SEAMM plug-in for calculating thermal conductivity",
             "type": "MolSSI plug-in",
             "version": "2024.6.3"
         },
+        "thermochemistry-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for calculating thermochemical functions",
+            "type": "MolSSI plug-in",
+            "version": "2025.1.31"
+        },
         "torchani-step": {
             "channel": "pypi",
-            "description": "A SEAMM plug-in for TorchANI",
+            "description": "A SEAMM plug-in for the TorchANI ML models",
             "type": "MolSSI plug-in",
-            "version": "2024.10.15"
+            "version": "2025.2.7"
         }
     }
 }
