@@ -53,8 +53,6 @@ jobs:
       - name: execute py script
         run: |
           echo `pwd`
-          cd work/seamm_packaging/seamm_packaging
-          echo `pwd`
           ls -l
 
           check_for_changes
