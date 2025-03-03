@@ -43,7 +43,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           installation-dir: ~/
-          environment-file: $HOME/test.yml
+          environment-file: ../../../test.yml
           activate-environment: seamm
           auto-update-conda: false
           auto-activate-base: false
