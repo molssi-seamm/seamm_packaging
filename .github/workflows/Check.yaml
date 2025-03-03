@@ -57,8 +57,10 @@ jobs:
           echo "#############################"
           ls -l
           echo "#############################"
+          conda list
+          echo "#############################"
 
-          check_for_changes
+          echo `check_for_changes`
 
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"

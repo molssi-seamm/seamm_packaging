@@ -31,10 +31,11 @@ def check_for_changes(environment=None, environments="environments"):
         env = create_env(packages, pinned=True)
         (environments / "seamm_pinned.yml").write_text(env)
 
-    if changed:
         print("Uploading to ZENODO")
         doi = upload_to_zenodo()
         print(f"   new DOI = {doi}")
+    else:
+        print("Packages have not changed, so nothing to do")
 
     return changed
 
