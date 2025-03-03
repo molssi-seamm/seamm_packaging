@@ -273,7 +273,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2025.3.3"
+            "version": "2025.2.7"
         },
         "diffusivity-step": {
             "channel": "pypi",
