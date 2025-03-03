@@ -50,6 +50,7 @@ jobs:
           show-channel-urls: true
       
       - name: execute py script
+        shell: bash -l {0}
         run: |
           ls -l ~/
           echo "#############################"
