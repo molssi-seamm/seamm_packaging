@@ -44,7 +44,7 @@ jobs:
         with:
           installation-dir: ~/
           python-version: "3.12"
-          environment-file: ~/test.yml
+          environment-file: ../../../test.yml
           activate-environment: seamm
           auto-update-conda: false
           auto-activate-base: false
