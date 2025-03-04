@@ -62,7 +62,7 @@ metadata = {
             "repository": "pypi",
         },
         "seamm-geometric": {
-            "description": "Connectro between geomeTRIC and SEAMM",
+            "description": "Connector between geomeTRIC and SEAMM",
             "repository": "pypi",
         },
         "seamm-installer": {
