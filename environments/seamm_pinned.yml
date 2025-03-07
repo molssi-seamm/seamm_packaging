@@ -57,7 +57,7 @@ dependencies:
       - geometry-analysis-step==2025.3.4
       - lammps-step==2025.2.7
       - loop-step==2024.12.23
-      - mopac-step==2025.2.23
+      - mopac-step==2025.3.6
       - packmol-step==2025.1.29
       - psi4-step==2024.12.7
       - qcarchive-step==2023.3.30
