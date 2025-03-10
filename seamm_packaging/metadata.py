@@ -14,6 +14,10 @@ metadata = {
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "dependencies": {
+                "pmw": {
+                    "comment": "conda-forge version is old and does not work",
+                    "repository": "pypi",
+                },
                 "psutil": {
                     "comment": "pip cannot install, so insist on conda",
                     "repository": "conda-forge",
@@ -59,7 +63,7 @@ metadata = {
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
-            "repository": "pypi",
+            "repository": "conda-forge",
         },
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
