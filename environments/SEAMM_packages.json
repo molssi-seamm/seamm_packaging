@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-08T05:19:22.666251+00:00",
-    "doi": "10.5281/zenodo.14991945",
+    "date": "2025-03-10T05:20:01.311684+00:00",
+    "doi": "10.5281/zenodo.14997654",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -345,13 +345,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2025.1.29"
+            "version": "2025.3.9"
         },
         "psi4-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2024.12.7"
+            "version": "2025.3.9"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -435,7 +435,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2024.4.22"
+            "version": "2025.3.9"
         },
         "seamm-jobserver": {
             "channel": "pypi",

@@ -11,7 +11,7 @@ dependencies:
   - seamm==2025.3.4
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
-  - seamm-installer==2024.4.22
+  - seamm-installer==2025.3.9
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
 
@@ -58,8 +58,8 @@ dependencies:
       - lammps-step==2025.2.7
       - loop-step==2024.12.23
       - mopac-step==2025.3.6
-      - packmol-step==2025.1.29
-      - psi4-step==2024.12.7
+      - packmol-step==2025.3.9
+      - psi4-step==2025.3.9
       - qcarchive-step==2023.3.30
       - quickmin-step==2025.2.24
       - rdkit-step==2023.2.22
