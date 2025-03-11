@@ -11,6 +11,7 @@ dependencies:
   - seamm
   - seamm-dashboard
   - seamm-datastore
+  - seamm-ff-util
   - seamm-installer
   - seamm-util
   - seamm-widgets
@@ -39,7 +40,6 @@ dependencies:
       # Core packages
       - seamm-ase
       - seamm-exec
-      - seamm-ff-util
       - seamm-geometric
       - seamm-jobserver
 
@@ -77,3 +77,8 @@ dependencies:
 
       # 3rd-party plug-ins
       - pyxtal-step
+
+      # Dependencies that require special handling
+
+      # seamm: conda-forge version is old and does not work
+      - pmw

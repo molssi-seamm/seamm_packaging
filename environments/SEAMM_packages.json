@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-10T05:20:01.311684+00:00",
-    "doi": "10.5281/zenodo.14997654",
+    "date": "2025-03-11T05:23:25.609356+00:00",
+    "doi": "10.5281/zenodo.15003875",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -23,6 +23,10 @@
             },
             "seamm": {
                 "dependencies": {
+                    "pmw": {
+                        "comment": "conda-forge version is old and does not work",
+                        "repository": "pypi"
+                    },
                     "psutil": {
                         "comment": "pip cannot install, so insist on conda",
                         "repository": "conda-forge"
@@ -66,7 +70,7 @@
             },
             "seamm-ff-util": {
                 "description": "Utility routines for handling forcefields in SEAMM",
-                "repository": "pypi"
+                "repository": "conda-forge"
             },
             "seamm-geometric": {
                 "description": "Connector between geomeTRIC and SEAMM",
@@ -420,10 +424,10 @@
             "version": "2025.1.3"
         },
         "seamm-ff-util": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2025.1.21"
+            "version": "2024.6.27"
         },
         "seamm-geometric": {
             "channel": "pypi",
@@ -507,7 +511,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for the TorchANI ML models",
             "type": "MolSSI plug-in",
-            "version": "2025.2.7"
+            "version": "2025.3.10"
         }
     }
 }

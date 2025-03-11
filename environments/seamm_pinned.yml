@@ -11,6 +11,7 @@ dependencies:
   - seamm==2025.3.4
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
+  - seamm-ff-util==2024.6.27
   - seamm-installer==2025.3.9
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
@@ -39,7 +40,6 @@ dependencies:
       # Core packages
       - seamm-ase==2025.2.7
       - seamm-exec==2025.1.3
-      - seamm-ff-util==2025.1.21
       - seamm-geometric==2025.2.7
       - seamm-jobserver==2024.3.12
 
@@ -73,7 +73,12 @@ dependencies:
       - table-step==2023.11.10
       - thermal-conductivity-step==2024.6.3
       - thermochemistry-step==2025.1.31
-      - torchani-step==2025.2.7
+      - torchani-step==2025.3.10
 
       # 3rd-party plug-ins
       - pyxtal-step==2021.7.29
+
+      # Dependencies that require special handling
+
+      # seamm: conda-forge version is old and does not work
+      - pmw
