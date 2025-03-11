@@ -7,7 +7,11 @@ metadata = {
                     "comment": "libsqlite version 3.49.1 is badly broken!",
                     "pinning": "!=3.49.1",
                     "repository": "conda-forge",
-                }
+                },
+                "pubchempy": {
+                    "comment": "Currently ommitted from molsystem requirements...",
+                    "repository": "conda-forge",
+                },
             },
             "repository": "conda-forge",
         },
@@ -21,7 +25,7 @@ metadata = {
                 "psutil": {
                     "comment": "pip cannot install, so insist on conda",
                     "repository": "conda-forge",
-                }
+                },
             },
             "repository": "conda-forge",
         },
