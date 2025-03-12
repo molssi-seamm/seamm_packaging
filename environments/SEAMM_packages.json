@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-11T05:23:25.609356+00:00",
-    "doi": "10.5281/zenodo.15003875",
+    "date": "2025-03-12T05:23:19.801135+00:00",
+    "doi": "10.5281/zenodo.15009814",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -15,6 +15,10 @@
                     "libsqlite": {
                         "comment": "libsqlite version 3.49.1 is badly broken!",
                         "pinning": "!=3.49.1",
+                        "repository": "conda-forge"
+                    },
+                    "pubchempy": {
+                        "comment": "Currently ommitted from molsystem requirements...",
                         "repository": "conda-forge"
                     }
                 },
@@ -427,7 +431,7 @@
             "channel": "conda-forge",
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2024.6.27"
+            "version": "2025.1.21"
         },
         "seamm-geometric": {
             "channel": "pypi",

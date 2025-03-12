@@ -24,6 +24,8 @@ dependencies:
 
   # molsystem: libsqlite version 3.49.1 is badly broken!
   - libsqlite!=3.49.1
+  # molsystem: Currently ommitted from molsystem requirements...
+  - pubchempy
   # seamm: pip cannot install, so insist on conda
   - psutil
   # seamm-dashboard: Dashboard fails with version 3, so...

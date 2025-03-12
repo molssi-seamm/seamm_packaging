@@ -11,7 +11,7 @@ dependencies:
   - seamm==2025.3.4
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
-  - seamm-ff-util==2024.6.27
+  - seamm-ff-util==2025.1.21
   - seamm-installer==2025.3.9
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
@@ -24,6 +24,8 @@ dependencies:
 
   # molsystem: libsqlite version 3.49.1 is badly broken!
   - libsqlite!=3.49.1
+  # molsystem: Currently ommitted from molsystem requirements...
+  - pubchempy
   # seamm: pip cannot install, so insist on conda
   - psutil
   # seamm-dashboard: Dashboard fails with version 3, so...
