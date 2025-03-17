@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-13T05:23:17.932184+00:00",
-    "doi": "10.5281/zenodo.15015967",
+    "date": "2025-03-17T05:24:21.123318+00:00",
+    "doi": "10.5281/zenodo.15037084",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -305,7 +305,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2024.12.14"
+            "version": "2025.3.16"
         },
         "from-smiles-step": {
             "channel": "pypi",
@@ -329,7 +329,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.2.7"
+            "version": "2025.3.16"
         },
         "loop-step": {
             "channel": "pypi",
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.3.4"
+            "version": "2025.3.16"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -431,7 +431,7 @@
             "channel": "conda-forge",
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2025.1.21"
+            "version": "2025.3.16"
         },
         "seamm-geometric": {
             "channel": "pypi",
