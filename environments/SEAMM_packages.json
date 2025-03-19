@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-18T05:23:42.830916+00:00",
-    "doi": "10.5281/zenodo.15043268",
+    "date": "2025-03-19T05:23:29.501738+00:00",
+    "doi": "10.5281/zenodo.15049118",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -305,7 +305,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2025.3.16"
+            "version": "2025.3.18"
         },
         "from-smiles-step": {
             "channel": "pypi",
