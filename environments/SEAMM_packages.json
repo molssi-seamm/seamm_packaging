@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-03-19T05:23:29.501738+00:00",
-    "doi": "10.5281/zenodo.15049118",
+    "date": "2025-04-02T05:25:54.897558+00:00",
+    "doi": "10.5281/zenodo.15123341",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -293,7 +293,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2024.12.14"
+            "version": "2025.4.1"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -305,7 +305,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2025.3.18"
+            "version": "2025.4.1"
         },
         "from-smiles-step": {
             "channel": "pypi",
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.3.16"
+            "version": "2025.4.1"
         },
         "mopac-step": {
             "channel": "pypi",

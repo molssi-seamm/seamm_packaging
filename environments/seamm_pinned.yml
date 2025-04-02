@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.3.16
+  - molsystem==2025.4.1
   - seamm==2025.3.4
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -51,9 +51,9 @@ dependencies:
       - custom-step==2023.12.12
       - dftbplus-step==2025.3.7
       - diffusivity-step==2024.7.30.1
-      - energy-scan-step==2024.12.14
+      - energy-scan-step==2025.4.1
       - fhi-aims-step==2024.10.31
-      - forcefield-step==2025.3.18
+      - forcefield-step==2025.4.1
       - from-smiles-step==2025.2.24
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
