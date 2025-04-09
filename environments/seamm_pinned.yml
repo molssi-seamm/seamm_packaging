@@ -11,7 +11,7 @@ dependencies:
   - seamm==2025.3.4
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
-  - seamm-ff-util==2025.3.16
+  - seamm-ff-util==2025.4.7
   - seamm-installer==2025.3.11
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
@@ -53,7 +53,7 @@ dependencies:
       - diffusivity-step==2024.7.30.1
       - energy-scan-step==2025.4.1
       - fhi-aims-step==2024.10.31
-      - forcefield-step==2025.4.1
+      - forcefield-step==2025.4.7
       - from-smiles-step==2025.2.24
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
