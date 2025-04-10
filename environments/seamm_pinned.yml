@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.2.24
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
-      - lammps-step==2025.3.17.1
+      - lammps-step==2025.4.9
       - loop-step==2024.12.23
       - mopac-step==2025.3.6
       - packmol-step==2025.3.9
