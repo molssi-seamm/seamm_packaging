@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-01T05:25:54.426129+00:00",
-    "doi": "10.5281/zenodo.15314407",
+    "date": "2025-05-08T05:26:19.921603+00:00",
+    "doi": "10.5281/zenodo.15362340",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -263,7 +263,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.15"
+            "version": "2025.5.7"
         },
         "crystal-builder-step": {
             "channel": "pypi",
@@ -293,7 +293,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2025.4.11"
+            "version": "2025.5.7"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -329,7 +329,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.4.9"
+            "version": "2025.5.7"
         },
         "loop-step": {
             "channel": "pypi",
@@ -347,7 +347,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2025.3.6"
+            "version": "2025.5.7.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -437,7 +437,7 @@
             "channel": "pypi",
             "description": "Connector between geomeTRIC and SEAMM",
             "type": "Core package",
-            "version": "2025.2.7"
+            "version": "2025.5.7"
         },
         "seamm-installer": {
             "channel": "conda-forge",
