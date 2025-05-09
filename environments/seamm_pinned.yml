@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.4.1
+  - molsystem==2025.5.8
   - seamm==2025.4.30
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -69,7 +69,7 @@ dependencies:
       - read-structure-step==2025.3.4
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
-      - structure-step==2024.10.24
+      - structure-step==2025.5.8
       - subflowchart-step==2025.3.4
       - supercell-step==2023.11.5
       - table-step==2023.11.10

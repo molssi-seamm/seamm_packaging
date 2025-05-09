@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-08T05:26:19.921603+00:00",
-    "doi": "10.5281/zenodo.15362340",
+    "date": "2025-05-09T05:25:12.307612+00:00",
+    "doi": "10.5281/zenodo.15369234",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.4.1"
+            "version": "2025.5.8"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -479,7 +479,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2024.10.24"
+            "version": "2025.5.8"
         },
         "subflowchart-step": {
             "channel": "pypi",
