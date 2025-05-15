@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-09T05:25:12.307612+00:00",
-    "doi": "10.5281/zenodo.15369234",
+    "date": "2025-05-15T05:26:18.413787+00:00",
+    "doi": "10.5281/zenodo.15421283",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -311,7 +311,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
             "type": "MolSSI plug-in",
-            "version": "2025.2.24"
+            "version": "2025.5.14"
         },
         "gaussian-step": {
             "channel": "pypi",
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.5.8"
+            "version": "2025.5.14"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -395,7 +395,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.3.4"
+            "version": "2025.5.14"
         },
         "seamm": {
             "channel": "conda-forge",
@@ -479,7 +479,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2025.5.8"
+            "version": "2025.5.14"
         },
         "subflowchart-step": {
             "channel": "pypi",

@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.5.8
+  - molsystem==2025.5.14
   - seamm==2025.4.30
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -54,7 +54,7 @@ dependencies:
       - energy-scan-step==2025.5.7
       - fhi-aims-step==2024.10.31
       - forcefield-step==2025.4.7
-      - from-smiles-step==2025.2.24
+      - from-smiles-step==2025.5.14
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
       - lammps-step==2025.5.7
@@ -66,10 +66,10 @@ dependencies:
       - quickmin-step==2025.2.24
       - rdkit-step==2023.2.22
       - reaction-path-step==2024.12.14
-      - read-structure-step==2025.3.4
+      - read-structure-step==2025.5.14
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
-      - structure-step==2025.5.8
+      - structure-step==2025.5.14
       - subflowchart-step==2025.3.4
       - supercell-step==2023.11.5
       - table-step==2023.11.10
