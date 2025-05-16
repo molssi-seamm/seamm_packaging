@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-15T05:26:18.413787+00:00",
-    "doi": "10.5281/zenodo.15421283",
+    "date": "2025-05-16T05:26:19.787850+00:00",
+    "doi": "10.5281/zenodo.15429298",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -335,7 +335,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.12.23"
+            "version": "2025.5.15"
         },
         "molsystem": {
             "channel": "conda-forge",

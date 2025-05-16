@@ -58,7 +58,7 @@ dependencies:
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
       - lammps-step==2025.5.7
-      - loop-step==2024.12.23
+      - loop-step==2025.5.15
       - mopac-step==2025.5.7.1
       - packmol-step==2025.3.9
       - psi4-step==2025.3.9
