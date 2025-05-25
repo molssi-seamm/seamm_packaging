@@ -11,7 +11,7 @@ dependencies:
   - seamm==2025.4.30
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
-  - seamm-ff-util==2025.4.7
+  - seamm-ff-util==2025.5.23.1
   - seamm-installer==2025.4.30
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10

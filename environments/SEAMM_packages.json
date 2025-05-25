@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-20T05:25:44.387835+00:00",
-    "doi": "10.5281/zenodo.15469133",
+    "date": "2025-05-25T05:24:18.645182+00:00",
+    "doi": "10.5281/zenodo.15509354",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -431,7 +431,7 @@
             "channel": "conda-forge",
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2025.4.7"
+            "version": "2025.5.23.1"
         },
         "seamm-geometric": {
             "channel": "pypi",
