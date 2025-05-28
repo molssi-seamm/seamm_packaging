@@ -8,7 +8,7 @@ dependencies:
 
   # Core packages
   - molsystem==2025.5.19
-  - seamm==2025.4.30
+  - seamm==2025.5.27
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.5.26
@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
-      - lammps-step==2025.5.26
+      - lammps-step==2025.5.27
       - loop-step==2025.5.15
       - mopac-step==2025.5.7.1
       - packmol-step==2025.3.9

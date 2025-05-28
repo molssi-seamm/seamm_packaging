@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-27T05:25:41.059483+00:00",
-    "doi": "10.5281/zenodo.15523983",
+    "date": "2025-05-28T05:26:03.717160+00:00",
+    "doi": "10.5281/zenodo.15532372",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -329,7 +329,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.5.26"
+            "version": "2025.5.27"
         },
         "loop-step": {
             "channel": "pypi",
@@ -401,7 +401,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.4.30"
+            "version": "2025.5.27"
         },
         "seamm-ase": {
             "channel": "pypi",
