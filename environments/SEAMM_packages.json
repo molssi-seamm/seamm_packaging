@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-28T05:26:03.717160+00:00",
-    "doi": "10.5281/zenodo.15532372",
+    "date": "2025-06-01T17:22:18.054472+00:00",
+    "doi": "10.5281/zenodo.15570680",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -497,7 +497,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for data tables in a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.10"
+            "version": "2025.6.1"
         },
         "thermal-conductivity-step": {
             "channel": "pypi",
