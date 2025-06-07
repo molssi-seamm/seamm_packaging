@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-06-01T17:22:18.054472+00:00",
-    "doi": "10.5281/zenodo.15570680",
+    "date": "2025-06-07T05:24:34.906676+00:00",
+    "doi": "10.5281/zenodo.15612754",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -443,7 +443,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2025.4.30"
+            "version": "2025.6.6"
         },
         "seamm-jobserver": {
             "channel": "pypi",
