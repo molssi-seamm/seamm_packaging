@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-06-21T05:24:57.578802+00:00",
-    "doi": "10.5281/zenodo.15709157",
+    "date": "2025-06-22T05:25:16.673432+00:00",
+    "doi": "10.5281/zenodo.15713944",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -329,7 +329,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.5.27"
+            "version": "2025.6.21"
         },
         "loop-step": {
             "channel": "pypi",
@@ -353,7 +353,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2025.3.9"
+            "version": "2025.6.20"
         },
         "psi4-step": {
             "channel": "pypi",
@@ -443,7 +443,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2025.6.6"
+            "version": "2025.6.21"
         },
         "seamm-jobserver": {
             "channel": "pypi",

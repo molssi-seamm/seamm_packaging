@@ -12,7 +12,7 @@ dependencies:
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.5.26
-  - seamm-installer==2025.6.6
+  - seamm-installer==2025.6.21
   - seamm-util==2024.8.22
   - seamm-widgets==2024.10.10
 
@@ -57,10 +57,10 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
-      - lammps-step==2025.5.27
+      - lammps-step==2025.6.21
       - loop-step==2025.5.15
       - mopac-step==2025.5.7.1
-      - packmol-step==2025.3.9
+      - packmol-step==2025.6.20
       - psi4-step==2025.3.9
       - qcarchive-step==2023.3.30
       - quickmin-step==2025.2.24
