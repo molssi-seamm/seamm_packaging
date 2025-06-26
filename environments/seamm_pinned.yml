@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.1.31
       - geometry-analysis-step==2025.3.4
-      - lammps-step==2025.6.23
+      - lammps-step==2025.6.25
       - loop-step==2025.5.15
       - mopac-step==2025.5.7.1
       - packmol-step==2025.6.20
@@ -71,7 +71,7 @@ dependencies:
       - strain-step==2022.11.7
       - structure-step==2025.5.14
       - subflowchart-step==2025.3.4
-      - supercell-step==2023.11.5
+      - supercell-step==2025.6.25.1
       - table-step==2025.6.1
       - thermal-conductivity-step==2024.6.3
       - thermochemistry-step==2025.1.31
