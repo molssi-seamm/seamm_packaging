@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-07-08T05:27:55.968715+00:00",
-    "doi": "10.5281/zenodo.15833669",
+    "date": "2025-07-17T05:31:42.323838+00:00",
+    "doi": "10.5281/zenodo.16015823",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -323,7 +323,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
             "type": "MolSSI plug-in",
-            "version": "2025.3.4"
+            "version": "2025.7.16"
         },
         "lammps-step": {
             "channel": "pypi",

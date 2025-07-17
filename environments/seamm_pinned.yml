@@ -56,7 +56,7 @@ dependencies:
       - forcefield-step==2025.6.23
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.1.31
-      - geometry-analysis-step==2025.3.4
+      - geometry-analysis-step==2025.7.16
       - lammps-step==2025.6.25
       - loop-step==2025.5.15
       - mopac-step==2025.5.7.1
