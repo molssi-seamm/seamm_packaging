@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-03T05:34:07.530961+00:00",
-    "doi": "10.5281/zenodo.16730646",
+    "date": "2025-08-06T05:36:53.183539+00:00",
+    "doi": "10.5281/zenodo.16750420",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -293,7 +293,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2025.5.7"
+            "version": "2025.8.5"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.5.19"
+            "version": "2025.8.5"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -401,7 +401,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.5.27"
+            "version": "2025.8.5"
         },
         "seamm-ase": {
             "channel": "pypi",
