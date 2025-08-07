@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-06T05:36:53.183539+00:00",
-    "doi": "10.5281/zenodo.16750420",
+    "date": "2025-08-07T05:35:39.218008+00:00",
+    "doi": "10.5281/zenodo.16757787",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -293,7 +293,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2025.8.5"
+            "version": "2025.8.6"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -395,7 +395,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.5.14"
+            "version": "2025.8.6"
         },
         "seamm": {
             "channel": "conda-forge",
