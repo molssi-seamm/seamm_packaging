@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-07T05:35:39.218008+00:00",
-    "doi": "10.5281/zenodo.16757787",
+    "date": "2025-08-13T05:27:57.976488+00:00",
+    "doi": "10.5281/zenodo.16830834",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -317,7 +317,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2025.1.31"
+            "version": "2025.8.12"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -341,7 +341,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.8.5"
+            "version": "2025.8.12"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -401,7 +401,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.8.5"
+            "version": "2025.8.12"
         },
         "seamm-ase": {
             "channel": "pypi",

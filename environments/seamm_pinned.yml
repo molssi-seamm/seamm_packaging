@@ -7,8 +7,8 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.8.5
-  - seamm==2025.8.5
+  - molsystem==2025.8.12
+  - seamm==2025.8.12
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
@@ -55,7 +55,7 @@ dependencies:
       - fhi-aims-step==2024.10.31
       - forcefield-step==2025.7.22
       - from-smiles-step==2025.5.14
-      - gaussian-step==2025.1.31
+      - gaussian-step==2025.8.12
       - geometry-analysis-step==2025.7.16
       - lammps-step==2025.8.2
       - loop-step==2025.7.23
