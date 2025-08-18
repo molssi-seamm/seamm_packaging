@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-05-09T05:25:12.307612+00:00",
-    "doi": "10.5281/zenodo.15369234",
+    "date": "2025-08-13T05:27:57.976488+00:00",
+    "doi": "10.5281/zenodo.16830834",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -293,7 +293,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2025.5.7"
+            "version": "2025.8.6"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -305,43 +305,43 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2025.4.7"
+            "version": "2025.7.22"
         },
         "from-smiles-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
             "type": "MolSSI plug-in",
-            "version": "2025.2.24"
+            "version": "2025.5.14"
         },
         "gaussian-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2025.1.31"
+            "version": "2025.8.12"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
             "type": "MolSSI plug-in",
-            "version": "2025.3.4"
+            "version": "2025.7.16"
         },
         "lammps-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.5.7"
+            "version": "2025.8.2"
         },
         "loop-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2024.12.23"
+            "version": "2025.7.23"
         },
         "molsystem": {
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.5.8"
+            "version": "2025.8.12"
         },
         "mopac-step": {
             "channel": "pypi",
@@ -353,7 +353,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2025.3.9"
+            "version": "2025.6.20"
         },
         "psi4-step": {
             "channel": "pypi",
@@ -395,13 +395,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.3.4"
+            "version": "2025.8.6"
         },
         "seamm": {
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.4.30"
+            "version": "2025.8.12"
         },
         "seamm-ase": {
             "channel": "pypi",
@@ -425,13 +425,13 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2025.1.3"
+            "version": "2025.6.23.2"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2025.4.7"
+            "version": "2025.8.1"
         },
         "seamm-geometric": {
             "channel": "pypi",
@@ -443,7 +443,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2025.4.30"
+            "version": "2025.7.7"
         },
         "seamm-jobserver": {
             "channel": "pypi",
@@ -479,7 +479,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2025.5.8"
+            "version": "2025.5.14"
         },
         "subflowchart-step": {
             "channel": "pypi",
@@ -491,13 +491,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building supercells of periodic systems.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.5"
+            "version": "2025.6.25.1"
         },
         "table-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for data tables in a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2023.11.10"
+            "version": "2025.6.1"
         },
         "thermal-conductivity-step": {
             "channel": "pypi",
