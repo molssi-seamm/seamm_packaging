@@ -18,6 +18,10 @@ metadata = {
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "dependencies": {
+                "kaleido": {
+                    "comment": "does not exist on conda forge",
+                    "repository": "pypi",
+                },
                 "pmw": {
                     "comment": "conda-forge version is old and does not work",
                     "repository": "pypi",
