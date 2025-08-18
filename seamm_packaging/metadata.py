@@ -18,10 +18,6 @@ metadata = {
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "dependencies": {
-                "kaleido": {
-                    "comment": "does not exist on conda forge",
-                    "repository": "pypi",
-                },
                 "pmw": {
                     "comment": "conda-forge version is old and does not work",
                     "repository": "pypi",
@@ -91,6 +87,12 @@ metadata = {
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "repository": "conda-forge",
+            "dependencies": {
+                "kaleido": {
+                    "comment": "does not exist on conda forge",
+                    "repository": "pypi",
+                },
+            },
         },
         "seamm-widgets": {
             "description": "Specialized tkinter widgets for SEAMM",
