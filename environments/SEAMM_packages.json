@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-13T05:27:57.976488+00:00",
-    "doi": "10.5281/zenodo.16830834",
+    "date": "2025-08-19T05:26:31.982444+00:00",
+    "doi": "10.5281/zenodo.16899975",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -89,6 +89,12 @@
                 "repository": "pypi"
             },
             "seamm-util": {
+                "dependencies": {
+                    "kaleido": {
+                        "comment": "does not exist on conda forge",
+                        "repository": "pypi"
+                    }
+                },
                 "description": "Utility methods for the SEAMM environment",
                 "repository": "conda-forge"
             },
@@ -401,7 +407,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.8.12"
+            "version": "2025.8.18.1"
         },
         "seamm-ase": {
             "channel": "pypi",
@@ -455,7 +461,7 @@
             "channel": "conda-forge",
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2024.8.22"
+            "version": "2025.8.18"
         },
         "seamm-widgets": {
             "channel": "conda-forge",

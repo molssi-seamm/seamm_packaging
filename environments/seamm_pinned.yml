@@ -8,12 +8,12 @@ dependencies:
 
   # Core packages
   - molsystem==2025.8.12
-  - seamm==2025.8.12
+  - seamm==2025.8.18.1
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
   - seamm-installer==2025.7.7
-  - seamm-util==2024.8.22
+  - seamm-util==2025.8.18
   - seamm-widgets==2024.10.10
 
   # MolSSI plug-ins
@@ -84,3 +84,5 @@ dependencies:
 
       # seamm: conda-forge version is old and does not work
       - pmw
+      # seamm-util: does not exist on conda forge
+      - kaleido
