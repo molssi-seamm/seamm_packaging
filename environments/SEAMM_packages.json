@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-19T05:26:31.982444+00:00",
-    "doi": "10.5281/zenodo.16899975",
+    "date": "2025-08-20T05:26:17.826078+00:00",
+    "doi": "10.5281/zenodo.16908452",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -407,7 +407,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.8.18.1"
+            "version": "2025.8.19"
         },
         "seamm-ase": {
             "channel": "pypi",

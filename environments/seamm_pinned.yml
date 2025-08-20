@@ -8,7 +8,7 @@ dependencies:
 
   # Core packages
   - molsystem==2025.8.12
-  - seamm==2025.8.18.1
+  - seamm==2025.8.19
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
