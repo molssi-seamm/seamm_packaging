@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-20T05:26:17.826078+00:00",
-    "doi": "10.5281/zenodo.16908452",
+    "date": "2025-08-21T05:26:29.068803+00:00",
+    "doi": "10.5281/zenodo.16916983",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -299,7 +299,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2025.8.6"
+            "version": "2025.8.20"
         },
         "fhi-aims-step": {
             "channel": "pypi",
@@ -323,7 +323,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2025.8.12"
+            "version": "2025.8.20"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
