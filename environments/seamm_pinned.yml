@@ -8,12 +8,12 @@ dependencies:
 
   # Core packages
   - molsystem==2025.8.12
-  - seamm==2025.8.12
+  - seamm==2025.8.19
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
   - seamm-installer==2025.7.7
-  - seamm-util==2024.8.22
+  - seamm-util==2025.8.18
   - seamm-widgets==2024.10.10
 
   # MolSSI plug-ins
@@ -51,11 +51,11 @@ dependencies:
       - custom-step==2023.12.12
       - dftbplus-step==2025.3.7
       - diffusivity-step==2024.7.30.1
-      - energy-scan-step==2025.8.6
+      - energy-scan-step==2025.8.20
       - fhi-aims-step==2024.10.31
       - forcefield-step==2025.7.22
       - from-smiles-step==2025.5.14
-      - gaussian-step==2025.8.12
+      - gaussian-step==2025.8.20
       - geometry-analysis-step==2025.7.16
       - lammps-step==2025.8.2
       - loop-step==2025.7.23
@@ -84,3 +84,5 @@ dependencies:
 
       # seamm: conda-forge version is old and does not work
       - pmw
+      # seamm-util: does not exist on conda forge
+      - kaleido

@@ -84,3 +84,5 @@ dependencies:
 
       # seamm: conda-forge version is old and does not work
       - pmw
+      # seamm-util: does not exist on conda forge
+      - kaleido
