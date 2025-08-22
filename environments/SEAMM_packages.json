@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-21T05:26:29.068803+00:00",
-    "doi": "10.5281/zenodo.16916983",
+    "date": "2025-08-22T05:26:22.577265+00:00",
+    "doi": "10.5281/zenodo.16924616",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -226,6 +226,10 @@
                 "description": "A SEAMM plug-in for calculating thermochemical functions",
                 "repository": "pypi"
             },
+            "thermomechanical-step": {
+                "description": "A SEAMM plug-in for calculating thermomechanical properties",
+                "repository": "pypi"
+            },
             "torchani-step": {
                 "description": "A SEAMM plug-in for the TorchANI ML models",
                 "repository": "pypi"
@@ -335,7 +339,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.8.2"
+            "version": "2025.8.21"
         },
         "loop-step": {
             "channel": "pypi",
@@ -516,6 +520,12 @@
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
             "version": "2025.1.31"
+        },
+        "thermomechanical-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for calculating thermomechanical properties",
+            "type": "MolSSI plug-in",
+            "version": "2025.8.21"
         },
         "torchani-step": {
             "channel": "pypi",

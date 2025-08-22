@@ -75,6 +75,7 @@ dependencies:
       - table-step
       - thermal-conductivity-step
       - thermochemistry-step
+      - thermomechanical-step
       - torchani-step
 
       # 3rd-party plug-ins
