@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-08-22T05:26:22.577265+00:00",
-    "doi": "10.5281/zenodo.16924616",
+    "date": "2025-08-23T05:23:52.680991+00:00",
+    "doi": "10.5281/zenodo.16931023",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -453,7 +453,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2025.7.7"
+            "version": "2025.8.22"
         },
         "seamm-jobserver": {
             "channel": "pypi",
@@ -525,7 +525,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
             "type": "MolSSI plug-in",
-            "version": "2025.8.21"
+            "version": "2025.8.22"
         },
         "torchani-step": {
             "channel": "pypi",
