@@ -8,13 +8,13 @@ dependencies:
 
   # Core packages
   - molsystem==2025.8.12
-  - seamm==2025.8.19
+  - seamm==2025.8.27
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
   - seamm-installer==2025.8.22
-  - seamm-util==2025.8.18
-  - seamm-widgets==2024.10.10
+  - seamm-util==2025.8.27
+  - seamm-widgets==2025.8.27
 
   # MolSSI plug-ins
 
@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.8.20
       - geometry-analysis-step==2025.7.16
-      - lammps-step==2025.8.21
+      - lammps-step==2025.8.27
       - loop-step==2025.7.23
       - mopac-step==2025.5.7.1
       - packmol-step==2025.6.20
