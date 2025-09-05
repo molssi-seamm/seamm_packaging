@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.8.12
+  - molsystem==2025.9.4
   - seamm==2025.8.27
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -75,7 +75,7 @@ dependencies:
       - table-step==2025.6.1
       - thermal-conductivity-step==2024.6.3
       - thermochemistry-step==2025.1.31
-      - thermomechanical-step==2025.9.2
+      - thermomechanical-step==2025.9.4
       - torchani-step==2025.3.10
 
       # 3rd-party plug-ins
