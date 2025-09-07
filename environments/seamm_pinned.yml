@@ -8,7 +8,7 @@ dependencies:
 
   # Core packages
   - molsystem==2025.9.4
-  - seamm==2025.9.5.1
+  - seamm==2025.9.6
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
   - seamm-ff-util==2025.8.1
@@ -60,7 +60,7 @@ dependencies:
       - lammps-step==2025.9.2
       - loop-step==2025.7.23
       - mopac-step==2025.5.7.1
-      - packmol-step==2025.6.20
+      - packmol-step==2025.9.6
       - psi4-step==2025.3.9
       - qcarchive-step==2023.3.30
       - quickmin-step==2025.2.24
@@ -75,7 +75,7 @@ dependencies:
       - table-step==2025.6.1
       - thermal-conductivity-step==2024.6.3
       - thermochemistry-step==2025.1.31
-      - thermomechanical-step==2025.9.4
+      - thermomechanical-step==2025.9.6
       - torchani-step==2025.3.10
 
       # 3rd-party plug-ins
