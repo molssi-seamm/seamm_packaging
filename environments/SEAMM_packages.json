@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-09-22T05:25:09.292337+00:00",
-    "doi": "10.5281/zenodo.17173531",
+    "date": "2025-09-24T05:24:00.377116+00:00",
+    "doi": "10.5281/zenodo.17189382",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -297,7 +297,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2024.7.30.1"
+            "version": "2025.9.23"
         },
         "energy-scan-step": {
             "channel": "pypi",
