@@ -269,6 +269,10 @@ metadata = {
             "description": "A SEAMM plug-in for the TorchANI ML models",
             "repository": "pypi",
         },
+        "vasp-step": {
+            "description": "A SEAMM plug-in for VASP, a planewave DFT code",
+            "repository": "pypi",
+        },
     },
     "3rd-party plug-in": {
         "pyxtal-step": {
