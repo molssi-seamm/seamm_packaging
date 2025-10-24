@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-10-23T05:25:57.883240+00:00",
-    "doi": "10.5281/zenodo.17421686",
+    "date": "2025-10-24T05:25:01.567652+00:00",
+    "doi": "10.5281/zenodo.17430676",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -233,6 +233,10 @@
             "torchani-step": {
                 "description": "A SEAMM plug-in for the TorchANI ML models",
                 "repository": "pypi"
+            },
+            "vasp-step": {
+                "description": "A SEAMM plug-in for VASP, a planewave DFT code",
+                "repository": "pypi"
             }
         },
         "conda development packages": [
@@ -435,7 +439,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2025.6.23.2"
+            "version": "2025.10.23"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -532,6 +536,12 @@
             "description": "A SEAMM plug-in for the TorchANI ML models",
             "type": "MolSSI plug-in",
             "version": "2025.3.10"
+        },
+        "vasp-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for VASP, a planewave DFT code",
+            "type": "MolSSI plug-in",
+            "version": "2025.10.22"
         }
     }
 }
