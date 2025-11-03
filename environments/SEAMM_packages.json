@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-11-01T05:24:37.341680+00:00",
-    "doi": "10.5281/zenodo.17499139",
+    "date": "2025-11-03T05:27:46.683339+00:00",
+    "doi": "10.5281/zenodo.17510021",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -541,7 +541,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2025.10.31"
+            "version": "2025.11.2"
         }
     }
 }
