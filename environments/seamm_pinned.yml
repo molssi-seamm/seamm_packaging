@@ -75,7 +75,7 @@ dependencies:
       - table-step==2025.6.1
       - thermal-conductivity-step==2024.6.3
       - thermochemistry-step==2025.1.31
-      - thermomechanical-step==2025.9.6
+      - thermomechanical-step==2025.11.4
       - torchani-step==2025.3.10
       - vasp-step==2025.11.2
 
