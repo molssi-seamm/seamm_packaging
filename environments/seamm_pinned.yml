@@ -66,7 +66,7 @@ dependencies:
       - quickmin-step==2025.2.24
       - rdkit-step==2023.2.22
       - reaction-path-step==2024.12.14
-      - read-structure-step==2025.8.6
+      - read-structure-step==2025.11.12
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
       - structure-step==2025.5.14

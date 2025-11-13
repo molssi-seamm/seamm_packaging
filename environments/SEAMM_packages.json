@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-11-09T20:19:41.298841+00:00",
-    "doi": "10.5281/zenodo.17566517",
+    "date": "2025-11-13T05:27:50.532798+00:00",
+    "doi": "10.5281/zenodo.17596442",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.8.6"
+            "version": "2025.11.12"
         },
         "seamm": {
             "channel": "conda-forge",
