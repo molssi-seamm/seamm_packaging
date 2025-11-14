@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-11-13T05:27:50.532798+00:00",
-    "doi": "10.5281/zenodo.17596442",
+    "date": "2025-11-14T05:26:52.519369+00:00",
+    "doi": "10.5281/zenodo.17605987",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -463,7 +463,7 @@
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2024.3.12"
+            "version": "2025.11.13"
         },
         "seamm-util": {
             "channel": "conda-forge",

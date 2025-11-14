@@ -43,7 +43,7 @@ dependencies:
       - seamm-ase==2025.2.7
       - seamm-exec==2025.10.23
       - seamm-geometric==2025.5.7
-      - seamm-jobserver==2024.3.12
+      - seamm-jobserver==2025.11.13
 
       # MolSSI plug-ins
       - control-parameters-step==2025.5.7
