@@ -262,7 +262,9 @@ metadata = {
             "repository": "pypi",
         },
         "thermomechanical-step": {
-            "description": "A SEAMM plug-in for calculating thermomechanical properties",
+            "description": (
+                "A SEAMM plug-in for calculating thermomechanical properties"
+            ),
             "repository": "pypi",
         },
         "torchani-step": {
