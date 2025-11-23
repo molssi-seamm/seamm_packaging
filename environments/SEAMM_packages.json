@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-11-20T05:27:37.483517+00:00",
-    "doi": "10.5281/zenodo.17657062",
+    "date": "2025-11-23T05:26:40.040770+00:00",
+    "doi": "10.5281/zenodo.17685889",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -349,7 +349,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2025.7.23"
+            "version": "2025.11.22"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -463,7 +463,7 @@
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2025.11.13"
+            "version": "2025.11.22"
         },
         "seamm-util": {
             "channel": "conda-forge",

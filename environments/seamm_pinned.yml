@@ -43,7 +43,7 @@ dependencies:
       - seamm-ase==2025.2.7
       - seamm-exec==2025.10.23
       - seamm-geometric==2025.5.7
-      - seamm-jobserver==2025.11.13
+      - seamm-jobserver==2025.11.22
 
       # MolSSI plug-ins
       - control-parameters-step==2025.5.7
@@ -58,7 +58,7 @@ dependencies:
       - gaussian-step==2025.8.20
       - geometry-analysis-step==2025.7.16
       - lammps-step==2025.11.19.1
-      - loop-step==2025.7.23
+      - loop-step==2025.11.22
       - mopac-step==2025.10.22
       - packmol-step==2025.9.6
       - psi4-step==2025.3.9
