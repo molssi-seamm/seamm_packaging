@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-11-23T05:26:40.040770+00:00",
-    "doi": "10.5281/zenodo.17685889",
+    "date": "2025-11-26T18:10:16.851634+00:00",
+    "doi": "10.5281/zenodo.17726871",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -343,7 +343,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.11.19.1"
+            "version": "2025.11.26"
         },
         "loop-step": {
             "channel": "pypi",
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.11.19"
+            "version": "2025.11.26"
         },
         "seamm": {
             "channel": "conda-forge",
@@ -541,7 +541,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2025.11.2"
+            "version": "2025.11.25"
         }
     }
 }

@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2025.8.20
       - geometry-analysis-step==2025.7.16
-      - lammps-step==2025.11.19.1
+      - lammps-step==2025.11.26
       - loop-step==2025.11.22
       - mopac-step==2025.10.22
       - packmol-step==2025.9.6
@@ -66,7 +66,7 @@ dependencies:
       - quickmin-step==2025.2.24
       - rdkit-step==2023.2.22
       - reaction-path-step==2024.12.14
-      - read-structure-step==2025.11.19
+      - read-structure-step==2025.11.26
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
       - structure-step==2025.5.14
@@ -77,7 +77,7 @@ dependencies:
       - thermochemistry-step==2025.1.31
       - thermomechanical-step==2025.11.4
       - torchani-step==2025.3.10
-      - vasp-step==2025.11.2
+      - vasp-step==2025.11.25
 
       # 3rd-party plug-ins
       - pyxtal-step==2021.7.29
