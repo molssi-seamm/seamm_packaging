@@ -60,7 +60,7 @@ dependencies:
       - lammps-step==2025.12.9
       - loop-step==2025.11.22
       - mopac-step==2025.10.22
-      - packmol-step==2025.9.6
+      - packmol-step==2025.12.19
       - psi4-step==2025.3.9
       - qcarchive-step==2023.3.30
       - quickmin-step==2025.2.24
