@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-12-21T05:29:12.358953+00:00",
+    "date": "2025-12-22T05:57:05.171980+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -355,13 +355,13 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2025.9.4"
+            "version": "2025.12.21"
         },
         "mopac-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2025.12.20"
+            "version": "2025.12.21"
         },
         "packmol-step": {
             "channel": "pypi",

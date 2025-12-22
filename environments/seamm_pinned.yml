@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.9.4
+  - molsystem==2025.12.21
   - seamm==2025.10.22
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
@@ -59,7 +59,7 @@ dependencies:
       - geometry-analysis-step==2025.7.16
       - lammps-step==2025.12.9
       - loop-step==2025.11.22
-      - mopac-step==2025.12.20
+      - mopac-step==2025.12.21
       - packmol-step==2025.12.19
       - psi4-step==2025.3.9
       - qcarchive-step==2023.3.30
