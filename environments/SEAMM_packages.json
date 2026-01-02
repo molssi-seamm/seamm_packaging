@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2025-12-22T05:57:05.171980+00:00",
+    "date": "2026-01-02T05:37:11.548475+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2025.11.26"
+            "version": "2026.1.1"
         },
         "seamm": {
             "channel": "conda-forge",
@@ -541,7 +541,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2025.11.25"
+            "version": "2026.1.1"
         }
     }
 }
