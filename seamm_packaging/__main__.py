@@ -42,19 +42,24 @@ def check_for_changes(environment=None, environments="environments"):
 
 
 if __name__ == "__main__":
-    # Find the environment file.
-    root = Path(__file__).parent.parent
-    environments = root / "environments"
+    if False:
+        print("Uploading to ZENODO")
+        doi = upload_to_zenodo()
+        print(f"   new DOI = {doi}")
+    else:
+        # Find the environment file.
+        root = Path(__file__).parent.parent
+        environments = root / "environments"
 
-    with NamedTemporaryFile(suffix=".yml", delete=False) as fp:
-        environment_file = Path(fp.name)
-        create_full_environment_file(environment_file)
-        create_full_environment(environment_file)
-        changed = check_for_changes("SEAMM_Packages", environments=environments)
+        with NamedTemporaryFile(suffix=".yml", delete=False) as fp:
+            environment_file = Path(fp.name)
+            create_full_environment_file(environment_file)
+            create_full_environment(environment_file)
+            changed = check_for_changes("SEAMM_Packages", environments=environments)
 
-    # Clean up
-    environment_file.unlink()
-    conda = Conda()
-    if conda.exists("SEAMM_Packages"):
-        print("Removing the existing environment 'SEAMM_Packages'")
-        conda.remove_environment("SEAMM_Packages")
+        # Clean up
+        environment_file.unlink()
+        conda = Conda()
+        if conda.exists("SEAMM_Packages"):
+            print("Removing the existing environment 'SEAMM_Packages'")
+            conda.remove_environment("SEAMM_Packages")
