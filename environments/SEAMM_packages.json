@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-01-07T05:37:03.176887+00:00",
-    "doi": "10.5281/zenodo.18169018",
+    "date": "2026-01-08T05:36:32.341357+00:00",
+    "doi": "10.5281/zenodo.18181616",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -367,7 +367,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2025.12.19"
+            "version": "2026.1.7"
         },
         "psi4-step": {
             "channel": "pypi",
