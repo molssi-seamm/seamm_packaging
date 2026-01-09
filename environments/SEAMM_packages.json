@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-01-08T05:36:32.341357+00:00",
-    "doi": "10.5281/zenodo.18181616",
+    "date": "2026-01-09T05:37:14.855175+00:00",
+    "doi": "10.5281/zenodo.18194175",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -301,7 +301,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2025.9.23"
+            "version": "2026.1.8"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -343,7 +343,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2025.12.9"
+            "version": "2026.1.8"
         },
         "loop-step": {
             "channel": "pypi",
