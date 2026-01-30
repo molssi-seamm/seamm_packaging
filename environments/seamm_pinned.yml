@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2025.12.21
+  - molsystem==2026.1.28
   - seamm==2025.10.22
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2024.6.2
