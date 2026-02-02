@@ -77,7 +77,7 @@ dependencies:
       - thermochemistry-step==2025.1.31
       - thermomechanical-step==2025.11.4
       - torchani-step==2025.3.10
-      - vasp-step==2026.1.28
+      - vasp-step==2026.2.1
 
       # 3rd-party plug-ins
       - pyxtal-step==2021.7.29
