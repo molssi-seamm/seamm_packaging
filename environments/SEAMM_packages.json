@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-02-06T06:05:18.653563+00:00",
+    "date": "2026-02-26T06:11:54.606474+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -355,7 +355,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.1.28"
+            "version": "2026.2.25"
         },
         "mopac-step": {
             "channel": "pypi",
