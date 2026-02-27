@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-02-26T06:11:54.606474+00:00",
+    "date": "2026-02-27T06:04:19.398802+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -319,7 +319,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2026.1.28"
+            "version": "2026.2.26"
         },
         "from-smiles-step": {
             "channel": "pypi",
@@ -343,7 +343,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.1.28"
+            "version": "2026.2.25"
         },
         "loop-step": {
             "channel": "pypi",
@@ -415,7 +415,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2025.10.22"
+            "version": "2026.2.26"
         },
         "seamm-ase": {
             "channel": "pypi",
@@ -457,7 +457,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2025.8.22"
+            "version": "2026.2.26"
         },
         "seamm-jobserver": {
             "channel": "pypi",
@@ -475,7 +475,7 @@
             "channel": "conda-forge",
             "description": "Specialized tkinter widgets for SEAMM",
             "type": "Core package",
-            "version": "2025.10.22"
+            "version": "2026.2.26"
         },
         "set-cell-step": {
             "channel": "pypi",
