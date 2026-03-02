@@ -49,35 +49,35 @@ dependencies:
       - control-parameters-step==2025.5.7
       - crystal-builder-step==2022.7.31
       - custom-step==2023.12.12
-      - dftbplus-step==2025.3.7
-      - diffusivity-step==2026.1.8
+      - dftbplus-step==2026.3.1
+      - diffusivity-step==2026.3.1
       - energy-scan-step==2025.8.20
-      - fhi-aims-step==2024.10.31
+      - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
       - from-smiles-step==2025.5.14
-      - gaussian-step==2025.8.20
-      - geometry-analysis-step==2025.7.16
+      - gaussian-step==2026.3.1
+      - geometry-analysis-step==2026.3.1
       - lammps-step==2026.2.25
       - loop-step==2025.11.22
-      - mopac-step==2025.12.21
-      - packmol-step==2026.1.7
-      - psi4-step==2025.3.9
-      - qcarchive-step==2023.3.30
-      - quickmin-step==2025.2.24
+      - mopac-step==2026.3.1
+      - packmol-step==2026.3.1
+      - psi4-step==2026.3.1
+      - qcarchive-step==2026.3.1
+      - quickmin-step==2026.3.1
       - rdkit-step==2023.2.22
-      - reaction-path-step==2024.12.14
+      - reaction-path-step==2026.3.1
       - read-structure-step==2026.1.6
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
-      - structure-step==2025.5.14
-      - subflowchart-step==2025.3.4
+      - structure-step==2026.3.1
+      - subflowchart-step==2026.3.1
       - supercell-step==2025.6.25.1
       - table-step==2025.6.1
-      - thermal-conductivity-step==2024.6.3
-      - thermochemistry-step==2025.1.31
-      - thermomechanical-step==2025.11.4
+      - thermal-conductivity-step==2026.3.1
+      - thermochemistry-step==2026.3.1
+      - thermomechanical-step==2026.3.1
       - torchani-step==2025.3.10
-      - vasp-step==2026.2.5
+      - vasp-step==2026.3.1
 
       # 3rd-party plug-ins
       - pyxtal-step==2021.7.29

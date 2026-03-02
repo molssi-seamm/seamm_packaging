@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-02-27T06:04:19.398802+00:00",
+    "date": "2026-03-02T06:04:00.742107+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -295,13 +295,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2025.3.7"
+            "version": "2026.3.1"
         },
         "diffusivity-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2026.1.8"
+            "version": "2026.3.1"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -313,7 +313,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for FHI-aims",
             "type": "MolSSI plug-in",
-            "version": "2024.10.31"
+            "version": "2026.3.1"
         },
         "forcefield-step": {
             "channel": "pypi",
@@ -331,13 +331,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2025.8.20"
+            "version": "2026.3.1"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
             "type": "MolSSI plug-in",
-            "version": "2025.7.16"
+            "version": "2026.3.1"
         },
         "lammps-step": {
             "channel": "pypi",
@@ -361,19 +361,19 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2025.12.21"
+            "version": "2026.3.1"
         },
         "packmol-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2026.1.7"
+            "version": "2026.3.1"
         },
         "psi4-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2025.3.9"
+            "version": "2026.3.1"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -385,13 +385,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for connecting with QCArchive",
             "type": "MolSSI plug-in",
-            "version": "2023.3.30"
+            "version": "2026.3.1"
         },
         "quickmin-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for simple, quick minimization using a forcefield",
             "type": "MolSSI plug-in",
-            "version": "2025.2.24"
+            "version": "2026.3.1"
         },
         "rdkit-step": {
             "channel": "pypi",
@@ -403,7 +403,7 @@
             "channel": "pypi",
             "description": "A SEAMM plugin for finding transition states and reaction paths",
             "type": "MolSSI plug-in",
-            "version": "2024.12.14"
+            "version": "2026.3.1"
         },
         "read-structure-step": {
             "channel": "pypi",
@@ -493,13 +493,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2025.5.14"
+            "version": "2026.3.1"
         },
         "subflowchart-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for subflowcharts",
             "type": "MolSSI plug-in",
-            "version": "2025.3.4"
+            "version": "2026.3.1"
         },
         "supercell-step": {
             "channel": "pypi",
@@ -517,19 +517,19 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating thermal conductivity",
             "type": "MolSSI plug-in",
-            "version": "2024.6.3"
+            "version": "2026.3.1"
         },
         "thermochemistry-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2025.1.31"
+            "version": "2026.3.1"
         },
         "thermomechanical-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
             "type": "MolSSI plug-in",
-            "version": "2025.11.4"
+            "version": "2026.3.1"
         },
         "torchani-step": {
             "channel": "pypi",
@@ -541,7 +541,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2026.2.5"
+            "version": "2026.3.1"
         }
     }
 }
