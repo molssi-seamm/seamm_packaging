@@ -6,6 +6,7 @@
 # the package.
 
 from .__main__ import create_full_environment_file, check_for_changes  # noqa: F401
+from .packaging import upload_to_zenodo  # noqa: F401
 from .conda import Conda  # noqa: F401
 from .pip import Pip  # noqa: F401
 

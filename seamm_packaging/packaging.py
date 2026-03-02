@@ -418,9 +418,11 @@ def upload_to_zenodo():
     """Upload the packaging files to Zenodo."""
     # Create a new Record
     record = add_version()
+    print(f"{record=}")
 
     # Remove the current files
     for filename in record.files():
+        print(f"removing file {filename}")
         record.remove_file(filename)
 
     # Update the metadata in the files
