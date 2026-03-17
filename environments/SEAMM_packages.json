@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-03-16T06:29:54.951456+00:00",
-    "doi": "10.5281/zenodo.19044968",
+    "date": "2026-03-17T06:11:00.565346+00:00",
+    "doi": "10.5281/zenodo.19060281",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -289,7 +289,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2023.12.12"
+            "version": "2026.3.15"
         },
         "dftbplus-step": {
             "channel": "pypi",
