@@ -41,7 +41,7 @@ dependencies:
   - pip:
       # Core packages
       - seamm-ase==2025.2.7
-      - seamm-exec==2025.10.23
+      - seamm-exec==2026.3.22
       - seamm-geometric==2025.5.7
       - seamm-jobserver==2025.11.22
 
@@ -57,7 +57,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2026.3.1
       - geometry-analysis-step==2026.3.1
-      - lammps-step==2026.2.25
+      - lammps-step==2026.3.22.1
       - loop-step==2025.11.22
       - mopac-step==2026.3.1
       - packmol-step==2026.3.1
