@@ -50,14 +50,14 @@ dependencies:
       - crystal-builder-step==2022.7.31
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
-      - diffusivity-step==2026.3.15
+      - diffusivity-step==2026.3.26
       - energy-scan-step==2025.8.20
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
       - from-smiles-step==2025.5.14
       - gaussian-step==2026.3.1
       - geometry-analysis-step==2026.3.1
-      - lammps-step==2026.3.24
+      - lammps-step==2026.3.26
       - loop-step==2025.11.22
       - mopac-step==2026.3.1
       - packmol-step==2026.3.1
