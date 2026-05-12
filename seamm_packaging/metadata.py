@@ -275,6 +275,12 @@ metadata = {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "repository": "pypi",
         },
+        "xtb-step": {
+            "description": (
+                "A SEAMM plug-in for the xTB family of extended tight-binding methods"
+            ),
+            "repository": "pypi",
+        },
     },
     "3rd-party plug-in": {
         "pyxtal-step": {
