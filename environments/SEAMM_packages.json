@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-05-12T15:23:23.904779+00:00",
-    "doi": "10.5281/zenodo.20140506",
+    "date": "2026-05-14T07:49:02.544097+00:00",
+    "doi": "10.5281/zenodo.20177245",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -551,7 +551,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
             "type": "MolSSI plug-in",
-            "version": "2026.5.12"
+            "version": "2026.5.13"
         }
     }
 }
