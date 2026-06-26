@@ -148,12 +148,20 @@
                 "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
                 "repository": "pypi"
             },
+            "golden-step": {
+                "description": "A SEAMM plugin for golden testing of flowcharts against a known baseline result",
+                "repository": "pypi"
+            },
             "lammps-step": {
                 "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
                 "repository": "pypi"
             },
             "loop-step": {
                 "description": "A SEAMM plug-in which provides loops in flowcharts.",
+                "repository": "pypi"
+            },
+            "model-chemistry-step": {
+                "description": "A SEAMM plug-in to setup a model chemistry for subsequent steps",
                 "repository": "pypi"
             },
             "mopac-step": {
