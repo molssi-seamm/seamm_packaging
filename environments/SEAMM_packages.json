@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-03-27T06:21:13.308228+00:00",
-    "doi": "10.5281/zenodo.19247269",
+    "date": "2026-06-24T08:27:53.073633+00:00",
+    "doi": "10.5281/zenodo.20825970",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -237,6 +237,10 @@
             "vasp-step": {
                 "description": "A SEAMM plug-in for VASP, a planewave DFT code",
                 "repository": "pypi"
+            },
+            "xtb-step": {
+                "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
+                "repository": "pypi"
             }
         },
         "conda development packages": [
@@ -361,7 +365,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.3.1"
+            "version": "2026.6.23"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -542,6 +546,12 @@
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
             "version": "2026.3.1"
+        },
+        "xtb-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
+            "type": "MolSSI plug-in",
+            "version": "2026.5.13"
         }
     }
 }
