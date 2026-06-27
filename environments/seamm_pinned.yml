@@ -57,9 +57,9 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2026.3.1
       - geometry-analysis-step==2026.3.1
-      - lammps-step==2026.6.25
+      - lammps-step==2026.6.26
       - loop-step==2025.11.22
-      - mopac-step==2026.6.23
+      - mopac-step==2026.6.26.1
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
@@ -78,7 +78,7 @@ dependencies:
       - thermomechanical-step==2026.3.1
       - torchani-step==2025.3.10
       - vasp-step==2026.3.1
-      - xtb-step==2026.5.13
+      - xtb-step==2026.6.26.1
 
       # 3rd-party plug-ins
       - pyxtal-step==2021.7.29
