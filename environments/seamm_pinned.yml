@@ -55,7 +55,7 @@ dependencies:
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
       - from-smiles-step==2025.5.14
-      - gaussian-step==2026.3.1
+      - gaussian-step==2026.6.27
       - geometry-analysis-step==2026.3.1
       - lammps-step==2026.6.26
       - loop-step==2025.11.22
