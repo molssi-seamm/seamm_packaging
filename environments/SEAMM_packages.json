@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-06-24T08:27:53.073633+00:00",
-    "doi": "10.5281/zenodo.20825970",
+    "date": "2026-06-27T07:53:58.593160+00:00",
+    "doi": "10.5281/zenodo.20957767",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -152,20 +152,12 @@
                 "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
                 "repository": "pypi"
             },
-            "golden-step": {
-                "description": "A SEAMM plugin for golden testing of flowcharts against a known baseline result",
-                "repository": "pypi"
-            },
             "lammps-step": {
                 "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
                 "repository": "pypi"
             },
             "loop-step": {
                 "description": "A SEAMM plug-in which provides loops in flowcharts.",
-                "repository": "pypi"
-            },
-            "model-chemistry-step": {
-                "description": "A SEAMM plug-in to setup a model chemistry for subsequent steps",
                 "repository": "pypi"
             },
             "mopac-step": {
@@ -363,7 +355,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.3.26"
+            "version": "2026.6.26"
         },
         "loop-step": {
             "channel": "pypi",
@@ -375,13 +367,13 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.2.25"
+            "version": "2026.6.25.1"
         },
         "mopac-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.6.23"
+            "version": "2026.6.26.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -567,7 +559,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
             "type": "MolSSI plug-in",
-            "version": "2026.5.13"
+            "version": "2026.6.26.1"
         }
     }
 }
