@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-06-28T08:27:17.493250+00:00",
-    "doi": "10.5281/zenodo.20993825",
+    "date": "2026-06-29T09:54:51.132424+00:00",
+    "doi": "10.5281/zenodo.21028668",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -479,7 +479,7 @@
             "channel": "conda-forge",
             "description": "Specialized tkinter widgets for SEAMM",
             "type": "Core package",
-            "version": "2026.2.26"
+            "version": "2026.6.28"
         },
         "set-cell-step": {
             "channel": "pypi",
