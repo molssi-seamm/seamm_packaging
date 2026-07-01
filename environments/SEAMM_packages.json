@@ -124,6 +124,10 @@
                 "description": "A SEAMM plug-in for calculating diffusivity",
                 "repository": "pypi"
             },
+            "dimer-builder-step": {
+                "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
+                "repository": "pypi"
+            },
             "energy-scan-step": {
                 "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
                 "repository": "pypi"
