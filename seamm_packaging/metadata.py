@@ -100,6 +100,10 @@ metadata = {
         },
     },
     "MolSSI plug-in": {
+        "atomic-charges-step": {
+            "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
+            "repository": "pypi"
+        },
         "control-parameters-step": {
             "description": (
                 "A SEAMM plug-in for defining command-line parameters for a flowchart."
@@ -126,6 +130,10 @@ metadata = {
         "diffusivity-step": {
             "description": "A SEAMM plug-in for calculating diffusivity",
             "repository": "pypi",
+        },
+        "dimer-builder-step": {
+            "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
+            "repository": "pypi"
         },
         "energy-scan-step": {
             "description": (
@@ -172,12 +180,20 @@ metadata = {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "repository": "pypi",
         },
+        "model-chemistry-step": {
+            "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
+            "repository": "pypi"
+        },
         "mopac-step": {
             "description": (
                 "A SEAMM plug-in to setup, run and analyze semiempirical calculations "
                 "with MOPAC"
             ),
             "repository": "pypi",
+        },
+        "orca-step": {
+            "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
+            "repository": "pypi"
         },
         "packmol-step": {
             "description": (
