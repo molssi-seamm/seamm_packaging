@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-06-29T09:54:51.132424+00:00",
-    "doi": "10.5281/zenodo.21028668",
+    "date": "2026-07-01T08:53:20.346580+00:00",
+    "doi": "10.5281/zenodo.21099571",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -114,10 +114,6 @@
             },
             "custom-step": {
                 "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
-                "repository": "pypi"
-            },
-            "dimer-builder-step": {
-                "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
                 "repository": "pypi"
             },
             "dftbplus-step": {
@@ -363,7 +359,7 @@
             "channel": "conda-forge",
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.6.25.1"
+            "version": "2026.6.29"
         },
         "mopac-step": {
             "channel": "pypi",
