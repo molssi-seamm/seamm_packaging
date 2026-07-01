@@ -116,6 +116,10 @@
                 "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
                 "repository": "pypi"
             },
+            "dimer-builder-step": {
+                "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
+                "repository": "pypi"
+            },
             "dftbplus-step": {
                 "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
                 "repository": "pypi"
