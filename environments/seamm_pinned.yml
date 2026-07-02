@@ -46,11 +46,13 @@ dependencies:
       - seamm-jobserver==2025.11.22
 
       # MolSSI plug-ins
+      - atomic-charges-step==2026.6.29
       - control-parameters-step==2025.5.7
       - crystal-builder-step==2022.7.31
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
       - diffusivity-step==2026.3.26
+      - dimer-builder-step==2026.6.30
       - energy-scan-step==2025.8.20
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
@@ -59,7 +61,9 @@ dependencies:
       - geometry-analysis-step==2026.3.1
       - lammps-step==2026.6.26
       - loop-step==2025.11.22
+      - model-chemistry-step==2026.6.28
       - mopac-step==2026.6.26.1
+      - orca-step==2026.6.28.1
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
