@@ -84,6 +84,10 @@ metadata = {
             "description": "The JobServer for the SEAMM environment.",
             "repository": "pypi",
         },
+        "seamm-MDI": {
+            "description": "An MDI engine driver for the SEAMM environment.",
+            "repository": "pypi",
+        },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "repository": "conda-forge",
