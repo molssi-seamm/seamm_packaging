@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-02T08:16:29.387151+00:00",
-    "doi": "10.5281/zenodo.21128373",
+    "date": "2026-07-07T08:29:23.470167+00:00",
+    "doi": "10.5281/zenodo.21235318",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -38,6 +38,10 @@
                 },
                 "description": "The core of the SEAMM environment and graphical interface.",
                 "repository": "conda-forge"
+            },
+            "seamm-MDI": {
+                "description": "An MDI engine driver for the SEAMM environment.",
+                "repository": "pypi"
             },
             "seamm-ase": {
                 "description": "Connector between SEAMM and ASE",
@@ -333,7 +337,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
             "type": "MolSSI plug-in",
-            "version": "2026.6.30"
+            "version": "2026.7.6"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -399,13 +403,13 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.6.26.1"
+            "version": "2026.7.6"
         },
         "orca-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.6.28.1"
+            "version": "2026.7.6.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -459,7 +463,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.3.19"
+            "version": "2026.7.6"
         },
         "seamm-ase": {
             "channel": "pypi",
