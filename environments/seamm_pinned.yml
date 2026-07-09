@@ -63,7 +63,7 @@ dependencies:
       - loop-step==2025.11.22
       - model-chemistry-step==2026.6.28
       - mopac-step==2026.7.6
-      - orca-step==2026.7.6.1
+      - orca-step==2026.7.8
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
