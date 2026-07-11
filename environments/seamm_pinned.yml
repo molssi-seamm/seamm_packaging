@@ -41,7 +41,7 @@ dependencies:
   - pip:
       # Core packages
       - seamm-ase==2025.2.7
-      - seamm-exec==2026.3.22
+      - seamm-exec==2026.7.10
       - seamm-geometric==2025.5.7
       - seamm-jobserver==2025.11.22
 
@@ -63,7 +63,7 @@ dependencies:
       - loop-step==2025.11.22
       - model-chemistry-step==2026.6.28
       - mopac-step==2026.7.6
-      - orca-step==2026.7.9.2
+      - orca-step==2026.7.10.1
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
