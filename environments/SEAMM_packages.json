@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-11T07:17:12.127106+00:00",
+    "date": "2026-07-14T07:15:17.606462+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -301,7 +301,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
             "type": "MolSSI plug-in",
-            "version": "2026.6.29"
+            "version": "2026.7.13"
         },
         "control-parameters-step": {
             "channel": "pypi",
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.7.10.1"
+            "version": "2026.7.13.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -457,7 +457,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.1.6"
+            "version": "2026.7.13"
         },
         "seamm": {
             "channel": "conda-forge",
