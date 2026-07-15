@@ -46,7 +46,7 @@ dependencies:
       - seamm-jobserver==2025.11.22
 
       # MolSSI plug-ins
-      - atomic-charges-step==2026.7.13
+      - atomic-charges-step==2026.7.13.1
       - control-parameters-step==2025.5.7
       - crystal-builder-step==2022.7.31
       - custom-step==2026.3.15
