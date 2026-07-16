@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-15T07:21:20.750073+00:00",
+    "date": "2026-07-16T07:27:38.019610+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -301,7 +301,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.13.1"
+            "version": "2026.7.14"
         },
         "control-parameters-step": {
             "channel": "pypi",
@@ -481,13 +481,13 @@
             "channel": "conda-forge",
             "description": "Manages the data in the datastore for the SEAMM Dashboard",
             "type": "Core package",
-            "version": "2024.6.2"
+            "version": "2026.7.15"
         },
         "seamm-exec": {
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.7.10"
+            "version": "2026.7.15"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -517,7 +517,7 @@
             "channel": "conda-forge",
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2025.12.9"
+            "version": "2026.7.15"
         },
         "seamm-widgets": {
             "channel": "conda-forge",

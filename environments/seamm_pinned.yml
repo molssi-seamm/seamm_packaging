@@ -10,10 +10,10 @@ dependencies:
   - molsystem==2026.6.29
   - seamm==2026.7.6
   - seamm-dashboard==2024.6.2
-  - seamm-datastore==2024.6.2
+  - seamm-datastore==2026.7.15
   - seamm-ff-util==2025.8.1
   - seamm-installer==2026.2.26
-  - seamm-util==2025.12.9
+  - seamm-util==2026.7.15
   - seamm-widgets==2026.6.28
 
   # MolSSI plug-ins
@@ -41,12 +41,12 @@ dependencies:
   - pip:
       # Core packages
       - seamm-ase==2025.2.7
-      - seamm-exec==2026.7.10
+      - seamm-exec==2026.7.15
       - seamm-geometric==2025.5.7
       - seamm-jobserver==2025.11.22
 
       # MolSSI plug-ins
-      - atomic-charges-step==2026.7.13.1
+      - atomic-charges-step==2026.7.14
       - control-parameters-step==2025.5.7
       - crystal-builder-step==2022.7.31
       - custom-step==2026.3.15
