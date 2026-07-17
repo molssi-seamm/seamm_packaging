@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-16T07:27:38.019610+00:00",
+    "date": "2026-07-17T07:23:40.616723+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.7.13.1"
+            "version": "2026.7.16"
         },
         "packmol-step": {
             "channel": "pypi",
