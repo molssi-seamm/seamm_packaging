@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-17T07:23:40.616723+00:00",
+    "date": "2026-07-22T07:39:44.510104+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -337,7 +337,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.9"
+            "version": "2026.7.20"
         },
         "energy-scan-step": {
             "channel": "pypi",
