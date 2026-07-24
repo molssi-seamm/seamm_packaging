@@ -52,7 +52,7 @@ dependencies:
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
       - diffusivity-step==2026.3.26
-      - dimer-builder-step==2026.7.20
+      - dimer-builder-step==2026.7.23
       - energy-scan-step==2025.8.20
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
