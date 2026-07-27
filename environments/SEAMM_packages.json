@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-24T07:37:43.669805+00:00",
+    "date": "2026-07-27T08:45:46.068867+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -337,7 +337,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.23"
+            "version": "2026.7.23.1"
         },
         "energy-scan-step": {
             "channel": "pypi",
@@ -505,7 +505,7 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2026.2.26"
+            "version": "2026.7.26"
         },
         "seamm-jobserver": {
             "channel": "pypi",
@@ -517,7 +517,7 @@
             "channel": "conda-forge",
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2026.7.20"
+            "version": "2026.7.26"
         },
         "seamm-widgets": {
             "channel": "conda-forge",

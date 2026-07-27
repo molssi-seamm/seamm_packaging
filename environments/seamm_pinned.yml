@@ -12,8 +12,8 @@ dependencies:
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2026.7.15
   - seamm-ff-util==2025.8.1
-  - seamm-installer==2026.2.26
-  - seamm-util==2026.7.20
+  - seamm-installer==2026.7.26
+  - seamm-util==2026.7.26
   - seamm-widgets==2026.6.28
 
   # MolSSI plug-ins
@@ -52,7 +52,7 @@ dependencies:
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
       - diffusivity-step==2026.3.26
-      - dimer-builder-step==2026.7.23
+      - dimer-builder-step==2026.7.23.1
       - energy-scan-step==2025.8.20
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
