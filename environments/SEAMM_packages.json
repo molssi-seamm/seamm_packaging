@@ -1,6 +1,6 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-28T07:52:25.145375+00:00",
+    "date": "2026-07-29T07:58:12.740797+00:00",
     "doi": "",
     "metadata": {
         "3rd-party plug-in": {
@@ -307,7 +307,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2025.5.7"
+            "version": "2026.7.28"
         },
         "crystal-builder-step": {
             "channel": "pypi",
@@ -367,7 +367,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2026.6.27"
+            "version": "2026.7.28"
         },
         "geometry-analysis-step": {
             "channel": "pypi",
@@ -409,7 +409,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.7.16"
+            "version": "2026.7.28"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -463,7 +463,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.7.6"
+            "version": "2026.7.28"
         },
         "seamm-ase": {
             "channel": "pypi",
@@ -589,7 +589,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2026.3.1"
+            "version": "2026.7.28"
         },
         "xtb-step": {
             "channel": "pypi",

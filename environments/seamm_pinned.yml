@@ -8,7 +8,7 @@ dependencies:
 
   # Core packages
   - molsystem==2026.6.29
-  - seamm==2026.7.6
+  - seamm==2026.7.28
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2026.7.15
   - seamm-ff-util==2025.8.1
@@ -47,7 +47,7 @@ dependencies:
 
       # MolSSI plug-ins
       - atomic-charges-step==2026.7.14
-      - control-parameters-step==2025.5.7
+      - control-parameters-step==2026.7.28
       - crystal-builder-step==2022.7.31
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
@@ -57,13 +57,13 @@ dependencies:
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
       - from-smiles-step==2025.5.14
-      - gaussian-step==2026.6.27
+      - gaussian-step==2026.7.28
       - geometry-analysis-step==2026.3.1
       - lammps-step==2026.6.26
       - loop-step==2025.11.22
       - model-chemistry-step==2026.6.28
       - mopac-step==2026.7.27
-      - orca-step==2026.7.16
+      - orca-step==2026.7.28
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
@@ -81,7 +81,7 @@ dependencies:
       - thermochemistry-step==2026.3.1
       - thermomechanical-step==2026.3.1
       - torchani-step==2025.3.10
-      - vasp-step==2026.3.1
+      - vasp-step==2026.7.28
       - xtb-step==2026.6.26.1
 
       # 3rd-party plug-ins
