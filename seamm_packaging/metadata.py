@@ -88,6 +88,12 @@ metadata = {
             "description": "An MDI engine driver for the SEAMM environment.",
             "repository": "pypi",
         },
+        "seamm-thermochemistry": {
+            "description": (
+                "A library for standardizing the quantum chemsitry energy reference."
+            ),
+            "repository": "pypi",
+        },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "repository": "conda-forge",
@@ -105,7 +111,10 @@ metadata = {
     },
     "MolSSI plug-in": {
         "atomic-charges-step": {
-            "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
+            "description": (
+                "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, "
+                "etc."
+            ),
             "repository": "pypi"
         },
         "control-parameters-step": {
@@ -136,7 +145,10 @@ metadata = {
             "repository": "pypi",
         },
         "dimer-builder-step": {
-            "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
+            "description": (
+                "A SEAMM plug-in for building dimer structures exploring the angular "
+                "and radial space."
+            ),
             "repository": "pypi"
         },
         "energy-scan-step": {
@@ -185,7 +197,9 @@ metadata = {
             "repository": "pypi",
         },
         "model-chemistry-step": {
-            "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
+            "description": (
+                "A SEAMM step for setting the model chemistry for subsequent steps."
+            ),
             "repository": "pypi"
         },
         "mopac-step": {
@@ -196,7 +210,9 @@ metadata = {
             "repository": "pypi",
         },
         "orca-step": {
-            "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
+            "description": (
+                "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))"
+            ),
             "repository": "pypi"
         },
         "packmol-step": {
