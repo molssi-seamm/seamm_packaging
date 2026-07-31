@@ -61,9 +61,9 @@ dependencies:
       - geometry-analysis-step==2026.3.1
       - lammps-step==2026.6.26
       - loop-step==2025.11.22
-      - model-chemistry-step==2026.6.28
+      - model-chemistry-step==2026.7.30
       - mopac-step==2026.7.27
-      - orca-step==2026.7.28
+      - orca-step==2026.7.30.1
       - packmol-step==2026.3.1
       - psi4-step==2026.3.1
       - qcarchive-step==2026.3.1
