@@ -44,6 +44,7 @@ dependencies:
       - seamm-exec
       - seamm-geometric
       - seamm-jobserver
+      - seamm-thermochemistry
 
       # MolSSI plug-ins
       - atomic-charges-step
