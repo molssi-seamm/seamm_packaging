@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-02T07:45:15.010244+00:00",
-    "doi": "10.5281/zenodo.21756386",
+    "date": "2026-08-03T08:43:52.645790+00:00",
+    "doi": "10.5281/zenodo.21770403",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -485,7 +485,7 @@
             "channel": "conda-forge",
             "description": "Manages the data in the datastore for the SEAMM Dashboard",
             "type": "Core package",
-            "version": "2026.7.31"
+            "version": "2026.8.2"
         },
         "seamm-exec": {
             "channel": "pypi",

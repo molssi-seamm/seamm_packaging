@@ -10,7 +10,7 @@ dependencies:
   - molsystem==2026.6.29
   - seamm==2026.7.28
   - seamm-dashboard==2024.6.2
-  - seamm-datastore==2026.7.31
+  - seamm-datastore==2026.8.2
   - seamm-ff-util==2025.8.1
   - seamm-installer==2026.7.26
   - seamm-util==2026.7.26
