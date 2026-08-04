@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-07-31T08:05:22.533819+00:00",
-    "doi": "",
+    "date": "2026-08-03T08:43:52.645790+00:00",
+    "doi": "10.5281/zenodo.21770403",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -90,6 +90,10 @@
             },
             "seamm-jobserver": {
                 "description": "The JobServer for the SEAMM environment.",
+                "repository": "pypi"
+            },
+            "seamm-thermochemistry": {
+                "description": "A library for standardizing the quantum chemsitry energy reference.",
                 "repository": "pypi"
             },
             "seamm-util": {
@@ -391,7 +395,7 @@
             "channel": "pypi",
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.30"
+            "version": "2026.7.31"
         },
         "molsystem": {
             "channel": "conda-forge",
@@ -409,7 +413,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.7.30.1"
+            "version": "2026.8.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -481,13 +485,13 @@
             "channel": "conda-forge",
             "description": "Manages the data in the datastore for the SEAMM Dashboard",
             "type": "Core package",
-            "version": "2026.7.15"
+            "version": "2026.8.2"
         },
         "seamm-exec": {
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.7.15"
+            "version": "2026.8.1"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -512,6 +516,12 @@
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
             "version": "2025.11.22"
+        },
+        "seamm-thermochemistry": {
+            "channel": "pypi",
+            "description": "A library for standardizing the quantum chemsitry energy reference.",
+            "type": "Core package",
+            "version": "2026.7.30.1"
         },
         "seamm-util": {
             "channel": "conda-forge",
