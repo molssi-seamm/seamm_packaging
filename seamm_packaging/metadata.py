@@ -33,6 +33,10 @@ metadata = {
             "description": "Connector between SEAMM and ASE",
             "repository": "pypi",
         },
+        "seamm-bsse": {
+            "description": "A library for the common code for n-body BSSE calculations",
+            "repository": "pypi",
+        },
         "seamm-dashboard": {
             "description": (
                 "The Web Dashboard for SEAMM (Simulation Environment for Atomistic "
