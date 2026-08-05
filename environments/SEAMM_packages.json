@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-03T08:43:52.645790+00:00",
-    "doi": "10.5281/zenodo.21770403",
+    "date": "2026-08-05T07:53:18.652347+00:00",
+    "doi": "10.5281/zenodo.21803687",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -45,6 +45,10 @@
             },
             "seamm-ase": {
                 "description": "Connector between SEAMM and ASE",
+                "repository": "pypi"
+            },
+            "seamm-bsse": {
+                "description": "A library for the common code for n-body BSSE calculations",
                 "repository": "pypi"
             },
             "seamm-dashboard": {
@@ -413,7 +417,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.8.1"
+            "version": "2026.8.4"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -425,7 +429,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.3.1"
+            "version": "2026.8.4"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -474,6 +478,12 @@
             "description": "Connector between SEAMM and ASE",
             "type": "Core package",
             "version": "2025.2.7"
+        },
+        "seamm-bsse": {
+            "channel": "pypi",
+            "description": "A library for the common code for n-body BSSE calculations",
+            "type": "Core package",
+            "version": "2026.8.4.1"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",

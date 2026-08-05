@@ -41,6 +41,7 @@ dependencies:
   - pip:
       # Core packages
       - seamm-ase
+      - seamm-bsse
       - seamm-exec
       - seamm-geometric
       - seamm-jobserver
