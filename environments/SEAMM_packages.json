@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-07T06:20:15.537106+00:00",
-    "doi": "10.5281/zenodo.21833523",
+    "date": "2026-08-08T05:56:24.118213+00:00",
+    "doi": "10.5281/zenodo.21847183",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -309,7 +309,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.14"
+            "version": "2026.8.7"
         },
         "control-parameters-step": {
             "channel": "pypi",
@@ -417,7 +417,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.8.6"
+            "version": "2026.8.7.1"
         },
         "packmol-step": {
             "channel": "pypi",
@@ -429,7 +429,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.8.4"
+            "version": "2026.8.7"
         },
         "pyxtal-step": {
             "channel": "pypi",
@@ -483,7 +483,7 @@
             "channel": "pypi",
             "description": "A library for the common code for n-body BSSE calculations",
             "type": "Core package",
-            "version": "2026.8.6"
+            "version": "2026.8.7.1"
         },
         "seamm-dashboard": {
             "channel": "conda-forge",
@@ -501,7 +501,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.8.1"
+            "version": "2026.8.6"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -525,7 +525,7 @@
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2025.11.22"
+            "version": "2026.8.6"
         },
         "seamm-thermochemistry": {
             "channel": "pypi",
