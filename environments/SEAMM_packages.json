@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-08T05:56:24.118213+00:00",
-    "doi": "10.5281/zenodo.21847183",
+    "date": "2026-08-09T05:59:38.475572+00:00",
+    "doi": "10.5281/zenodo.21858040",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -501,7 +501,7 @@
             "channel": "pypi",
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.8.6"
+            "version": "2026.8.8"
         },
         "seamm-ff-util": {
             "channel": "conda-forge",
@@ -525,7 +525,7 @@
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.8.6"
+            "version": "2026.8.8"
         },
         "seamm-thermochemistry": {
             "channel": "pypi",
