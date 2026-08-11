@@ -8,11 +8,11 @@ dependencies:
 
   # Core packages
   - molsystem==2026.6.29
-  - seamm==2026.7.28
+  - seamm==2026.8.10
   - seamm-dashboard==2024.6.2
   - seamm-datastore==2026.8.2
   - seamm-ff-util==2025.8.1
-  - seamm-installer==2026.7.26
+  - seamm-installer==2026.8.10.1
   - seamm-util==2026.7.26
   - seamm-widgets==2026.6.28
 
@@ -44,7 +44,7 @@ dependencies:
       - seamm-bsse==2026.8.7.1
       - seamm-exec==2026.8.8
       - seamm-geometric==2025.5.7
-      - seamm-jobserver==2026.8.9
+      - seamm-jobserver==2026.8.10
       - seamm-thermochemistry==2026.7.30.1
 
       # MolSSI plug-ins

@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-10T06:23:09.887838+00:00",
-    "doi": "10.5281/zenodo.21868387",
+    "date": "2026-08-11T06:06:54.651729+00:00",
+    "doi": "10.5281/zenodo.21883681",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -471,7 +471,7 @@
             "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.7.28"
+            "version": "2026.8.10"
         },
         "seamm-ase": {
             "channel": "pypi",
@@ -519,13 +519,13 @@
             "channel": "conda-forge",
             "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
             "type": "Core package",
-            "version": "2026.7.26"
+            "version": "2026.8.10.1"
         },
         "seamm-jobserver": {
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.8.9"
+            "version": "2026.8.10"
         },
         "seamm-thermochemistry": {
             "channel": "pypi",
