@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-08-12T06:29:04.640597+00:00",
-    "doi": "10.5281/zenodo.21898915",
+    "date": "2026-08-14T06:28:54.003383+00:00",
+    "doi": "10.5281/zenodo.21929575",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -525,7 +525,7 @@
             "channel": "pypi",
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.8.11"
+            "version": "2026.8.13"
         },
         "seamm-thermochemistry": {
             "channel": "pypi",
