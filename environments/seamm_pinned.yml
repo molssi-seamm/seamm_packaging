@@ -8,7 +8,7 @@ dependencies:
 
   # Core packages
   - molsystem==2026.6.29
-  - seamm==2026.8.11
+  - seamm==2026.9.15
   - seamm-dashboard==2022.9.29
   - seamm-datastore==2026.8.2
   - seamm-ff-util==2025.8.1
@@ -61,7 +61,7 @@ dependencies:
       - from-smiles-step==2025.5.14
       - gaussian-step==2026.7.28
       - geometry-analysis-step==2026.3.1
-      - lammps-step==2026.9.14.3
+      - lammps-step==2026.9.15.2
       - loop-step==2025.11.22
       - model-chemistry-step==2026.7.31
       - mopac-step==2026.7.27
@@ -72,7 +72,7 @@ dependencies:
       - quickmin-step==2026.3.1
       - rdkit-step==2023.2.22
       - reaction-path-step==2026.3.1
-      - read-structure-step==2026.7.13
+      - read-structure-step==2026.9.15.1
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
       - structure-step==2026.3.1
