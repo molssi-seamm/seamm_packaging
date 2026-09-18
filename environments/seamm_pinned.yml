@@ -7,7 +7,7 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2026.6.29
+  - molsystem==2026.9.17.1
   - seamm==2026.9.15
   - seamm-dashboard==2022.9.29
   - seamm-datastore==2026.8.2
@@ -72,7 +72,7 @@ dependencies:
       - quickmin-step==2026.3.1
       - rdkit-step==2023.2.22
       - reaction-path-step==2026.3.1
-      - read-structure-step==2026.9.15.1
+      - read-structure-step==2026.9.17
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
       - structure-step==2026.3.1
