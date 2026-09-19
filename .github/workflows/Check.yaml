@@ -52,6 +52,9 @@ jobs:
       - name: execute py script
         shell: bash -l {0}
         run: |
+          # A login shell does not get GitHub's default -eo pipefail, so a failed
+          # upload to Zenodo must not silently fall through to the commit below.
+          set -eo pipefail
           ls -l ~/
           echo "#############################"
           echo `pwd`
@@ -61,7 +64,9 @@ jobs:
           conda list
           echo "#############################"
 
-          echo `check_for_changes`
+          # Run directly: wrapping it in echo `...` hid both the exit status and
+          # the line structure of its output.
+          check_for_changes
 
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
@@ -87,10 +92,19 @@ jobs:
             echo ""
             git commit -a -F commit_message.txt
             git push
-            # Create release
-            version=$(date '+%Y.%m.%d' | sed -e 's/\.0/./g')
-            gh release create -F commit_message.txt $version
-            gh workflow run Release.yaml
+            # Create the release. Versions are CalVer (YYYY.M.D); a second
+            # release on the same day gets a .1, .2, ... suffix.
+            base=$(date '+%Y.%m.%d' | sed -e 's/\.0/./g')
+            version=$base
+            n=0
+            while gh release view "$version" >/dev/null 2>&1; do
+              n=$((n + 1))
+              version="$base.$n"
+            done
+            echo "Creating release $version"
+            gh release create -F commit_message.txt "$version"
+            # Announce on Slack
+            gh workflow run Slack.yaml
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

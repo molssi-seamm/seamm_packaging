@@ -1,55 +1,94 @@
 ===============
 SEAMM Packaging
 ===============
-Tools to create packing lists and packages for the SEAMM environment.
+Maintains the list of packages that make up the SEAMM environment, and publishes it
+where the SEAMM installer can find it.
 
 * Free software: BSD license
 * Documentation: https://molssi-seamm.github.io
-* Code: https://github.com/molssi-seamm/packaging
+* Code: https://github.com/molssi-seamm/seamm_packaging
 
-HOWTO
------
+What this does
+--------------
 
-The automated packaging system is designed to create a package for the SEAMM
-environment using GitHub Actions. However, this is currently not working because PyPi
-has restricted programmatic access to the API. The following instructions are for
-running by hand.
+``seamm_installer`` does not hard-code the packages it installs. It reads a package
+list, ``SEAMM_packages.json``, from the latest published version of the Zenodo record
+`10.5281/zenodo.7789853 <https://doi.org/10.5281/zenodo.7789853>`_. This project
+generates that list and keeps it current.
 
-#. Clone the repository and ensure it is up to date
-#. From the PyPi website search for "seamm" and save the pages as "search1.html",
-   "search2.html", etc. in the Downloads directory
-#. Run the script in the top level of the project:
+The list is built from ``seamm_packaging/metadata.py``, which is the single place a
+package is declared. It has three groups of packages that go into the SEAMM
+environment:
 
-   .. code-block:: bash
+* **Core package** -- the framework and its libraries (``seamm``, ``molsystem``,
+  ``seamm-jobserver``, ...)
+* **MolSSI plug-in** -- the steps maintained by MolSSI
+* **3rd-party plug-in** -- steps maintained elsewhere
 
-       python -m seamm_packaging
+Each entry gives a description, whether the package comes from ``conda-forge`` or
+``pypi``, and optionally dependencies that need special handling (pinning, or forcing a
+particular repository). ``excluded plug-ins`` records packages deliberately left out,
+for instance because they live in their own Conda environment (``lammps-mdi``,
+``xnns``, ``seamm-webui``). The two ``development packages`` lists are the extra tools
+the installer adds for developers.
 
-   This should update the package info and upload it to Zenodo.
+Nightly the ``Check`` GitHub Action:
 
-#. Push the changes to the repository
-#. Make a new release
-#. Manually invoke the GitHub Action "Release" to do the rest.
-   
-seamm Docker image
-------------------------
-There is a Docker image available for SEAMM. It is available at the Github Container
-Registry (ghcr.io) as
+#. builds a full environment from the metadata, resolving all the packages to their
+   current versions on conda-forge and PyPI;
+#. compares the result with the committed ``environments/SEAMM_packages.json``;
+#. if anything changed, regenerates ``environments/seamm.yml`` and
+   ``environments/seamm_pinned.yml``, uploads the three files as a new version of the
+   Zenodo record, commits the result, and creates a GitHub release.
+
+Releases are tagged with the date (``2026.9.19``); further releases on the same day get
+a ``.1``, ``.2``, ... suffix. A Slack message announces each one.
+
+Adding a package
+----------------
+
+#. Add it to the appropriate group in ``seamm_packaging/metadata.py``. Use the PyPI
+   name (lowercase, hyphens) since that is what Conda and pip report.
+#. Run ``make format lint`` and commit to ``main``.
+#. Either wait for the nightly run or start one by hand (below).
+
+Running the workflow by hand
+----------------------------
+
+The ``Check`` workflow can be started from the Actions tab on GitHub, or with
 
 .. code-block:: bash
 
-    ghcr.io/molssi-seamm/seamm:<version>
+    gh workflow run Check.yaml
 
-Where <version> is the explicit version tag for the desired image. The tag `latest` is
-quite confusing, and does not mean the latest version of the image, so we recomend using
-explcit versions rather than `latest`.
+It does exactly what the nightly run does, and does nothing if the package list is
+unchanged.
 
-The container is run with the following command:
+Running locally
+---------------
 
-.. code-block:: bash
+The package installs three commands, all run from the top level of the checkout:
 
-    docker run --rm -v $PWD:/home ghcr.io/molssi-seamm/seamm:<version> ?flowchart?
+``create_full_environment_file``
+    Writes ``test.yml``, a Conda environment file listing every package in the
+    metadata, which is what the workflow feeds to Conda.
 
-where `flowchart` is an optional flowchart to load into SEAMM.
+``check_for_changes``
+    Given the resolved environment (the workflow activates it first), updates
+    ``environments/`` and uploads to Zenodo if the package list changed.
+
+``upload_to_zenodo``
+    Uploads the current contents of ``environments/`` as a new version of the Zenodo
+    record and publishes it. Needs the ``ZENODO_TOKEN`` environment variable. For a
+    dry run that leaves the new version as an unpublished draft, use Python::
+
+        from seamm_packaging import upload_to_zenodo
+        upload_to_zenodo(publish=False)
+
+Zenodo allows only one unpublished draft per record. If a run fails part way through
+the draft is discarded, and if one is nevertheless left behind the next run reuses it.
+An empty ``"doi"`` in the committed ``SEAMM_packages.json`` means the last upload
+failed; the next run notices and uploads again.
 
 Acknowledgements
 ----------------

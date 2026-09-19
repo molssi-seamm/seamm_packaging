@@ -88,8 +88,18 @@ metadata = {
             "description": "The JobServer for the SEAMM environment.",
             "repository": "pypi",
         },
-        "seamm-MDI": {
-            "description": "An MDI engine driver for the SEAMM environment.",
+        "seamm-mdi": {
+            "description": (
+                "A reusable MolSSI Driver Interface (MDI) facility for driving "
+                "engines from SEAMM steps."
+            ),
+            "repository": "pypi",
+        },
+        "seamm-slurm": {
+            "description": (
+                "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH "
+                "transports."
+            ),
             "repository": "pypi",
         },
         "seamm-thermochemistry": {
@@ -119,7 +129,7 @@ metadata = {
                 "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, "
                 "etc."
             ),
-            "repository": "pypi"
+            "repository": "pypi",
         },
         "control-parameters-step": {
             "description": (
@@ -153,11 +163,25 @@ metadata = {
                 "A SEAMM plug-in for building dimer structures exploring the angular "
                 "and radial space."
             ),
-            "repository": "pypi"
+            "repository": "pypi",
+        },
+        "energy-step": {
+            "description": (
+                "A SEAMM plug-in for calculating the energy and forces of many "
+                "structures with a model chemistry served over MDI."
+            ),
+            "repository": "pypi",
         },
         "energy-scan-step": {
             "description": (
                 "A SEAMM plug-in for calculating energy profiles along coordinates"
+            ),
+            "repository": "pypi",
+        },
+        "extract-clusters-step": {
+            "description": (
+                "A SEAMM plug-in for extracting molecular clusters (n-mers) from "
+                "bulk or trajectory structures."
             ),
             "repository": "pypi",
         },
@@ -189,6 +213,13 @@ metadata = {
             ),
             "repository": "pypi",
         },
+        "golden-step": {
+            "description": (
+                "A SEAMM plug-in that snapshots the current system to a JSON file "
+                "and optionally verifies it against a reference, for golden testing."
+            ),
+            "repository": "pypi",
+        },
         "lammps-step": {
             "description": (
                 "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics "
@@ -204,7 +235,7 @@ metadata = {
             "description": (
                 "A SEAMM step for setting the model chemistry for subsequent steps."
             ),
-            "repository": "pypi"
+            "repository": "pypi",
         },
         "mopac-step": {
             "description": (
@@ -213,11 +244,18 @@ metadata = {
             ),
             "repository": "pypi",
         },
+        "normal-mode-sampling-step": {
+            "description": (
+                "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the "
+                "Hessian to generate displaced structures."
+            ),
+            "repository": "pypi",
+        },
         "orca-step": {
             "description": (
                 "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))"
             ),
-            "repository": "pypi"
+            "repository": "pypi",
         },
         "packmol-step": {
             "description": (
@@ -315,6 +353,13 @@ metadata = {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "repository": "pypi",
         },
+        "xnn-step": {
+            "description": (
+                "A SEAMM plug-in for machine-learned force fields trained with xnn, "
+                "provided as model chemistries and run as MDI engines."
+            ),
+            "repository": "pypi",
+        },
         "xtb-step": {
             "description": (
                 "A SEAMM plug-in for the xTB family of extended tight-binding methods"
@@ -340,6 +385,11 @@ metadata = {
         "solvate-step",
         "nwchem-step",
         "properties-step",
+        # These live in their own Conda environments, created by the
+        # corresponding installer, not in the main SEAMM environment.
+        "lammps-mdi",  # MDI engine for LAMMPS, in the seamm-lammps environment
+        "xnns",  # the xnn MLFF code, in the seamm-xnn environment
+        "seamm-webui",  # its own seamm-webui environment (seamm_installer)
     ],
     "conda development packages": [
         "black",

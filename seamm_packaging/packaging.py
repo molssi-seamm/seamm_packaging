@@ -32,6 +32,20 @@ logger.setLevel(logging.DEBUG)
 logger.setLevel(0)
 
 
+def _response_detail(response):
+    """A printable description of an HTTP response for error messages.
+
+    Zenodo does not always answer with JSON (e.g. an empty body, or an HTML error
+    page), and calling ``response.json()`` on such a body raises a JSONDecodeError
+    that hides the real error. This never raises.
+    """
+    try:
+        return pprint.pformat(response.json())
+    except ValueError:
+        text = response.text.strip()
+        return text if text else "<empty response body>"
+
+
 def create_full_environment(environment_file, progress=True):
     """Find the Python packages in SEAMM.
 
@@ -257,6 +271,12 @@ def update_package_list(packages, environments="environments"):
                         changed = True
                         print(f"  {package}: from {oldtype} to {newtype}")
                         message.append(f"{package} changed from {oldtype} to {newtype}")
+            if not changed and plist.get("doi", "") == "":
+                # A previous run updated the database but failed to upload it to
+                # Zenodo (the DOI is filled in only after a successful upload).
+                changed = True
+                print("The package database has no DOI: a previous upload failed.")
+                message.append("Re-uploading the package database to Zenodo")
             if not changed:
                 print("The package database has not changed.")
             else:
@@ -293,16 +313,14 @@ def create_env(packages, pinned=False):
         print("Creating the pinned environment file for the packages.")
     else:
         print("Creating the environment file for the packages.")
-    prelines = [
-        """name: seamm
+    prelines = ["""name: seamm
 channels:
   - conda-forge
   - defaults
 dependencies:
   - pip
   - python
-"""
-    ]
+"""]
     # Creating the environment file with versions pinned
     lines = []
     # First the conda installable packages, including any dependencies
@@ -359,16 +377,14 @@ def create_full_env():
     ----------
     """
     print("Creating the full environment file from the metadata.")
-    prelines = [
-        """name: seamm
+    prelines = ["""name: seamm
 channels:
   - conda-forge
   - defaults
 dependencies:
   - pip
   - python
-"""
-    ]
+"""]
     # Creating the environment file
     lines = []
 
@@ -414,85 +430,175 @@ dependencies:
     return "\n".join(lines)
 
 
-def upload_to_zenodo():
-    """Upload the packaging files to Zenodo."""
+def upload_to_zenodo(publish=True):
+    """Upload the packaging files to Zenodo as a new version of the record.
+
+    Parameters
+    ----------
+    publish : bool = True
+        Whether to publish the new version. If False the files are uploaded to the
+        draft but it is left unpublished, which is useful for testing.
+
+    Returns
+    -------
+    str
+        The DOI of the new version.
+
+    Notes
+    -----
+    Zenodo allows only one draft (unpublished) version per record. If anything goes
+    wrong after the draft is created it is discarded again, so that a failed run does
+    not block the next one. As a second line of defense, `add_version` reuses an
+    existing draft if one is found rather than trying to create another.
+    """
     # Create a new Record
     record = add_version()
-    print(f"{record=}")
+    print(f"Zenodo draft {record.data['id']} ({record.doi})")
 
-    # Remove the current files
-    for filename in record.files():
-        print(f"removing file {filename}")
-        record.remove_file(filename)
+    try:
+        # Remove the files inherited from the previous version
+        for filename in record.files():
+            print(f"removing file {filename}")
+            record.remove_file(filename)
 
-    # Update the metadata in the files
-    doi = record.doi
-    conceptdoi = record.conceptdoi
+        # Update the metadata in the files
+        doi = record.doi
+        conceptdoi = record.conceptdoi
 
-    path = Path("environments") / "SEAMM_packages.json"
-    with path.open() as fd:
-        tmp = json.load(fd)
-        tmp["doi"] = doi
-        tmp["conceptdoi"] = conceptdoi
-    with path.open("w") as fd:
-        json.dump(tmp, fd, indent=4, sort_keys=True)
+        path = Path("environments") / "SEAMM_packages.json"
+        with path.open() as fd:
+            tmp = json.load(fd)
+            tmp["doi"] = doi
+            tmp["conceptdoi"] = conceptdoi
+        with path.open("w") as fd:
+            json.dump(tmp, fd, indent=4, sort_keys=True)
 
-    # Now we can add the files to Zenodo with the correct DOI, etc.
-    for name in ("SEAMM_packages.json", "seamm.yml", "seamm_pinned.yml"):
-        path = Path("environments") / name
-        text = path.read_text()
-        record.add_file(name, contents=text)
+        # Now we can add the files to Zenodo with the correct DOI, etc.
+        for name in ("SEAMM_packages.json", "seamm.yml", "seamm_pinned.yml"):
+            path = Path("environments") / name
+            text = path.read_text()
+            print(f"adding file {name}")
+            record.add_file(name, contents=text)
 
-    # For some reason the version doesn't work...let's see what the record looks like.
-    # print(record)
-
-    # Update the version in the deposit
-    # version = int(record.version)
-    # record.version = str(version + 1)
-
-    # And, finally, can publish!
-    record.publish()
+        # And, finally, can publish!
+        if publish:
+            record.publish()
+            print(f"published {record.doi}")
+        else:
+            print("not publishing the draft (publish=False)")
+    except Exception:
+        # Leave Zenodo clean so that the next run can create a new draft.
+        print(f"Upload failed, discarding draft {record.data['id']}")
+        try:
+            record.discard()
+        except Exception as e:
+            print(f"   ...could not discard the draft: {e}")
+        raise
 
     return doi
 
 
+def find_draft(conceptrecid, token):
+    """Find an existing unpublished draft of the given concept record, if any.
+
+    Parameters
+    ----------
+    conceptrecid : int or str
+        The concept record id that all versions share.
+    token : str
+        The Zenodo access token.
+
+    Returns
+    -------
+    dict or None
+        The deposition data of the draft, or None if there is no draft.
+    """
+    headers = {"Authorization": f"Bearer {token}"}
+    url = "https://zenodo.org/api/deposit/depositions"
+    params = {"status": "draft", "all_versions": "true", "size": 100}
+    response = requests.get(url, headers=headers, params=params)
+
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"Error listing Zenodo drafts: code = {response.status_code}"
+            f"\n\n{_response_detail(response)}"
+        )
+
+    for deposition in response.json():
+        if str(deposition.get("conceptrecid")) == str(
+            conceptrecid
+        ) and not deposition.get("submitted", True):
+            # The listing is abbreviated (no "bucket" link, etc.), so fetch the
+            # full deposition.
+            response = requests.get(deposition["links"]["self"], headers=headers)
+            if response.status_code != 200:
+                raise RuntimeError(
+                    f"Error getting Zenodo draft {deposition['id']}: "
+                    f"code = {response.status_code}"
+                    f"\n\n{_response_detail(response)}"
+                )
+            return response.json()
+    return None
+
+
 def add_version(_id="10891078"):
-    """Create a new record object for uploading a new version to Zenodo."""
+    """Create a new record object for uploading a new version to Zenodo.
+
+    If a draft of a new version already exists -- typically left behind by an
+    earlier run that failed part way through -- it is reused, because Zenodo refuses
+    to create a second draft ("files.enabled: Please remove all files first").
+    """
     token = os.environ["ZENODO_TOKEN"]
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
     }
 
-    url = f"https://zenodo.org/api/deposit/depositions/{_id}/actions/newversion"
-
-    logger.debug(f"add_version {url=}")
-    logger.debug(headers)
-
-    response = requests.post(url, headers=headers)
-
-    logger.debug(f"{response.status_code=}")
-    logger.debug(f"\n{pprint.pformat(response.json())}")
-
-    if response.status_code != 201:
-        raise RuntimeError(
-            f"Error in add_version: code = {response.status_code}"
-            f"\n\n{pprint.pformat(response.json())}"
-        )
-
-    result = response.json()
-
-    # The result is for the original DOI, so get the data for the new one
-    url = result["links"]["latest_draft"]
+    # The concept record id, shared by all versions, from the published record
+    url = f"https://zenodo.org/api/deposit/depositions/{_id}"
     response = requests.get(url, headers=headers)
-
     if response.status_code != 200:
         raise RuntimeError(
-            f"Error in add_version get latest draft: code = {response.status_code}"
-            f"\n\n{pprint.pformat(response.json())}"
+            f"Error in add_version getting record {_id}: code = {response.status_code}"
+            f"\n\n{_response_detail(response)}"
         )
+    conceptrecid = response.json()["conceptrecid"]
 
-    result = response.json()
+    draft = find_draft(conceptrecid, token)
+    if draft is not None:
+        print(f"Reusing the existing Zenodo draft {draft['id']}")
+        logger.debug(f"\n{pprint.pformat(draft)}")
+        result = draft
+    else:
+        url = f"https://zenodo.org/api/deposit/depositions/{_id}/actions/newversion"
+
+        logger.debug(f"add_version {url=}")
+
+        response = requests.post(url, headers=headers)
+
+        logger.debug(f"{response.status_code=}")
+        logger.debug(f"\n{_response_detail(response)}")
+
+        if response.status_code != 201:
+            raise RuntimeError(
+                f"Error in add_version: code = {response.status_code}"
+                f"\n\n{_response_detail(response)}"
+            )
+
+        result = response.json()
+
+        # The result is for the original DOI, so get the data for the new one
+        url = result["links"]["latest_draft"]
+        response = requests.get(url, headers=headers)
+
+        if response.status_code != 200:
+            raise RuntimeError(
+                "Error in add_version get latest draft: "
+                f"code = {response.status_code}"
+                f"\n\n{_response_detail(response)}"
+            )
+
+        result = response.json()
 
     metadata = {**result["metadata"]}
 
@@ -736,7 +842,7 @@ class Record(collections.abc.Mapping):
         if response.status_code != 201:
             raise RuntimeError(
                 f"Error in add_file: code = {response.status_code}"
-                f"\n\n{pprint.pformat(response.json())}"
+                f"\n\n{_response_detail(response)}"
             )
 
         # Add the new file to the metadata
@@ -753,6 +859,26 @@ class Record(collections.abc.Mapping):
         # Already exists?
         if keyword not in self.keywords:
             self.metadata["keywords"].append(keyword)
+
+    def discard(self):
+        """Discard (delete) this draft from Zenodo.
+
+        Only unpublished drafts can be discarded; the published versions of a record
+        are permanent.
+        """
+        if self.submitted:
+            raise RuntimeError("A published record cannot be discarded.")
+
+        url = self.data["links"]["self"]
+        headers = {"Authorization": f"Bearer {self.token}"}
+
+        response = requests.delete(url, headers=headers)
+
+        if response.status_code not in (200, 204):
+            raise RuntimeError(
+                f"Error in discard: code = {response.status_code}"
+                f"\n\n{_response_detail(response)}"
+            )
 
     def download_file(self, filename, path):
         """Download a file to a local copy.
@@ -795,7 +921,7 @@ class Record(collections.abc.Mapping):
                 if response.status_code != 200:
                     raise RuntimeError(
                         f"Error in download_file: code = {response.status_code}"
-                        f"\n\n{pprint.pformat(response.json())}"
+                        f"\n\n{_response_detail(response)}"
                     )
 
                 with open(out_path, "wb") as fd:
@@ -847,7 +973,7 @@ class Record(collections.abc.Mapping):
                 if response.status_code != 200:
                     raise RuntimeError(
                         f"Error in get_file: code = {response.status_code}"
-                        f"\n\n{pprint.pformat(response.json())}"
+                        f"\n\n{_response_detail(response)}"
                     )
                 return response.text
 
@@ -870,7 +996,7 @@ class Record(collections.abc.Mapping):
         if response.status_code != 202:
             raise RuntimeError(
                 f"Error in publish_metadata: code = {response.status_code}"
-                f"\n\n{pprint.pformat(response.json())}"
+                f"\n\n{_response_detail(response)}"
             )
 
         self.data = response.json()
@@ -899,10 +1025,10 @@ class Record(collections.abc.Mapping):
                 url = data["links"]["self"]
                 response = requests.delete(url, headers=headers)
 
-                if response.status_code != 204:
+                if response.status_code not in (200, 204):
                     raise RuntimeError(
                         f"Error in remove_file: code = {response.status_code}"
-                        f"\n\n{pprint.pformat(response.json())}"
+                        f"\n\n{_response_detail(response)}"
                     )
 
                 # Remove the entry from the metadata
@@ -939,7 +1065,7 @@ class Record(collections.abc.Mapping):
         if response.status_code != 200:
             raise RuntimeError(
                 f"Error in update_metadata: code = {response.status_code}"
-                f"\n\n{pprint.pformat(response.json())}"
+                f"\n\n{_response_detail(response)}"
             )
 
         self.data = response.json()
