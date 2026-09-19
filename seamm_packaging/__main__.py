@@ -19,6 +19,17 @@ def create_full_environment_file(filename="test.yml"):
 
 
 def check_for_changes(environment=None, environments="environments"):
+    """Console-script entry point: update the package list if it changed.
+
+    Always returns 0 on success. The console script does ``sys.exit()`` on the
+    return value, so returning the ``changed`` flag made every successful update
+    exit with status 1.
+    """
+    _check_for_changes(environment=environment, environments=environments)
+    return 0
+
+
+def _check_for_changes(environment=None, environments="environments"):
     packages = list_packages(environment=environment)
     changed, packages = update_package_list(packages, environments=environments)
 
@@ -55,7 +66,7 @@ if __name__ == "__main__":
             environment_file = Path(fp.name)
             create_full_environment_file(environment_file)
             create_full_environment(environment_file)
-            changed = check_for_changes("SEAMM_Packages", environments=environments)
+            changed = _check_for_changes("SEAMM_Packages", environments=environments)
 
         # Clean up
         environment_file.unlink()
