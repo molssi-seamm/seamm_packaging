@@ -45,6 +45,8 @@ dependencies:
       - seamm-exec==2026.8.8
       - seamm-geometric==2025.5.7
       - seamm-jobserver==2026.8.13
+      - seamm-mdi==2026.9.18
+      - seamm-slurm==2026.8.13
       - seamm-thermochemistry==2026.7.30.1
 
       # MolSSI plug-ins
@@ -56,15 +58,19 @@ dependencies:
       - diffusivity-step==2026.3.26
       - dimer-builder-step==2026.9.18
       - energy-scan-step==2025.8.20
+      - energy-step==2026.9.19
+      - extract-clusters-step==2026.9.19
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
       - from-smiles-step==2025.5.14
       - gaussian-step==2026.7.28
       - geometry-analysis-step==2026.3.1
+      - golden-step==2026.7.28
       - lammps-step==2026.9.15.2
       - loop-step==2026.9.18
       - model-chemistry-step==2026.7.31
       - mopac-step==2026.7.27
+      - normal-mode-sampling-step==2026.7.15
       - orca-step==2026.8.11
       - packmol-step==2026.3.1
       - psi4-step==2026.8.7
@@ -84,6 +90,7 @@ dependencies:
       - thermomechanical-step==2026.3.1
       - torchani-step==2025.3.10
       - vasp-step==2026.7.28
+      - xnn-step==2026.9.19
       - xtb-step==2026.6.26.1
 
       # 3rd-party plug-ins

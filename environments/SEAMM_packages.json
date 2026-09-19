@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-09-19T09:20:42.667526+00:00",
-    "doi": "",
+    "date": "2026-09-19T13:56:50.689721+00:00",
+    "doi": "10.5281/zenodo.22846037",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -38,10 +38,6 @@
                 },
                 "description": "The core of the SEAMM environment and graphical interface.",
                 "repository": "conda-forge"
-            },
-            "seamm-MDI": {
-                "description": "An MDI engine driver for the SEAMM environment.",
-                "repository": "pypi"
             },
             "seamm-ase": {
                 "description": "Connector between SEAMM and ASE",
@@ -96,6 +92,14 @@
                 "description": "The JobServer for the SEAMM environment.",
                 "repository": "pypi"
             },
+            "seamm-mdi": {
+                "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
+                "repository": "pypi"
+            },
+            "seamm-slurm": {
+                "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
+                "repository": "pypi"
+            },
             "seamm-thermochemistry": {
                 "description": "A library for standardizing the quantum chemsitry energy reference.",
                 "repository": "pypi"
@@ -148,6 +152,14 @@
                 "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
                 "repository": "pypi"
             },
+            "energy-step": {
+                "description": "A SEAMM plug-in for calculating the energy and forces of many structures with a model chemistry served over MDI.",
+                "repository": "pypi"
+            },
+            "extract-clusters-step": {
+                "description": "A SEAMM plug-in for extracting molecular clusters (n-mers) from bulk or trajectory structures.",
+                "repository": "pypi"
+            },
             "fhi-aims-step": {
                 "description": "A SEAMM plug-in for FHI-aims",
                 "repository": "pypi"
@@ -168,6 +180,10 @@
                 "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
                 "repository": "pypi"
             },
+            "golden-step": {
+                "description": "A SEAMM plug-in that snapshots the current system to a JSON file and optionally verifies it against a reference, for golden testing.",
+                "repository": "pypi"
+            },
             "lammps-step": {
                 "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
                 "repository": "pypi"
@@ -182,6 +198,10 @@
             },
             "mopac-step": {
                 "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
+                "repository": "pypi"
+            },
+            "normal-mode-sampling-step": {
+                "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
                 "repository": "pypi"
             },
             "orca-step": {
@@ -266,6 +286,10 @@
                 "description": "A SEAMM plug-in for VASP, a planewave DFT code",
                 "repository": "pypi"
             },
+            "xnn-step": {
+                "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
+                "repository": "pypi"
+            },
             "xtb-step": {
                 "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
                 "repository": "pypi"
@@ -293,7 +317,10 @@
             "seamm-dashboard-client",
             "solvate-step",
             "nwchem-step",
-            "properties-step"
+            "properties-step",
+            "lammps-mdi",
+            "xnns",
+            "seamm-webui"
         ],
         "pypi development packages": [
             "build",
@@ -353,6 +380,18 @@
             "type": "MolSSI plug-in",
             "version": "2025.8.20"
         },
+        "energy-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for calculating the energy and forces of many structures with a model chemistry served over MDI.",
+            "type": "MolSSI plug-in",
+            "version": "2026.9.19"
+        },
+        "extract-clusters-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for extracting molecular clusters (n-mers) from bulk or trajectory structures.",
+            "type": "MolSSI plug-in",
+            "version": "2026.9.19"
+        },
         "fhi-aims-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for FHI-aims",
@@ -383,6 +422,12 @@
             "type": "MolSSI plug-in",
             "version": "2026.3.1"
         },
+        "golden-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in that snapshots the current system to a JSON file and optionally verifies it against a reference, for golden testing.",
+            "type": "MolSSI plug-in",
+            "version": "2026.7.28"
+        },
         "lammps-step": {
             "channel": "pypi",
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
@@ -412,6 +457,12 @@
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
             "version": "2026.7.27"
+        },
+        "normal-mode-sampling-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
+            "type": "MolSSI plug-in",
+            "version": "2026.7.15"
         },
         "orca-step": {
             "channel": "pypi",
@@ -527,6 +578,18 @@
             "type": "Core package",
             "version": "2026.8.13"
         },
+        "seamm-mdi": {
+            "channel": "pypi",
+            "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
+            "type": "Core package",
+            "version": "2026.9.18"
+        },
+        "seamm-slurm": {
+            "channel": "pypi",
+            "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
+            "type": "Core package",
+            "version": "2026.8.13"
+        },
         "seamm-thermochemistry": {
             "channel": "pypi",
             "description": "A library for standardizing the quantum chemsitry energy reference.",
@@ -610,6 +673,12 @@
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
             "version": "2026.7.28"
+        },
+        "xnn-step": {
+            "channel": "pypi",
+            "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
+            "type": "MolSSI plug-in",
+            "version": "2026.9.19"
         },
         "xtb-step": {
             "channel": "pypi",
