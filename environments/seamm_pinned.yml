@@ -7,8 +7,6 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem==2026.9.17.1
-  - seamm==2026.9.15
   - seamm-dashboard==2022.9.29
   - seamm-datastore==2026.8.2
   - seamm-ff-util==2025.8.1
@@ -40,6 +38,8 @@ dependencies:
   # PyPi packages
   - pip:
       # Core packages
+      - molsystem==2026.9.18
+      - seamm==2026.9.19
       - seamm-ase==2025.2.7
       - seamm-bsse==2026.8.7.1
       - seamm-exec==2026.8.8
@@ -54,7 +54,7 @@ dependencies:
       - custom-step==2026.3.15
       - dftbplus-step==2026.3.1
       - diffusivity-step==2026.3.26
-      - dimer-builder-step==2026.7.27
+      - dimer-builder-step==2026.9.18
       - energy-scan-step==2025.8.20
       - fhi-aims-step==2026.3.1
       - forcefield-step==2026.2.26
@@ -62,7 +62,7 @@ dependencies:
       - gaussian-step==2026.7.28
       - geometry-analysis-step==2026.3.1
       - lammps-step==2026.9.15.2
-      - loop-step==2025.11.22
+      - loop-step==2026.9.18
       - model-chemistry-step==2026.7.31
       - mopac-step==2026.7.27
       - orca-step==2026.8.11
@@ -72,7 +72,7 @@ dependencies:
       - quickmin-step==2026.3.1
       - rdkit-step==2023.2.22
       - reaction-path-step==2026.3.1
-      - read-structure-step==2026.9.17
+      - read-structure-step==2026.9.18.1
       - set-cell-step==2021.10.14
       - strain-step==2022.11.7
       - structure-step==2026.3.1

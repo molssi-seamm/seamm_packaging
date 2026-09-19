@@ -7,8 +7,6 @@ dependencies:
   - python
 
   # Core packages
-  - molsystem
-  - seamm
   - seamm-dashboard
   - seamm-datastore
   - seamm-ff-util
@@ -40,6 +38,8 @@ dependencies:
   # PyPi packages
   - pip:
       # Core packages
+      - molsystem
+      - seamm
       - seamm-ase
       - seamm-bsse
       - seamm-exec
