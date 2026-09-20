@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-09-19T13:56:50.689721+00:00",
-    "doi": "10.5281/zenodo.22846037",
+    "date": "2026-09-20T09:43:06.202492+00:00",
+    "doi": "10.5281/zenodo.22856249",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -678,7 +678,7 @@
             "channel": "pypi",
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.9.19"
+            "version": "2026.9.19.1"
         },
         "xtb-step": {
             "channel": "pypi",
