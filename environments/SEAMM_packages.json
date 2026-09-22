@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-09-21T10:36:01.995118+00:00",
-    "doi": "10.5281/zenodo.22872735",
+    "date": "2026-09-22T09:47:06.388063+00:00",
+    "doi": "10.5281/zenodo.22894737",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -600,7 +600,7 @@
             "channel": "conda-forge",
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2026.7.26"
+            "version": "2026.9.18"
         },
         "seamm-widgets": {
             "channel": "conda-forge",

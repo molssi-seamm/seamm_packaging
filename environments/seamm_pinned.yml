@@ -11,7 +11,7 @@ dependencies:
   - seamm-datastore==2026.8.2
   - seamm-ff-util==2026.9.20.1
   - seamm-installer==2026.8.10.1
-  - seamm-util==2026.7.26
+  - seamm-util==2026.9.18
   - seamm-widgets==2026.6.28
 
   # MolSSI plug-ins
