@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.7789853",
-    "date": "2026-09-22T09:47:06.388063+00:00",
-    "doi": "10.5281/zenodo.22894737",
+    "date": "2026-09-25T10:08:04.968490+00:00",
+    "doi": "10.5281/zenodo.22956779",
     "metadata": {
         "3rd-party plug-in": {
             "pyxtal-step": {
@@ -519,7 +519,7 @@
             "version": "2026.9.18.1"
         },
         "seamm": {
-            "channel": "pypi",
+            "channel": "conda-forge",
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
             "version": "2026.9.20"
@@ -606,7 +606,7 @@
             "channel": "conda-forge",
             "description": "Specialized tkinter widgets for SEAMM",
             "type": "Core package",
-            "version": "2026.6.28"
+            "version": "2026.9.18"
         },
         "set-cell-step": {
             "channel": "pypi",
