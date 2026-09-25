@@ -37,9 +37,9 @@ test = [
 ]
 
 [project.scripts]
-create_full_environment_file = "seamm_packaging:create_full_environment_file"
+resolve_packages = "seamm_packaging:resolve_packages"
 check_for_changes = "seamm_packaging:check_for_changes"
-upload_to_zenodo = "seamm_packaging:upload_to_zenodo"
+packaging_dry_run = "seamm_packaging:dry_run"
 
 [tool.setuptools]
 # This subkey is a beta stage development and keys may change in the future, see https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html for more details

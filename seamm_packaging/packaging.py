@@ -10,7 +10,6 @@ import os
 import requests
 import packaging.version as pkgVersion  # noqa: F401
 
-from .conda import Conda
 from .metadata import metadata
 
 upload_types = {
@@ -46,456 +45,276 @@ def _response_detail(response):
         return text if text else "<empty response body>"
 
 
-def create_full_environment(environment_file, progress=True):
-    """Find the Python packages in SEAMM.
+FORMAT = 2
+LOCK_FILE = "seamm.lock.txt"
+DATABASE_FILE = "SEAMM_packages.json"
+
+
+def _write_database(path, plist):
+    with path.open("w") as fd:
+        json.dump(plist, fd, indent=4, sort_keys=True)
+
+
+def _write_commit_message(lines):
+    with Path("commit_message.txt").open("w") as fd:
+        fd.write("New SEAMM package database\n\n")
+        for i, line in enumerate(lines):
+            fd.write(f"{i}. {line}\n")
+
+
+def update_package_list(packages, lock, environments="environments", python="3.12"):
+    """Update the package database and lock file if anything changed.
 
     Parameters
     ----------
-    environment_file : str or pathlib.Path
-        The environment file
-    progress : bool = True
-        Whether to print out dots to show progress.
-
-    Returns
-    -------
-    dict(str, str)
-        A dictionary with information about the packages.
-    """
-    print("Finding all the packages that make up SEAMM. This may take several minutes.")
-
-    conda = Conda(logger=logger)
-
-    print("Creating a new conda environment 'SEAMM_Packages'")
-    result = conda.create_environment(
-        str(environment_file), name="SEAMM_Packages", force=True
-    )
-
-    # Check for errors
-    if "exception_name" in result:
-        message = (
-            "Conda env create failed:\n"
-            "   encountered exception result['exception_name']\n"
-        )
-        if "message" in result:
-            message += "\n"
-            message += result["message"]
-            message += "\n"
-        print(message)
-        raise RuntimeError(message)
-
-    if "success" in result and not result["success"]:
-        message = (
-            "Conda env create failed:\n" "   'success' not in result, or not true.\n"
-        )
-        if "message" in result:
-            message += "\n"
-            message += result["message"]
-            message += "\n"
-        if "error" in result:
-            message += "\n"
-            message += result["error"]
-            message += "\n"
-        print(message)
-        raise RuntimeError(message)
-
-    packages = {}
-    for item in result["actions"]["LINK"]:
-        package = item["name"]
-        if package in metadata["Core package"]:
-            _type = "Core package"
-            data = metadata["Core package"][package]
-        elif package in metadata["MolSSI plug-in"]:
-            _type = "MolSSI plug-in"
-            data = metadata["MolSSI plug-in"][package]
-        elif package in metadata["3rd-party plug-in"]:
-            _type = "3rd-party plug-in"
-            data = metadata["3rd-party plug-in"][package]
-        else:
-            _type = None
-        if _type is not None:
-            packages[package] = {
-                "channel": "conda-forge",
-                "description": data["description"],
-                "type": _type,
-                "version": item["version"],
-            }
-    for item in result["actions"]["PIP"]:
-        tmp = item.split("-")
-        package = "-".join(tmp[0:-1])
-        version = tmp[-1]
-        if package in metadata["Core package"]:
-            _type = "Core package"
-            data = metadata["Core package"][package]
-        elif package in metadata["MolSSI plug-in"]:
-            _type = "MolSSI plug-in"
-            data = metadata["MolSSI plug-in"][package]
-        elif package in metadata["3rd-party plug-in"]:
-            _type = "3rd-party plug-in"
-            data = metadata["3rd-party plug-in"][package]
-        else:
-            _type = None
-        if _type is not None:
-            packages[package] = {
-                "channel": "pypi",
-                "description": data["description"],
-                "type": _type,
-                "version": version,
-            }
-
-    return packages
-
-
-def list_packages(environment=None):
-    """Return the package list using Conda list"""
-    conda = Conda(logger=logger)
-
-    result = conda.list(environment=environment)
-
-    packages = {}
-    for package, data in result.items():
-        if package in metadata["Core package"]:
-            _type = "Core package"
-            mdata = metadata["Core package"][package]
-        elif package in metadata["MolSSI plug-in"]:
-            _type = "MolSSI plug-in"
-            mdata = metadata["MolSSI plug-in"][package]
-        elif package in metadata["3rd-party plug-in"]:
-            _type = "3rd-party plug-in"
-            mdata = metadata["3rd-party plug-in"][package]
-        else:
-            _type = None
-        if _type is not None:
-            packages[package] = {
-                "channel": data["channel"],
-                "description": mdata["description"],
-                "type": _type,
-                "version": data["version"],
-            }
-
-    return packages
-
-
-def update_package_list(packages, environments="environments"):
-    """Update the package list for any changes
-
-    Parameters
-    ----------
-    packages : {str: str}
-        The new list of packages
+    packages : {str: dict}
+        The freshly resolved packages: name -> {description, type, version}.
+    lock : str
+        The freshly compiled universal lock text.
     environments : str or pathlib.Path
-        Path to environments/ directory
+        Path to the environments/ directory holding the database and lock.
+    python : str
+        The minimum Python version the lock was resolved for.
 
     Returns
     -------
-    dict(str, str)
-        A dictionary with information about the packages.
+    (bool, dict)
+        Whether anything changed (and so a commit and an upload are needed),
+        and the packages.
+
+    Notes
+    -----
+    The database format (``"format": 2``) has no channels: every package comes
+    from PyPI. The Zenodo identifiers (``doi``, ``conceptdoi``, ``zenodo_id``)
+    are filled in by ``upload_to_zenodo`` after a successful upload; an empty
+    ``doi`` therefore means the last upload failed and must be retried.
     """
-    # Read the existing package database and see if there are changes
+    environments = Path(environments)
+    environments.mkdir(exist_ok=True)
+    path = environments / DATABASE_FILE
+    lock_path = environments / LOCK_FILE
+
     message = []
     changed = False
-    path = Path(environments) / "SEAMM_packages.json"
-    if not path.exists():
-        changed = True
-        print("The package database does not exist.")
-
-        plist = {
-            "date": datetime.now(timezone.utc).isoformat(),
-            "doi": "10.5281/zenodo.7860696",
-            "metadata": metadata,
-            "packages": packages,
-        }
-        with path.open("w") as fd:
-            json.dump(plist, fd, indent=4, sort_keys=True)
-        with Path("commit_message.txt").open("w") as fd:
-            fd.write("Initial commit of the SEAMM package database")
-    else:
-        with path.open("r") as fd:
-            try:
+    plist = None
+    if path.exists():
+        try:
+            with path.open("r") as fd:
                 plist = json.load(fd)
-            except json.JSONDecodeError:
-                plist = None
-        if plist is None:
-            changed = True
-            print("The package database could not be read, so replacing.")
+        except json.JSONDecodeError:
+            plist = None
+        if plist is not None and plist.get("format") != FORMAT:
+            print(f"The package database is not format {FORMAT}; replacing it.")
+            message.append(f"Package database converted to format {FORMAT}")
+            plist = None
 
-            plist = {
-                "conceptdoi": "10.5281/zenodo.7789853",
-                "date": datetime.now(timezone.utc).isoformat(),
-                "doi": "10.5281/zenodo.7860696",
-                "metadata": metadata,
-                "packages": packages,
-            }
-            with path.open("w") as fd:
-                json.dump(plist, fd, indent=4, sort_keys=True)
-            with Path("commit_message.txt").open("w") as fd:
-                fd.write("Could not read the SEAMM package database, so replacing")
-        else:
-            print("Checking for changes in SEAMM")
-            old_packages = plist["packages"]
-            for package in packages:
-                logger.debug(f"Checking package {package}")
-                newv = packages[package]["version"]
-                if package not in old_packages:
-                    changed = True
-                    print(f"  New package: {package} {newv}")
-                    message.append(f"{package} added to SEAMM")
-                else:
-                    oldv = old_packages[package]["version"]
-                    oldchannel = old_packages[package]["channel"]
-                    newchannel = packages[package]["channel"]
-                    oldtype = old_packages[package]["type"]
-                    newtype = packages[package]["type"]
-                    logger.debug(f"    Old version: {oldv} ({oldchannel}) {oldtype}")
-                    logger.debug(f"    New version: {newv} ({newchannel}) {newtype}")
-                    if oldv != newv:
-                        changed = True
-                        if oldchannel != newchannel:
-                            print(
-                                f"  {package}: changed from {oldv} "
-                                f"({oldchannel}) to {newv} ({newchannel})"
-                            )
-                            message.append(
-                                f"{package} changed from {oldv} ({oldchannel}) to "
-                                f"{newv} ({newchannel})"
-                            )
-                        else:
-                            print(f"  {package}: from {oldv} to {newv}")
-                            message.append(f"{package} changed from {oldv} to {newv}")
-                    elif oldchannel != newchannel:
-                        changed = True
-                        print(f"  {package}: from {oldchannel} to {newchannel}")
-                        message.append(
-                            f"{package} changed from {oldchannel} to {newchannel}"
-                        )
-                    if oldtype != newtype:
-                        changed = True
-                        print(f"  {package}: from {oldtype} to {newtype}")
-                        message.append(f"{package} changed from {oldtype} to {newtype}")
-            if not changed and plist.get("doi", "") == "":
-                # A previous run updated the database but failed to upload it to
-                # Zenodo (the DOI is filled in only after a successful upload).
-                changed = True
-                print("The package database has no DOI: a previous upload failed.")
-                message.append("Re-uploading the package database to Zenodo")
-            if not changed:
-                print("The package database has not changed.")
-            else:
-                print("The package database has changed.")
-
-                plist = {
-                    "conceptdoi": "10.5281/zenodo.7789853",
-                    "date": datetime.now(timezone.utc).isoformat(),
-                    "doi": "",
-                    "metadata": metadata,
-                    "packages": packages,
-                }
-                with path.open("w") as fd:
-                    json.dump(plist, fd, indent=4, sort_keys=True)
-                with Path("commit_message.txt").open("w") as fd:
-                    fd.write("New SEAMM package database\n\n")
-                    for i, line in enumerate(message):
-                        fd.write(f"{i}. {line}\n")
-
-    return changed, packages
-
-
-def create_env(packages, pinned=False):
-    """Create the environment files for the packages.
-
-    Parameters
-    ----------
-    packages : dict(str, dict)
-        The packages to create the environment files for.
-    pinned : bool = False
-        Whether to pin the versions
-    """
-    if pinned:
-        print("Creating the pinned environment file for the packages.")
+    if plist is None:
+        changed = True
+        print("Starting a new package database.")
+        if not message:
+            message.append("Initial package database")
+        old_packages = {}
+        old_lock = ""
+        zenodo = {"doi": "", "conceptdoi": "", "zenodo_id": ""}
     else:
-        print("Creating the environment file for the packages.")
-    prelines = ["""name: seamm
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - pip
-  - python
-"""]
-    # Creating the environment file with versions pinned
-    lines = []
-    # First the conda installable packages, including any dependencies
-    for repo in ("conda-forge", "pypi"):
-        if repo == "conda-forge":
-            lines.extend(prelines)
-            spc = 2 * " "
-        else:
-            lines.append("  # PyPi packages")
-            lines.append("  - pip:")
-            spc = 6 * " "
+        print("Checking for changes in SEAMM")
+        old_packages = plist["packages"]
+        old_lock = lock_path.read_text() if lock_path.exists() else ""
+        zenodo = {k: plist.get(k, "") for k in ("doi", "conceptdoi", "zenodo_id")}
 
-        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
-            lines.append(f"{spc}# {_type}s")
-            for package in sorted(metadata[_type].keys()):
-                if package in packages:
-                    data = packages[package]
-                    if data["channel"] == repo:
-                        if pinned:
-                            lines.append(f"{spc}- {package}=={data['version']}")
-                        else:
-                            lines.append(f"{spc}- {package}")
-            lines.append("")
+    for package, data in packages.items():
+        newv = data["version"]
+        newtype = data["type"]
+        if package not in old_packages:
+            changed = True
+            print(f"  New package: {package} {newv}")
+            message.append(f"{package} added to SEAMM")
+            continue
+        oldv = old_packages[package]["version"]
+        oldtype = old_packages[package]["type"]
+        if oldv != newv:
+            changed = True
+            print(f"  {package}: from {oldv} to {newv}")
+            message.append(f"{package} changed from {oldv} to {newv}")
+        if oldtype != newtype:
+            changed = True
+            print(f"  {package}: from {oldtype} to {newtype}")
+            message.append(f"{package} changed from {oldtype} to {newtype}")
+    for package in old_packages:
+        if package not in packages:
+            changed = True
+            print(f"  Removed package: {package}")
+            message.append(f"{package} removed from SEAMM")
 
-        # Are there any dependencies that require conda installs?
-        dependencies = []
-        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
-            for package, meta in metadata[_type].items():
-                if package in packages and "dependencies" in meta:
-                    for dependency, depdata in meta["dependencies"].items():
-                        if depdata["repository"] == repo:
-                            dependencies.append(
-                                f"{spc}# {package}: {depdata['comment']}"
-                            )
-                            if "pinning" in depdata and depdata["pinning"] != "":
-                                dependencies.append(
-                                    f"{spc}- {dependency}{depdata['pinning']}"
-                                )
-                            else:
-                                dependencies.append(f"{spc}- {dependency}")
+    if lock != old_lock:
+        if not changed:
+            print("  The lock file changed (a dependency, not a SEAMM package).")
+            message.append("Dependencies in the lock file changed")
+        changed = True
 
-        if len(dependencies) > 0:
-            lines.append(f"{spc}# Dependencies that require special handling\n")
-            lines.extend(dependencies)
-            lines.append("")
+    if not changed and zenodo["doi"] == "":
+        # A previous run updated the database but failed to upload it to
+        # Zenodo (the DOI is filled in only after a successful upload).
+        changed = True
+        print("The package database has no DOI: a previous upload failed.")
+        message.append("Re-uploading the package database to Zenodo")
 
-    return "\n".join(lines)
+    if not changed:
+        print("The package database has not changed.")
+        return False, packages
 
-
-def create_full_env():
-    """Create the full environment file from the metadata.
-
-    Parameters
-    ----------
-    """
-    print("Creating the full environment file from the metadata.")
-    prelines = ["""name: seamm
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - pip
-  - python
-"""]
-    # Creating the environment file
-    lines = []
-
-    # First the conda installable packages, including any dependencies
-    for repo in ("conda-forge", "pypi"):
-        if repo == "conda-forge":
-            lines.extend(prelines)
-            spc = 2 * " "
-        else:
-            lines.append("  # PyPi packages")
-            lines.append("  - pip:")
-            spc = 6 * " "
-
-        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
-            lines.append(f"{spc}# {_type}s")
-            for package, data in sorted(metadata[_type].items(), key=lambda x: x[0]):
-                if data["repository"] == repo:
-                    lines.append(f"{spc}- {package}")
-            lines.append("")
-
-        # Are there any dependencies that require conda installs?
-        dependencies = []
-        for _type in ("Core package", "MolSSI plug-in", "3rd-party plug-in"):
-            for package, meta in metadata[_type].items():
-                if "dependencies" in meta:
-                    for dependency, depdata in meta["dependencies"].items():
-                        if depdata["repository"] == repo:
-                            dependencies.append(
-                                f"{spc}# {package}: {depdata['comment']}"
-                            )
-                            if "pinning" in depdata and depdata["pinning"] != "":
-                                dependencies.append(
-                                    f"{spc}- {dependency}{depdata['pinning']}"
-                                )
-                            else:
-                                dependencies.append(f"{spc}- {dependency}")
-
-        if len(dependencies) > 0:
-            lines.append(f"{spc}# Dependencies that require special handling\n")
-            lines.extend(dependencies)
-            lines.append("")
-
-    return "\n".join(lines)
+    print("The package database has changed.")
+    plist = {
+        "format": FORMAT,
+        "python": python,
+        "lock": LOCK_FILE,
+        "date": datetime.now(timezone.utc).isoformat(),
+        "doi": "",
+        "conceptdoi": zenodo["conceptdoi"],
+        "zenodo_id": zenodo["zenodo_id"],
+        "metadata": metadata,
+        "packages": packages,
+    }
+    _write_database(path, plist)
+    lock_path.write_text(lock)
+    _write_commit_message(message)
+    return True, packages
 
 
-def upload_to_zenodo(publish=True):
-    """Upload the packaging files to Zenodo as a new version of the record.
+RECORD_METADATA = {
+    "title": "SEAMM Package List",
+    "upload_type": "dataset",
+    "description": (
+        "<p>The package list for the SEAMM environment (Simulation Environment "
+        "for Atomistic and Molecular Simulations), and the universal lock file "
+        "resolved from it with uv: the pinned, known-good set of every package "
+        "and dependency, for all platforms, that the SEAMM installer uses.</p>"
+    ),
+    "creators": [
+        {
+            "name": "Saxe, Paul",
+            "affiliation": "MolSSI, Virginia Tech",
+            "orcid": "0000-0002-8641-9448",
+        }
+    ],
+    "license": "cc-by-4.0",
+    "access_right": "open",
+    "keywords": ["SEAMM", "package list", "uv", "lock file"],
+}
+
+
+def upload_to_zenodo(publish=True, environments="environments"):
+    """Upload the package database and lock file to Zenodo.
+
+    The first time (no ``zenodo_id`` in the database) a brand-new record is
+    created; afterwards a new version of that record. On success the
+    database on disk is updated with the DOI, concept DOI and record id, so
+    the commit that follows carries them.
 
     Parameters
     ----------
     publish : bool = True
-        Whether to publish the new version. If False the files are uploaded to the
-        draft but it is left unpublished, which is useful for testing.
+        Whether to publish. If False the draft is uploaded and then *discarded*,
+        so a dry run leaves nothing behind on Zenodo.
+    environments : str or pathlib.Path
+        Path to the environments/ directory.
 
     Returns
     -------
     str
-        The DOI of the new version.
+        The DOI of the new version ("" for a dry run).
 
     Notes
     -----
-    Zenodo allows only one draft (unpublished) version per record. If anything goes
-    wrong after the draft is created it is discarded again, so that a failed run does
-    not block the next one. As a second line of defense, `add_version` reuses an
-    existing draft if one is found rather than trying to create another.
+    Zenodo allows only one draft (unpublished) version per record. If anything
+    goes wrong after the draft is created it is discarded again, so that a
+    failed run does not block the next one. As a second line of defense,
+    `add_version` reuses an existing draft if one is found.
     """
-    # Create a new Record
-    record = add_version()
-    print(f"Zenodo draft {record.data['id']} ({record.doi})")
+    environments = Path(environments)
+    path = environments / DATABASE_FILE
+    with path.open() as fd:
+        plist = json.load(fd)
+
+    zenodo_id = plist.get("zenodo_id", "")
+    if zenodo_id:
+        record = add_version(str(zenodo_id))
+        print(f"Zenodo draft {record.data['id']} of record {zenodo_id}")
+    else:
+        record = create_record()
+        print(f"Zenodo NEW record, draft {record.data['id']}")
 
     try:
-        # Remove the files inherited from the previous version
         for filename in record.files():
             print(f"removing file {filename}")
             record.remove_file(filename)
 
-        # Update the metadata in the files
-        doi = record.doi
-        conceptdoi = record.conceptdoi
+        doi = record.data.get("doi") or record.data.get("metadata", {}).get(
+            "prereserve_doi", {}
+        ).get("doi", "")
+        conceptdoi = record.data.get("conceptdoi", "")
 
-        path = Path("environments") / "SEAMM_packages.json"
-        with path.open() as fd:
-            tmp = json.load(fd)
-            tmp["doi"] = doi
-            tmp["conceptdoi"] = conceptdoi
-        with path.open("w") as fd:
-            json.dump(tmp, fd, indent=4, sort_keys=True)
+        plist["doi"] = doi
+        plist["conceptdoi"] = conceptdoi
+        plist["zenodo_id"] = record.data["id"]
+        _write_database(path, plist)
 
-        # Now we can add the files to Zenodo with the correct DOI, etc.
-        for name in ("SEAMM_packages.json", "seamm.yml", "seamm_pinned.yml"):
-            path = Path("environments") / name
-            text = path.read_text()
+        for name in (DATABASE_FILE, LOCK_FILE):
+            text = (environments / name).read_text()
             print(f"adding file {name}")
             record.add_file(name, contents=text)
 
-        # And, finally, can publish!
         if publish:
             record.publish()
-            print(f"published {record.doi}")
+            # After publishing the record knows its final identifiers.
+            plist["doi"] = record.data.get("doi", doi)
+            plist["conceptdoi"] = record.data.get("conceptdoi", conceptdoi)
+            plist["zenodo_id"] = record.data["id"]
+            _write_database(path, plist)
+            print(f"published {plist['doi']} (record {plist['zenodo_id']})")
+            return plist["doi"]
         else:
-            print("not publishing the draft (publish=False)")
+            print("dry run: discarding the draft (publish=False)")
+            record.discard()
+            plist["doi"] = ""
+            plist["conceptdoi"] = ""
+            plist["zenodo_id"] = zenodo_id
+            _write_database(path, plist)
+            return ""
     except Exception:
-        # Leave Zenodo clean so that the next run can create a new draft.
         print(f"Upload failed, discarding draft {record.data['id']}")
         try:
             record.discard()
         except Exception as e:
             print(f"   ...could not discard the draft: {e}")
+        plist["doi"] = ""
+        _write_database(path, plist)
         raise
 
-    return doi
+
+def create_record():
+    """Create a brand-new Zenodo deposition for the package list.
+
+    Used once, the first time the database is uploaded; every later upload is
+    a new version of this record (`add_version`). A DOI is pre-reserved so the
+    uploaded files can carry it.
+    """
+    token = os.environ["ZENODO_TOKEN"]
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
+    url = "https://zenodo.org/api/deposit/depositions"
+    data = {"metadata": {**RECORD_METADATA, "prereserve_doi": True}}
+    response = requests.post(url, json=data, headers=headers)
+    if response.status_code != 201:
+        raise RuntimeError(
+            f"Error creating a Zenodo record: code = {response.status_code}"
+            f"\n\n{_response_detail(response)}"
+        )
+    result = response.json()
+    logger.debug(f"\n{pprint.pformat(result)}")
+    return Record(result, token, metadata={})
 
 
 def find_draft(conceptrecid, token):
@@ -541,7 +360,7 @@ def find_draft(conceptrecid, token):
     return None
 
 
-def add_version(_id="10891078"):
+def add_version(_id):
     """Create a new record object for uploading a new version to Zenodo.
 
     If a draft of a new version already exists -- typically left behind by an
