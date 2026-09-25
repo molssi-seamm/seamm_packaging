@@ -345,10 +345,6 @@ metadata = {
             ),
             "repository": "pypi",
         },
-        "torchani-step": {
-            "description": "A SEAMM plug-in for the TorchANI ML models",
-            "repository": "pypi",
-        },
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "repository": "pypi",
@@ -385,6 +381,10 @@ metadata = {
         "solvate-step",
         "nwchem-step",
         "properties-step",
+        # Shelved 2026-09-25: needs substantial work (its docs build fails in
+        # CI, and the plug-in has not tracked recent SEAMM changes). Its
+        # pkg_resources -> importlib fix sits unmerged in torchani_step PR #9.
+        "torchani-step",
         # These live in their own Conda environments, created by the
         # corresponding installer, not in the main SEAMM environment.
         "lammps-mdi",  # MDI engine for LAMMPS, in the seamm-lammps environment
