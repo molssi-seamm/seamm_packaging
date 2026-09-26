@@ -11,14 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
-      - name: install python packages
+      - name: setup uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: install this package
         run: |
           python -m pip install --upgrade pip
           python -m pip install .
@@ -28,68 +31,25 @@ jobs:
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
 
-      - name: create environment file
+      - name: resolve, compare, upload, commit, release
         run: |
-          echo `pwd`
-          cd 
-          echo `pwd`
-          ls -l
-          create_full_environment_file
-
-          cat test.yml
-
-      # More info on options: https://github.com/conda-incubator/setup-miniconda
-      - name: create conda environment
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          installation-dir: ~/
-          environment-file: ../../../test.yml
-          activate-environment: seamm
-          auto-update-conda: false
-          auto-activate-base: false
-          show-channel-urls: true
-      
-      - name: execute py script
-        shell: bash -l {0}
-        run: |
-          # A login shell does not get GitHub's default -eo pipefail, so a failed
-          # upload to Zenodo must not silently fall through to the commit below.
           set -eo pipefail
-          ls -l ~/
-          echo "#############################"
-          echo `pwd`
-          echo "#############################"
-          ls -l
-          echo "#############################"
-          conda list
-          echo "#############################"
+          uv --version
 
-          # Run directly: wrapping it in echo `...` hid both the exit status and
-          # the line structure of its output.
+          # Resolves the package list with uv, compares with the committed
+          # database, and on any change uploads the database + lock to Zenodo
+          # (a new version of the record) and fills in the DOI on disk.
           check_for_changes
 
           if [ -z "$(git status --porcelain)" ]; then
             echo "Working directory clean"
           else
             echo "Changes detected"
-            echo "##############################################################"
             git status --porcelain
             echo "##############################################################"
-            ls -lR
+            head -c 2000 environments/SEAMM_packages.json
             echo "##############################################################"
-            echo "seamm.yml file:"
-            echo ""
-            cat environments/seamm.yml
-            echo "##############################################################"
-            echo ""
-            echo "\nseamm_pinned.yml file:"
-            echo ""
-            cat environments/seamm_pinned.yml
-            echo "##############################################################"
-            echo ""
-            echo "Does commit_message.txt exist?"
-            ls -l commit_message.txt
-            echo ""
+            wc -l environments/seamm.lock.txt
             git commit -a -F commit_message.txt
             git push
             # Create the release. Versions are CalVer (YYYY.M.D); a second
@@ -109,4 +69,3 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-

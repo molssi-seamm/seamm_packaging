@@ -25,31 +25,34 @@ environment:
 * **MolSSI plug-in** -- the steps maintained by MolSSI
 * **3rd-party plug-in** -- steps maintained elsewhere
 
-Each entry gives a description, whether the package comes from ``conda-forge`` or
-``pypi``, and optionally dependencies that need special handling (pinning, or forcing a
-particular repository). ``excluded plug-ins`` records packages deliberately left out,
-for instance because they live in their own Conda environment (``lammps-mdi``,
-``xnns``, ``seamm-webui``). The two ``development packages`` lists are the extra tools
-the installer adds for developers.
+Each entry gives a description. Every package comes from PyPI and declares its own
+dependencies, so there are no channels and no per-package dependency tables.
+``excluded plug-ins`` records packages deliberately left out: retired
+(``seamm-dashboard``), shelved (``torchani-step``), or living in their own environment
+(``lammps-mdi``, ``xnns``, ``seamm-webui``). ``development packages`` are the extra
+tools the installer adds for developers.
 
 Nightly the ``Check`` GitHub Action:
 
-#. builds a full environment from the metadata, resolving all the packages to their
-   current versions on conda-forge and PyPI;
-#. compares the result with the committed ``environments/SEAMM_packages.json``;
-#. if anything changed, regenerates ``environments/seamm.yml`` and
-   ``environments/seamm_pinned.yml``, uploads the three files as a new version of the
-   Zenodo record, commits the result, and creates a GitHub release.
+#. resolves the whole package list from PyPI with ``uv pip compile --universal``,
+   one solve valid for every platform, giving a pinned lock file;
+#. compares the SEAMM package versions and the lock with the committed
+   ``environments/SEAMM_packages.json`` and ``environments/seamm.lock.txt``;
+#. if anything changed, uploads both files as a new version of the Zenodo record
+   (creating the record the very first time), fills the DOI into the database,
+   commits the result, and creates a GitHub release.
 
-Releases are tagged with the date (``2026.9.19``); further releases on the same day get
-a ``.1``, ``.2``, ... suffix. A Slack message announces each one.
+The lock file is the "known-good set": the installer passes it to ``uv pip install``
+as constraints, so a fresh installation gets exactly the versions that resolved
+together here. Releases are tagged with the date (``2026.9.25``); further releases on
+the same day get a ``.1``, ``.2``, ... suffix. A Slack message announces each one.
 
 Adding a package
 ----------------
 
-#. Add it to the appropriate group in ``seamm_packaging/metadata.py``. Use the PyPI
-   name (lowercase, hyphens) since that is what Conda and pip report.
-#. Run ``make format lint`` and commit to ``main``.
+#. Add it to the appropriate group in ``seamm_packaging/metadata.py``, by its PyPI
+   name (lowercase, hyphens).
+#. Run ``make format lint test`` and commit to ``main``.
 #. Either wait for the nightly run or start one by hand (below).
 
 Running the workflow by hand
@@ -67,28 +70,30 @@ unchanged.
 Running locally
 ---------------
 
-The package installs three commands, all run from the top level of the checkout:
+``uv`` must be installed (``curl -LsSf https://astral.sh/uv/install.sh | sh``). The
+package installs three commands, all run from the top level of the checkout:
 
-``create_full_environment_file``
-    Writes ``test.yml``, a Conda environment file listing every package in the
-    metadata, which is what the workflow feeds to Conda.
+``resolve_packages``
+    Resolves the package list, prints every package with its version, and writes
+    ``environments/SEAMM_packages.json`` and ``environments/seamm.lock.txt`` -- without
+    touching Zenodo. Use it to see what a nightly run would do.
+
+``packaging_dry_run``
+    Everything the nightly run does, but the Zenodo draft is uploaded and then
+    *discarded* rather than published, so nothing is left behind. Needs
+    ``ZENODO_TOKEN``. Leaves the database with an empty DOI, so the next real run
+    uploads again.
 
 ``check_for_changes``
-    Given the resolved environment (the workflow activates it first), updates
-    ``environments/`` and uploads to Zenodo if the package list changed.
-
-``upload_to_zenodo``
-    Uploads the current contents of ``environments/`` as a new version of the Zenodo
-    record and publishes it. Needs the ``ZENODO_TOKEN`` environment variable. For a
-    dry run that leaves the new version as an unpublished draft, use Python::
-
-        from seamm_packaging import upload_to_zenodo
-        upload_to_zenodo(publish=False)
+    The real thing: resolve, compare, and if changed upload to Zenodo and publish.
+    Needs ``ZENODO_TOKEN``.
 
 Zenodo allows only one unpublished draft per record. If a run fails part way through
 the draft is discarded, and if one is nevertheless left behind the next run reuses it.
 An empty ``"doi"`` in the committed ``SEAMM_packages.json`` means the last upload
-failed; the next run notices and uploads again.
+failed; the next run notices and uploads again. The record id (``"zenodo_id"``) in
+the database is what later uploads add versions to; with no id, a new record is
+created.
 
 Acknowledgements
 ----------------
