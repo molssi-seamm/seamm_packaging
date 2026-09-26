@@ -91,6 +91,9 @@ def compile_lock(names, python_version="3.12", uv=None):
             uv,
             "pip",
             "compile",
+            # uv keeps a cached view of the index; without --refresh a release
+            # published minutes ago is not seen and the lock silently lags.
+            "--refresh",
             "--universal",
             f"--python-version={python_version}",
             "--no-header",

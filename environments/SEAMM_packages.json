@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-09-26T09:46:09.778104+00:00",
-    "doi": "10.5281/zenodo.22975163",
+    "date": "2026-09-26T12:50:40.793890+00:00",
+    "doi": "",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -35,11 +35,11 @@
             "seamm-geometric": {
                 "description": "Connector between geomeTRIC and SEAMM"
             },
-            "seamm-installer": {
-                "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations)."
-            },
             "seamm-jobserver": {
                 "description": "The JobServer for the SEAMM environment."
+            },
+            "seamm-manager": {
+                "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment."
             },
             "seamm-mdi": {
                 "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps."
@@ -203,6 +203,7 @@
         ],
         "excluded plug-ins": [
             "seamm-dashboard",
+            "seamm-installer",
             "cassandra-step",
             "chemical-formula",
             "cms-plots",
@@ -408,15 +409,15 @@
             "type": "Core package",
             "version": "2025.5.7"
         },
-        "seamm-installer": {
-            "description": "The installer/updater for SEAMM (Simulation Environment for Atomistic and Molecular Simulations).",
-            "type": "Core package",
-            "version": "2026.8.10.1"
-        },
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
             "version": "2026.8.13"
+        },
+        "seamm-manager": {
+            "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
+            "type": "Core package",
+            "version": "2026.9.26"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -496,7 +497,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.9.19.1"
+            "version": "2026.9.26"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",

@@ -9,8 +9,8 @@ publishes both to Zenodo, where the installer reads them.
 shelved, or living in their own environment. "development packages" are what
 `seamm-manager install development` adds.
 
-Phase 3 of the 2026-09-25 campaign replaces "seamm-installer" here with
-"seamm-manager" once that package exists on PyPI; seamm-installer is then frozen.
+"seamm-manager" replaced "seamm-installer" here on 2026-09-26; the old installer is
+frozen and kept only for conda-based installations, which read the old package list.
 """
 
 metadata = {
@@ -37,11 +37,12 @@ metadata = {
             "description": "Utility routines for handling " "forcefields in SEAMM"
         },
         "seamm-geometric": {"description": "Connector between geomeTRIC and " "SEAMM"},
-        "seamm-installer": {
-            "description": "The installer/updater for SEAMM "
-            "(Simulation Environment for "
-            "Atomistic and Molecular "
-            "Simulations)."
+        "seamm-manager": {
+            "description": (
+                "The manager for SEAMM (Simulation Environment for Atomistic and "
+                "Molecular Simulations): installs, updates and configures SEAMM in a "
+                "uv-managed environment."
+            ),
         },
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM " "environment."
@@ -263,6 +264,7 @@ metadata = {
     # Not installed: retired, shelved, or living in their own environment.
     "excluded plug-ins": [
         "seamm-dashboard",  # retired 2026-09; replaced by seamm-webui
+        "seamm-installer",  # frozen 2026-09-26; replaced by seamm-manager
         "cassandra-step",
         "chemical-formula",
         "cms-plots",
