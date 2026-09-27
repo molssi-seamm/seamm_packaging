@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-09-26T12:51:02.854942+00:00",
-    "doi": "10.5281/zenodo.22977748",
+    "date": "2026-09-27T10:26:53.169823+00:00",
+    "doi": "10.5281/zenodo.22995141",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -417,7 +417,7 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.9.26"
+            "version": "2026.9.26.5"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -506,5 +506,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 22977748
+    "zenodo_id": 22995141
 }
