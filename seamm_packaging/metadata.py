@@ -254,13 +254,7 @@ metadata = {
             "extended tight-binding methods"
         },
     },
-    "3rd-party plug-in": {
-        "pyxtal-step": {
-            "description": "A SEAMM plug-in for PyXtal, "
-            "which builds atomic and "
-            "molecular crystals."
-        }
-    },
+    "3rd-party plug-in": {},
     # Not installed: retired, shelved, or living in their own environment.
     "excluded plug-ins": [
         "seamm-dashboard",  # retired 2026-09; replaced by seamm-webui
@@ -274,6 +268,9 @@ metadata = {
         "nwchem-step",
         "properties-step",
         "torchani-step",  # shelved 2026-09-25: needs substantial work
+        # removed 2026-09-28: unmaintained; its installer imports pkg_resources,
+        # which Python 3.12 no longer provides, so it fails on every installation
+        "pyxtal-step",
         # These live in their own environments created by the plug-in installers
         "lammps-mdi",  # MDI engine for LAMMPS, in the seamm-lammps environment
         "xnns",  # the xnn MLFF code, in the seamm-xnn environment
