@@ -1,15 +1,11 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-09-28T11:35:00.791658+00:00",
-    "doi": "10.5281/zenodo.23013833",
+    "date": "2026-09-28T20:05:45.044991+00:00",
+    "doi": "10.5281/zenodo.23023210",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
-        "3rd-party plug-in": {
-            "pyxtal-step": {
-                "description": "A SEAMM plug-in for PyXtal, which builds atomic and molecular crystals."
-            }
-        },
+        "3rd-party plug-in": {},
         "Core package": {
             "molsystem": {
                 "description": "The molecular/crystal data model for SEAMM"
@@ -213,6 +209,7 @@
             "nwchem-step",
             "properties-step",
             "torchani-step",
+            "pyxtal-step",
             "lammps-mdi",
             "xnns",
             "seamm-webui"
@@ -344,11 +341,6 @@
             "type": "MolSSI plug-in",
             "version": "2026.8.7"
         },
-        "pyxtal-step": {
-            "description": "A SEAMM plug-in for PyXtal, which builds atomic and molecular crystals.",
-            "type": "3rd-party plug-in",
-            "version": "2021.7.29"
-        },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
             "type": "MolSSI plug-in",
@@ -417,7 +409,7 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.9.27.6"
+            "version": "2026.9.28"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -432,7 +424,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.9.27.1"
+            "version": "2026.9.28"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -497,7 +489,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.9.27.1"
+            "version": "2026.9.28"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
@@ -506,5 +498,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23013833
+    "zenodo_id": 23023210
 }
