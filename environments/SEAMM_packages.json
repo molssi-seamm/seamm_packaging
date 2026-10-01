@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-09-30T11:01:51.486250+00:00",
-    "doi": "10.5281/zenodo.23058431",
+    "date": "2026-10-01T11:28:23.368383+00:00",
+    "doi": "10.5281/zenodo.23081476",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -464,7 +464,7 @@
         "table-step": {
             "description": "A SEAMM plug-in for data tables in a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2025.6.1"
+            "version": "2026.9.30"
         },
         "thermal-conductivity-step": {
             "description": "A SEAMM plug-in for calculating thermal conductivity",
@@ -498,5 +498,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23058431
+    "zenodo_id": 23081476
 }
