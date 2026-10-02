@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-02T11:50:49.569145+00:00",
-    "doi": "10.5281/zenodo.23102149",
+    "date": "2026-10-02T11:53:04.132781+00:00",
+    "doi": "10.5281/zenodo.23102191",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -369,7 +369,7 @@
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.2.1"
+            "version": "2026.10.2.2"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -498,5 +498,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23102149
+    "zenodo_id": 23102191
 }
