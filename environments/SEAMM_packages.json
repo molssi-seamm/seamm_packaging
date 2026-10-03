@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-02T11:53:04.132781+00:00",
-    "doi": "10.5281/zenodo.23102191",
+    "date": "2026-10-03T10:17:58.096901+00:00",
+    "doi": "10.5281/zenodo.23119332",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -319,7 +319,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.10.1"
+            "version": "2026.10.2"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -329,7 +329,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.1"
+            "version": "2026.10.2.1"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -389,7 +389,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.9.27"
+            "version": "2026.10.2"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -404,12 +404,12 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.9.27"
+            "version": "2026.10.2"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.10.2"
+            "version": "2026.10.2.3"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -419,7 +419,7 @@
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
             "type": "Core package",
-            "version": "2026.8.13"
+            "version": "2026.10.2"
         },
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
@@ -429,7 +429,7 @@
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2026.9.27.1"
+            "version": "2026.10.2"
         },
         "seamm-widgets": {
             "description": "Specialized tkinter widgets for SEAMM",
@@ -489,7 +489,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.9.28"
+            "version": "2026.10.2"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
@@ -498,5 +498,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23102191
+    "zenodo_id": 23119332
 }
