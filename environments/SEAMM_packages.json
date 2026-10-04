@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-04T11:01:52.796758+00:00",
-    "doi": "10.5281/zenodo.23135707",
+    "date": "2026-10-04T19:49:59.939658+00:00",
+    "doi": "10.5281/zenodo.23144281",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -42,6 +42,9 @@
             },
             "seamm-mdi": {
                 "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps."
+            },
+            "seamm-scheduler": {
+                "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports."
             },
             "seamm-slurm": {
                 "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports."
@@ -280,7 +283,7 @@
         "forcefield-step": {
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2026.9.27"
+            "version": "2026.10.4"
         },
         "from-smiles-step": {
             "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
@@ -310,7 +313,7 @@
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.3"
+            "version": "2026.10.4"
         },
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
@@ -325,7 +328,7 @@
         "molsystem": {
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.10.3"
+            "version": "2026.10.4"
         },
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
@@ -375,12 +378,12 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.4"
+            "version": "2026.10.4.1"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.3"
+            "version": "2026.10.4"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -400,7 +403,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.4"
+            "version": "2026.10.4.1"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -415,7 +418,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.3"
+            "version": "2026.10.4"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -431,6 +434,11 @@
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
             "type": "Core package",
             "version": "2026.9.18"
+        },
+        "seamm-scheduler": {
+            "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
+            "type": "Core package",
+            "version": "2026.10.4"
         },
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
@@ -514,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23135707
+    "zenodo_id": 23144281
 }
