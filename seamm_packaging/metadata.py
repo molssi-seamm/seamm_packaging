@@ -47,6 +47,10 @@ metadata = {
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM " "environment."
         },
+        "seamm-mbe": {
+            "description": "A library for many-body expansion "
+            "(MBE) corrections in SEAMM"
+        },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface "
             "(MDI) facility for driving engines "
@@ -152,6 +156,11 @@ metadata = {
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops " "in flowcharts."
+        },
+        "mbe-step": {
+            "description": "A SEAMM plug-in for many-body "
+            "expansion (MBE) corrections of "
+            "energies and forces."
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting "
