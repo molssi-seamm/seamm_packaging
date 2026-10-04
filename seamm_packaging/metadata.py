@@ -56,6 +56,11 @@ metadata = {
             "(MDI) facility for driving engines "
             "from SEAMM steps."
         },
+        "seamm-scheduler": {
+            "description": "Queueing systems (SLURM, PBS) for SEAMM: "
+            "submit, poll and cancel jobs and tasks, with local "
+            "and SSH transports."
+        },
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) "
             "for SEAMM, with local and SSH "
