@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-04T19:49:59.939658+00:00",
-    "doi": "10.5281/zenodo.23144281",
+    "date": "2026-10-05T12:09:28.356270+00:00",
+    "doi": "10.5281/zenodo.23161625",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -318,7 +318,7 @@
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.4"
+            "version": "2026.10.4.1"
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
@@ -522,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23144281
+    "zenodo_id": 23161625
 }
