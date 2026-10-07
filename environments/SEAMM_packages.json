@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-07T17:28:56.147864+00:00",
-    "doi": "10.5281/zenodo.23219567",
+    "date": "2026-10-07T17:32:46.412111+00:00",
+    "doi": "10.5281/zenodo.23219639",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -423,7 +423,7 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.10.7"
+            "version": "2026.10.7.1"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
@@ -522,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23219567
+    "zenodo_id": 23219639
 }
