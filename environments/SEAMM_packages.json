@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-07T17:32:46.412111+00:00",
-    "doi": "10.5281/zenodo.23219639",
+    "date": "2026-10-08T11:53:03.264888+00:00",
+    "doi": "10.5281/zenodo.23238182",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -333,7 +333,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.10.7"
+            "version": "2026.10.8"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -343,7 +343,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.7"
+            "version": "2026.10.8"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -403,7 +403,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.7.1"
+            "version": "2026.10.8"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -508,7 +508,7 @@
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
-            "version": "2026.10.7"
+            "version": "2026.10.8"
         },
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
@@ -522,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23219639
+    "zenodo_id": 23238182
 }

@@ -12,7 +12,7 @@ ase==3.29.0
     #   seamm-ase
     #   thermochemistry-step
 atomic-charges-step==2026.8.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 attrs==26.1.0
     # via
     #   jsonschema
@@ -51,36 +51,36 @@ colorama==0.4.6
 contourpy==1.4.0
     # via matplotlib
 control-parameters-step==2026.7.28
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 crystal-builder-step==2022.7.31
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 custom-step==2026.3.15
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 cycler==0.12.1
     # via matplotlib
 deprecated==1.3.1
     # via mendeleev
 dftbplus-step==2026.10.6
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 diffusivity-step==2026.3.26
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 dimer-builder-step==2026.10.3
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 energy-scan-step==2026.9.25
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 energy-step==2026.10.3
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 et-xmlfile==2.0.0
     # via openpyxl
 extract-clusters-step==2026.9.19
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 fasteners==0.20
     # via
     #   seamm
     #   seamm-exec
     #   seamm-jobserver
 fhi-aims-step==2026.9.29
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 flask==3.1.3
     # via
     #   flask-authorize
@@ -97,21 +97,21 @@ flexparser==0.4
 fonttools==4.66.1
     # via matplotlib
 forcefield-step==2026.10.4
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 formulaic==1.2.2
     # via statsmodels
 from-smiles-step==2025.5.14
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 gaussian-step==2026.10.6
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 geometric==1.1.1
     # via
     #   energy-scan-step
     #   seamm-geometric
 geometry-analysis-step==2026.10.5
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 golden-step==2026.7.28
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 h5py==3.16.0
     # via vasp-step
 hsd==0.1
@@ -146,10 +146,10 @@ kim-query==4.0.0
 kiwisolver==1.5.1
     # via matplotlib
 lammps-step==2026.10.6.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 loop-step==2026.10.5
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   subflowchart-step
 lxml==6.1.3
     # via vasp-step
@@ -170,19 +170,19 @@ marshmallow-sqlalchemy==1.5.0
 matplotlib==3.11.2
     # via ase
 mbe-step==2026.10.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 mendeleev==1.3.0
     # via
     #   dimer-builder-step
     #   molsystem
 model-chemistry-step==2026.10.3
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   lammps-step
     #   mbe-step
 molsystem==2026.10.6.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   atomic-charges-step
     #   diffusivity-step
     #   dimer-builder-step
@@ -200,8 +200,8 @@ molsystem==2026.10.6.1
     #   seamm-mbe
     #   supercell-step
     #   thermochemistry-step
-mopac-step==2026.10.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+mopac-step==2026.10.8
+    # via -r /tmp/tmpfmrll11h/requirements.in
 mpmath==1.3.0
     # via sympy
 msgpack==1.2.3
@@ -214,7 +214,7 @@ narwhals==2.26.0
 networkx==3.7
     # via geometric
 normal-mode-sampling-step==2026.10.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 numexpr==2.14.2
     # via pymbar
 numpy==2.5.3
@@ -276,8 +276,8 @@ openpyxl==3.1.5
     #   crystal-builder-step
     #   seamm
     #   table-step
-orca-step==2026.10.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+orca-step==2026.10.8
+    # via -r /tmp/tmpfmrll11h/requirements.in
 packaging==26.3
     # via
     #   cclib
@@ -291,7 +291,7 @@ packaging==26.3
     #   seekpath
     #   statsmodels
 packmol-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 pandas==3.0.6
     # via
     #   dftbplus-step
@@ -323,7 +323,7 @@ pint==0.24.4
     #   mendeleev
     #   qcelemental
     #   seamm-util
-platformdirs==4.12.3
+platformdirs==4.12.4
     # via
     #   pint
     #   seamm-manager
@@ -343,7 +343,7 @@ pmw==2.1.1
 prettytable==3.18.0
     # via pycifrw
 psi4-step==2026.10.6
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 psutil==7.2.2
     # via
     #   loop-step
@@ -419,13 +419,13 @@ pyyaml==6.0.3
     #   seamm-datastore
     #   seamm-manager
 qcarchive-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 qcelemental==0.51.2
     # via qcportal
 qcportal==0.70
     # via qcarchive-step
 quickmin-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 rdkit==2026.3.6
     # via
     #   energy-scan-step
@@ -433,12 +433,12 @@ rdkit==2026.3.6
     #   molsystem
     #   seamm-ff-util
 rdkit-step==2023.2.22
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 reaction-path-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 read-structure-step==2026.10.6
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   energy-scan-step
     #   forcefield-step
     #   reaction-path-step
@@ -487,7 +487,7 @@ scipy==1.18.1
     #   statsmodels
 seamm==2026.10.5
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -534,13 +534,13 @@ seamm==2026.10.5
     #   xtb-step
 seamm-ase==2025.2.7
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   reaction-path-step
     #   structure-step
     #   thermochemistry-step
 seamm-bsse==2026.8.7.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   mbe-step
     #   orca-step
     #   psi4-step
@@ -548,11 +548,11 @@ seamm-dashboard-client==2026.10.1
     # via seamm
 seamm-datastore==2026.10.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   seamm-exec
-seamm-exec==2026.10.7.1
+seamm-exec==2026.10.8
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   atomic-charges-step
     #   dftbplus-step
     #   dimer-builder-step
@@ -569,44 +569,44 @@ seamm-exec==2026.10.7.1
     #   vasp-step
 seamm-ff-util==2026.9.25
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   forcefield-step
     #   lammps-step
 seamm-geometric==2025.5.7
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   structure-step
 seamm-jobserver==2026.10.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 seamm-manager==2026.10.7.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   xnn-step
 seamm-mbe==2026.10.6.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   mbe-step
 seamm-mdi==2026.9.18
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   dimer-builder-step
     #   energy-step
     #   normal-mode-sampling-step
 seamm-scheduler==2026.10.7
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   seamm-exec
     #   seamm-jobserver
     #   seamm-slurm
 seamm-slurm==2026.10.2
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 seamm-thermochemistry==2026.9.28
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   mbe-step
 seamm-util==2026.10.2
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -648,7 +648,7 @@ seamm-util==2026.10.2
     #   xtb-step
 seamm-widgets==2026.9.25.1
     # via
-    #   -r /tmp/tmp6y8dlrn9/requirements.in
+    #   -r /tmp/tmpfmrll11h/requirements.in
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -680,7 +680,7 @@ seamm-widgets==2026.9.25.1
 seekpath==2.2.2
     # via molsystem
 set-cell-step==2021.10.14
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 six==1.17.0
     # via
     #   flask-authorize
@@ -691,7 +691,7 @@ spglib==2.7.0
     # via
     #   molsystem
     #   seekpath
-sqlalchemy==2.1.3
+sqlalchemy==2.1.4
     # via
     #   alembic
     #   flask-authorize
@@ -706,17 +706,17 @@ statsmodels==0.15.0
 stevedore==5.9.1
     # via seamm
 strain-step==2026.10.6
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 structure-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 subflowchart-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 supercell-step==2026.10.6
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 sympy==1.14.0
     # via seamm-ff-util
 table-step==2026.10.5
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 tabulate==0.10.0
     # via
     #   atomic-charges-step
@@ -747,11 +747,11 @@ tabulate==0.10.0
     #   thermochemistry-step
     #   vasp-step
 thermal-conductivity-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 thermochemistry-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 thermomechanical-step==2026.3.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 threadpoolctl==3.7.0
     # via scikit-learn
 tqdm==4.70.1
@@ -780,8 +780,8 @@ unidecode==1.4.0
     # via basis-set-exchange
 urllib3==2.8.0
     # via requests
-vasp-step==2026.10.7
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+vasp-step==2026.10.8
+    # via -r /tmp/tmpfmrll11h/requirements.in
 wcwidth==0.9.2
     # via prettytable
 werkzeug==3.1.9
@@ -793,8 +793,8 @@ wrapt==2.5.0
     #   deprecated
     #   formulaic
 xnn-step==2026.10.5
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 xtb-step==2026.6.26.1
-    # via -r /tmp/tmp6y8dlrn9/requirements.in
+    # via -r /tmp/tmpfmrll11h/requirements.in
 zstandard==0.25.0
     # via qcportal
