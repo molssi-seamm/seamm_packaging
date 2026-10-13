@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-11T11:19:37.301274+00:00",
-    "doi": "10.5281/zenodo.23297352",
+    "date": "2026-10-13T12:33:01.624855+00:00",
+    "doi": "10.5281/zenodo.23341645",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -248,12 +248,12 @@
         "dftbplus-step": {
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.6"
+            "version": "2026.10.11"
         },
         "diffusivity-step": {
             "description": "A SEAMM plug-in for calculating diffusivity",
             "type": "MolSSI plug-in",
-            "version": "2026.3.26"
+            "version": "2026.10.12"
         },
         "dimer-builder-step": {
             "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
@@ -283,7 +283,7 @@
         "forcefield-step": {
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.4"
+            "version": "2026.10.12.1"
         },
         "from-smiles-step": {
             "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
@@ -293,7 +293,7 @@
         "gaussian-step": {
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2026.10.6"
+            "version": "2026.10.11"
         },
         "geometry-analysis-step": {
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
@@ -308,7 +308,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.6.1"
+            "version": "2026.10.12.1"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
@@ -323,7 +323,7 @@
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.3"
+            "version": "2026.10.12.1"
         },
         "molsystem": {
             "description": "The molecular/crystal data model for SEAMM",
@@ -343,17 +343,17 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.10"
+            "version": "2026.10.12.1"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2026.10.10"
+            "version": "2026.10.12"
         },
         "psi4-step": {
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.10.6"
+            "version": "2026.10.11"
         },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
@@ -403,12 +403,12 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.10.4"
+            "version": "2026.10.11"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2026.9.25"
+            "version": "2026.10.12"
         },
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
@@ -418,12 +418,12 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.7"
+            "version": "2026.10.11"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.10.7.1"
+            "version": "2026.10.11"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
@@ -513,7 +513,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.5"
+            "version": "2026.10.12"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
@@ -522,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23297352
+    "zenodo_id": 23341645
 }
