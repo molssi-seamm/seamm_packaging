@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-13T12:33:01.624855+00:00",
-    "doi": "10.5281/zenodo.23341645",
+    "date": "2026-10-14T10:00:07.656619+00:00",
+    "doi": "10.5281/zenodo.23363713",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -343,7 +343,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.12.1"
+            "version": "2026.10.13"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -513,7 +513,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.12"
+            "version": "2026.10.13"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
@@ -522,5 +522,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23341645
+    "zenodo_id": 23363713
 }
