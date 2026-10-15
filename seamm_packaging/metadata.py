@@ -51,6 +51,10 @@ metadata = {
             "description": "A library for many-body expansion "
             "(MBE) corrections in SEAMM"
         },
+        "seamm-md-analysis": {
+            "description": "A library for the analysis of molecular "
+            "dynamics in SEAMM"
+        },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface "
             "(MDI) facility for driving engines "
@@ -256,6 +260,10 @@ metadata = {
         },
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a " "planewave DFT code"
+        },
+        "viscosity-step": {
+            "description": "A SEAMM plug-in for calculating the shear "
+            "viscosity from molecular dynamics"
         },
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned "
