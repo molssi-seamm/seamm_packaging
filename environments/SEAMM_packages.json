@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-16T08:55:02.618983+00:00",
-    "doi": "10.5281/zenodo.23413810",
+    "date": "2026-10-16T09:12:12.788343+00:00",
+    "doi": "10.5281/zenodo.23414044",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -314,7 +314,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.15.4"
+            "version": "2026.10.16"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
@@ -538,5 +538,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23413810
+    "zenodo_id": 23414044
 }
