@@ -1,3 +1,5 @@
+active-learning-step==2026.10.14.1
+    # via -r /tmp/tmpls_e24v0/requirements.in
 alembic==1.20.0
     # via seamm-datastore
 annotated-types==0.8.0
@@ -8,11 +10,12 @@ argcomplete==3.7.2
     # via basis-set-exchange
 ase==3.29.0
     # via
+    #   active-learning-step
     #   reaction-path-step
     #   seamm-ase
     #   thermochemistry-step
 atomic-charges-step==2026.8.7
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 attrs==26.1.0
     # via
     #   jsonschema
@@ -51,36 +54,38 @@ colorama==0.4.6
 contourpy==1.4.0
     # via matplotlib
 control-parameters-step==2026.7.28
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 crystal-builder-step==2022.7.31
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 custom-step==2026.3.15
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 cycler==0.12.1
     # via matplotlib
 deprecated==1.3.1
     # via mendeleev
 dftbplus-step==2026.10.11
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 diffusivity-step==2026.10.15.3
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 dimer-builder-step==2026.10.9
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 energy-scan-step==2026.9.25
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 energy-step==2026.10.3
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 et-xmlfile==2.0.0
     # via openpyxl
 extract-clusters-step==2026.9.19
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 fasteners==0.20
     # via
     #   seamm
     #   seamm-exec
     #   seamm-jobserver
 fhi-aims-step==2026.9.29
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
+filelock==4.2.0
+    # via mdanalysis
 flask==3.1.3
     # via
     #   flask-authorize
@@ -98,22 +103,24 @@ fonttools==4.67.0
     # via matplotlib
 forcefield-step==2026.10.16
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   lammps-step
 formulaic==1.2.2
     # via statsmodels
 from-smiles-step==2025.5.14
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 gaussian-step==2026.10.11
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 geometric==1.1.1
     # via
     #   energy-scan-step
     #   seamm-geometric
 geometry-analysis-step==2026.10.5
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 golden-step==2026.7.28
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
+griddataformats==1.2.0
+    # via mdanalysis
 h5py==3.16.0
     # via
     #   seamm-md-analysis
@@ -140,7 +147,9 @@ jinja2==3.1.6
     #   flask
     #   seamm
 joblib==1.6.0
-    # via scikit-learn
+    # via
+    #   mdanalysis
+    #   scikit-learn
 jsonschema==4.26.0
     # via basis-set-exchange
 jsonschema-specifications==2025.9.1
@@ -149,11 +158,13 @@ kim-query==4.0.0
     # via forcefield-step
 kiwisolver==1.5.1
     # via matplotlib
-lammps-step==2026.10.16
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+lammps-step==2026.10.16.2
+    # via -r /tmp/tmpls_e24v0/requirements.in
+liquid-structure-step==2026.10.16
+    # via -r /tmp/tmpls_e24v0/requirements.in
 loop-step==2026.10.5
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   subflowchart-step
 lxml==6.1.3
     # via vasp-step
@@ -172,22 +183,33 @@ marshmallow==4.3.1
 marshmallow-sqlalchemy==1.5.0
     # via seamm-datastore
 matplotlib==3.11.2
-    # via ase
+    # via
+    #   ase
+    #   mdanalysis
 mbe-step==2026.10.10
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
+mda-xdrlib==0.2.0
+    # via mdanalysis
+mdanalysis==2.10.0
+    # via
+    #   liquid-structure-step
+    #   seamm-md-analysis
 mendeleev==1.3.0
     # via
     #   dimer-builder-step
     #   molsystem
-model-chemistry-step==2026.10.14
+mmtf-python==1.1.3
+    # via mdanalysis
+model-chemistry-step==2026.10.16
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   lammps-step
     #   mbe-step
     #   orca-step
 molsystem==2026.10.10
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   atomic-charges-step
     #   diffusivity-step
     #   dimer-builder-step
@@ -206,11 +228,15 @@ molsystem==2026.10.10
     #   supercell-step
     #   thermochemistry-step
 mopac-step==2026.10.8.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 mpmath==1.3.0
     # via sympy
+mrcfile==1.5.4
+    # via griddataformats
 msgpack==1.2.3
-    # via qcportal
+    # via
+    #   mmtf-python
+    #   qcportal
 narwhals==2.27.1
     # via
     #   formulaic
@@ -219,11 +245,12 @@ narwhals==2.27.1
 networkx==3.7
     # via geometric
 normal-mode-sampling-step==2026.10.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 numexpr==2.14.2
     # via pymbar
 numpy==2.5.4
     # via
+    #   active-learning-step
     #   ase
     #   atomic-charges-step
     #   cclib
@@ -238,12 +265,16 @@ numpy==2.5.4
     #   gaussian-step
     #   geometric
     #   geometry-analysis-step
+    #   griddataformats
     #   h5py
     #   lammps-step
+    #   liquid-structure-step
     #   matplotlib
     #   mbe-step
+    #   mdanalysis
     #   mendeleev
     #   molsystem
+    #   mrcfile
     #   normal-mode-sampling-step
     #   numexpr
     #   orca-step
@@ -283,12 +314,13 @@ openpyxl==3.1.5
     #   crystal-builder-step
     #   seamm
     #   table-step
-orca-step==2026.10.13
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+orca-step==2026.10.16.2
+    # via -r /tmp/tmpls_e24v0/requirements.in
 packaging==26.3
     # via
     #   cclib
     #   matplotlib
+    #   mdanalysis
     #   patsy
     #   plotly
     #   qcportal
@@ -298,7 +330,7 @@ packaging==26.3
     #   seekpath
     #   statsmodels
 packmol-step==2026.10.15
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 pandas==3.0.6
     # via
     #   dftbplus-step
@@ -351,7 +383,7 @@ pmw==2.1.1
 prettytable==3.18.0
     # via pycifrw
 psi4-step==2026.10.11
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 psutil==7.2.2
     # via
     #   loop-step
@@ -429,13 +461,13 @@ pyyaml==6.0.3
     #   seamm-datastore
     #   seamm-manager
 qcarchive-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 qcelemental==0.51.3
     # via qcportal
 qcportal==0.71
     # via qcarchive-step
 quickmin-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 rdkit==2026.9.1
     # via
     #   energy-scan-step
@@ -443,12 +475,12 @@ rdkit==2026.9.1
     #   molsystem
     #   seamm-ff-util
 rdkit-step==2023.2.22
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 reaction-path-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 read-structure-step==2026.10.9
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   energy-scan-step
     #   forcefield-step
     #   reaction-path-step
@@ -488,7 +520,9 @@ scipy==1.18.1
     #   extract-clusters-step
     #   formulaic
     #   geometric
+    #   griddataformats
     #   lammps-step
+    #   mdanalysis
     #   molsystem
     #   psi4-step
     #   pymbar
@@ -497,7 +531,8 @@ scipy==1.18.1
     #   statsmodels
 seamm==2026.10.15
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -515,6 +550,7 @@ seamm==2026.10.15
     #   geometry-analysis-step
     #   golden-step
     #   lammps-step
+    #   liquid-structure-step
     #   loop-step
     #   mbe-step
     #   model-chemistry-step
@@ -545,13 +581,13 @@ seamm==2026.10.15
     #   xtb-step
 seamm-ase==2026.10.14.1
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   reaction-path-step
     #   structure-step
     #   thermochemistry-step
 seamm-bsse==2026.8.7.1
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   mbe-step
     #   orca-step
     #   psi4-step
@@ -559,11 +595,12 @@ seamm-dashboard-client==2026.10.1
     # via seamm
 seamm-datastore==2026.10.1
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   seamm-exec
-seamm-exec==2026.10.16
+seamm-exec==2026.10.16.3
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   atomic-charges-step
     #   dftbplus-step
     #   dimer-builder-step
@@ -580,51 +617,53 @@ seamm-exec==2026.10.16
     #   vasp-step
 seamm-ff-util==2026.10.16
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   forcefield-step
     #   lammps-step
 seamm-geometric==2025.5.7
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   structure-step
 seamm-jobserver==2026.10.11
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 seamm-manager==2026.10.11
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   xnn-step
 seamm-mbe==2026.10.10
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   mbe-step
 seamm-md-analysis==2026.10.16
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   diffusivity-step
     #   lammps-step
+    #   liquid-structure-step
     #   thermal-conductivity-step
     #   viscosity-step
 seamm-mdi==2026.9.18
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   dimer-builder-step
     #   energy-step
     #   normal-mode-sampling-step
 seamm-scheduler==2026.10.10
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   seamm-exec
     #   seamm-jobserver
     #   seamm-slurm
 seamm-slurm==2026.10.2
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 seamm-thermochemistry==2026.9.28
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
     #   mbe-step
 seamm-util==2026.10.2
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -639,6 +678,7 @@ seamm-util==2026.10.2
     #   forcefield-step
     #   gaussian-step
     #   golden-step
+    #   liquid-structure-step
     #   mbe-step
     #   model-chemistry-step
     #   molsystem
@@ -667,7 +707,8 @@ seamm-util==2026.10.2
     #   xtb-step
 seamm-widgets==2026.9.25.1
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   atomic-charges-step
     #   control-parameters-step
     #   crystal-builder-step
@@ -679,6 +720,7 @@ seamm-widgets==2026.9.25.1
     #   fhi-aims-step
     #   gaussian-step
     #   golden-step
+    #   liquid-structure-step
     #   mbe-step
     #   model-chemistry-step
     #   normal-mode-sampling-step
@@ -700,7 +742,7 @@ seamm-widgets==2026.9.25.1
 seekpath==2.2.2
     # via molsystem
 set-cell-step==2021.10.14
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 six==1.17.0
     # via
     #   flask-authorize
@@ -726,19 +768,20 @@ statsmodels==0.15.0
 stevedore==5.9.1
     # via seamm
 strain-step==2026.10.6
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 structure-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 subflowchart-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 supercell-step==2026.10.6
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 sympy==1.14.0
     # via seamm-ff-util
 table-step==2026.10.5
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 tabulate==0.10.0
     # via
+    #   active-learning-step
     #   atomic-charges-step
     #   control-parameters-step
     #   dftbplus-step
@@ -748,6 +791,7 @@ tabulate==0.10.0
     #   gaussian-step
     #   geometry-analysis-step
     #   lammps-step
+    #   liquid-structure-step
     #   mopac-step
     #   orca-step
     #   packmol-step
@@ -769,15 +813,19 @@ tabulate==0.10.0
     #   viscosity-step
     #   xtb-step
 thermal-conductivity-step==2026.10.16
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 thermochemistry-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 thermomechanical-step==2026.3.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 threadpoolctl==3.7.0
-    # via scikit-learn
+    # via
+    #   mdanalysis
+    #   scikit-learn
 tqdm==4.70.1
-    # via qcportal
+    # via
+    #   mdanalysis
+    #   qcportal
 typing-extensions==4.16.0
     # via
     #   alembic
@@ -804,9 +852,9 @@ unidecode==1.4.0
 urllib3==2.8.0
     # via requests
 vasp-step==2026.10.8
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 viscosity-step==2026.10.15.1
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 wcwidth==0.9.2
     # via prettytable
 werkzeug==3.1.9
@@ -817,11 +865,12 @@ wrapt==2.5.1
     # via
     #   deprecated
     #   formulaic
-xnn-step==2026.10.14
+xnn-step==2026.10.16
     # via
-    #   -r /tmp/tmp8ee7asaz/requirements.in
+    #   -r /tmp/tmpls_e24v0/requirements.in
+    #   active-learning-step
     #   lammps-step
 xtb-step==2026.10.9
-    # via -r /tmp/tmp8ee7asaz/requirements.in
+    # via -r /tmp/tmpls_e24v0/requirements.in
 zstandard==0.25.0
     # via qcportal
