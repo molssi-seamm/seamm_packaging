@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-15T21:38:50.053729+00:00",
-    "doi": "10.5281/zenodo.23405638",
+    "date": "2026-10-16T08:55:02.618983+00:00",
+    "doi": "10.5281/zenodo.23413810",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -289,7 +289,7 @@
         "forcefield-step": {
             "description": "A SEAMM plug-in for setting up a forcefield or EAM potentials for subsequent simulations.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.12.1"
+            "version": "2026.10.16"
         },
         "from-smiles-step": {
             "description": "A SEAMM plug-in for creating structures from SMILES, InChI, InChIKey, or name.",
@@ -409,12 +409,12 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.15"
+            "version": "2026.10.16"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
             "type": "Core package",
-            "version": "2026.10.12"
+            "version": "2026.10.16"
         },
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
@@ -439,7 +439,7 @@
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
             "type": "Core package",
-            "version": "2026.10.15.2"
+            "version": "2026.10.16"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -504,7 +504,7 @@
         "thermal-conductivity-step": {
             "description": "A SEAMM plug-in for calculating thermal conductivity",
             "type": "MolSSI plug-in",
-            "version": "2026.10.15.2"
+            "version": "2026.10.16"
         },
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
@@ -524,7 +524,7 @@
         "viscosity-step": {
             "description": "A SEAMM plug-in for calculating the shear viscosity from molecular dynamics",
             "type": "MolSSI plug-in",
-            "version": "2026.10.15"
+            "version": "2026.10.15.1"
         },
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
@@ -538,5 +538,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23405638
+    "zenodo_id": 23413810
 }
