@@ -80,6 +80,11 @@ metadata = {
         "seamm-widgets": {"description": "Specialized tkinter widgets for " "SEAMM"},
     },
     "MolSSI plug-in": {
+        "active-learning-step": {
+            "description": "A SEAMM plug-in for active learning of machine-learned "
+            "force fields: scoring candidate structures with a committee, "
+            "selecting them, and training committees"
+        },
         "atomic-charges-step": {
             "description": "A SEAMM plug-in for "
             "calculation atomic charges "
@@ -162,6 +167,11 @@ metadata = {
             "description": "A SEAMM plug-in for LAMMPS, a "
             "forcefield-based molecular "
             "dynamics (MD) code."
+        },
+        "liquid-structure-step": {
+            "description": "A SEAMM plug-in for the structure of liquids and "
+            "solutions from molecular dynamics: radial distribution functions, "
+            "coordination numbers, ion pairing and solvation shells"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops " "in flowcharts."
