@@ -112,6 +112,11 @@ metadata = {
             "fast quantum mechanical "
             "simulation code."
         },
+        "dielectric-constant-step": {
+            "description": "A SEAMM plug-in for the static dielectric constant of "
+            "liquids, and of the solvent of electrolytes, from the dipole "
+            "fluctuations in molecular dynamics"
+        },
         "diffusivity-step": {
             "description": "A SEAMM plug-in for " "calculating diffusivity"
         },
@@ -162,6 +167,11 @@ metadata = {
             "current system to a JSON file and "
             "optionally verifies it against a "
             "reference, for golden testing."
+        },
+        "ionic-conductivity-step": {
+            "description": "A SEAMM plug-in for the ionic conductivity of "
+            "electrolytes from molecular dynamics: Einstein-Helfand, "
+            "Nernst-Einstein and the ionicity"
         },
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a "
