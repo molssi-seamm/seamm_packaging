@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-18T09:24:42.472748+00:00",
-    "doi": "10.5281/zenodo.23449739",
+    "date": "2026-10-18T13:53:24.186991+00:00",
+    "doi": "10.5281/zenodo.23453298",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -341,7 +341,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17.2"
+            "version": "2026.10.18.1"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
@@ -561,7 +561,7 @@
         "xnn-step": {
             "description": "A SEAMM plug-in for machine-learned force fields trained with xnn, provided as model chemistries and run as MDI engines.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17"
+            "version": "2026.10.17.1"
         },
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
@@ -570,5 +570,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23449739
+    "zenodo_id": 23453298
 }
