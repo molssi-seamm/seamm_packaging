@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-18T15:21:38.960709+00:00",
-    "doi": "10.5281/zenodo.23454579",
+    "date": "2026-10-18T23:39:09.816234+00:00",
+    "doi": "10.5281/zenodo.23461080",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -276,7 +276,7 @@
         "dielectric-constant-step": {
             "description": "A SEAMM plug-in for the static dielectric constant of liquids, and of the solvent of electrolytes, from the dipole fluctuations in molecular dynamics",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17.1"
+            "version": "2026.10.18"
         },
         "diffusivity-step": {
             "description": "A SEAMM plug-in for calculating diffusivity",
@@ -341,12 +341,12 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18.3"
+            "version": "2026.10.18.4"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17"
+            "version": "2026.10.18"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
@@ -366,7 +366,7 @@
         "molsystem": {
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.10.17"
+            "version": "2026.10.18"
         },
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
@@ -386,7 +386,7 @@
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.18.1"
         },
         "psi4-step": {
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
@@ -471,7 +471,7 @@
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
             "type": "Core package",
-            "version": "2026.10.17.4"
+            "version": "2026.10.18"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -496,7 +496,7 @@
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2026.10.2"
+            "version": "2026.10.18"
         },
         "seamm-widgets": {
             "description": "Specialized tkinter widgets for SEAMM",
@@ -570,5 +570,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23454579
+    "zenodo_id": 23461080
 }
