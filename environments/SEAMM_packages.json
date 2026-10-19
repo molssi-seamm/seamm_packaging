@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-18T23:39:09.816234+00:00",
-    "doi": "10.5281/zenodo.23461080",
+    "date": "2026-10-19T09:10:05.990829+00:00",
+    "doi": "10.5281/zenodo.23469870",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -341,7 +341,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18.4"
+            "version": "2026.10.18.5"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
@@ -471,7 +471,7 @@
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
             "type": "Core package",
-            "version": "2026.10.18"
+            "version": "2026.10.18.1"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -536,7 +536,7 @@
         "thermal-conductivity-step": {
             "description": "A SEAMM plug-in for calculating thermal conductivity",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17"
+            "version": "2026.10.18"
         },
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
@@ -570,5 +570,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23461080
+    "zenodo_id": 23469870
 }
