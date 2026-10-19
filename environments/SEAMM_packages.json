@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-19T14:57:10.189599+00:00",
-    "doi": "10.5281/zenodo.23477917",
+    "date": "2026-10-19T17:18:36.525936+00:00",
+    "doi": "10.5281/zenodo.23480307",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -421,7 +421,7 @@
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.17.1"
+            "version": "2026.10.19.1"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -456,7 +456,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.11"
+            "version": "2026.10.19"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -570,5 +570,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23477917
+    "zenodo_id": 23480307
 }
