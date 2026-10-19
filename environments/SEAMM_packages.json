@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-19T10:37:19.909439+00:00",
-    "doi": "10.5281/zenodo.23471812",
+    "date": "2026-10-19T14:57:10.189599+00:00",
+    "doi": "10.5281/zenodo.23477917",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -276,7 +276,7 @@
         "dielectric-constant-step": {
             "description": "A SEAMM plug-in for the static dielectric constant of liquids, and of the solvent of electrolytes, from the dipole fluctuations in molecular dynamics",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.19"
         },
         "diffusivity-step": {
             "description": "A SEAMM plug-in for calculating diffusivity",
@@ -336,17 +336,17 @@
         "ionic-conductivity-step": {
             "description": "A SEAMM plug-in for the ionic conductivity of electrolytes from molecular dynamics: Einstein-Helfand, Nernst-Einstein and the ionicity",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17.1"
+            "version": "2026.10.19"
         },
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18.5"
+            "version": "2026.10.19"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.19.1"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
@@ -471,7 +471,7 @@
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
             "type": "Core package",
-            "version": "2026.10.18.1"
+            "version": "2026.10.19"
         },
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
@@ -570,5 +570,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23471812
+    "zenodo_id": 23477917
 }
