@@ -25,6 +25,10 @@ metadata = {
             "description": "A library for the common code for "
             "n-body BSSE calculations"
         },
+        "seamm-dashboard-client": {
+            "description": "The client for submitting jobs to and querying a "
+            "SEAMM dashboard or web interface"
+        },
         "seamm-datastore": {
             "description": "Manages the data in the "
             "datastore for the SEAMM "
@@ -305,7 +309,6 @@ metadata = {
         "chemical-formula",
         "cms-plots",
         "seamm-cookiecutter",
-        "seamm-dashboard-client",
         "solvate-step",
         "nwchem-step",
         "properties-step",
