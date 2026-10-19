@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-19T17:18:36.525936+00:00",
-    "doi": "10.5281/zenodo.23480307",
+    "date": "2026-10-19T20:55:31.006309+00:00",
+    "doi": "10.5281/zenodo.23484093",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -18,6 +18,9 @@
             },
             "seamm-bsse": {
                 "description": "A library for the common code for n-body BSSE calculations"
+            },
+            "seamm-dashboard-client": {
+                "description": "The client for submitting jobs to and querying a SEAMM dashboard or web interface"
             },
             "seamm-datastore": {
                 "description": "Manages the data in the datastore for the SEAMM Dashboard"
@@ -231,7 +234,6 @@
             "chemical-formula",
             "cms-plots",
             "seamm-cookiecutter",
-            "seamm-dashboard-client",
             "solvate-step",
             "nwchem-step",
             "properties-step",
@@ -291,7 +293,7 @@
         "energy-scan-step": {
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2026.9.25"
+            "version": "2026.10.19"
         },
         "energy-step": {
             "description": "A SEAMM plug-in for calculating the energy and forces of many structures with a model chemistry served over MDI.",
@@ -381,7 +383,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.19"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -421,7 +423,7 @@
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.19.1"
+            "version": "2026.10.19.2"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -433,6 +435,11 @@
             "type": "Core package",
             "version": "2026.8.7.1"
         },
+        "seamm-dashboard-client": {
+            "description": "The client for submitting jobs to and querying a SEAMM dashboard or web interface",
+            "type": "Core package",
+            "version": "2026.10.19"
+        },
         "seamm-datastore": {
             "description": "Manages the data in the datastore for the SEAMM Dashboard",
             "type": "Core package",
@@ -441,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.18"
+            "version": "2026.10.19"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -451,12 +458,12 @@
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
             "type": "Core package",
-            "version": "2025.5.7"
+            "version": "2026.10.19"
         },
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.19"
+            "version": "2026.10.19.1"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -476,7 +483,7 @@
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
             "type": "Core package",
-            "version": "2026.9.18"
+            "version": "2026.10.19"
         },
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
@@ -516,7 +523,7 @@
         "structure-step": {
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2026.3.1"
+            "version": "2026.10.19"
         },
         "subflowchart-step": {
             "description": "A SEAMM plug-in for subflowcharts",
@@ -570,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23480307
+    "zenodo_id": 23484093
 }
