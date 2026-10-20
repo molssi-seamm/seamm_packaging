@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-19T23:21:30.009422+00:00",
-    "doi": "10.5281/zenodo.23486000",
+    "date": "2026-10-20T09:54:24.013067+00:00",
+    "doi": "10.5281/zenodo.23495964",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -343,7 +343,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.19"
+            "version": "2026.10.19.1"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
@@ -463,7 +463,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.19.1"
+            "version": "2026.10.19.2"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23486000
+    "zenodo_id": 23495964
 }
