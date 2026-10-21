@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-20T09:54:24.013067+00:00",
-    "doi": "10.5281/zenodo.23495964",
+    "date": "2026-10-21T09:56:30.519322+00:00",
+    "doi": "10.5281/zenodo.23531204",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -258,7 +258,7 @@
         "control-parameters-step": {
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2026.7.28"
+            "version": "2026.10.20"
         },
         "crystal-builder-step": {
             "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
@@ -288,12 +288,12 @@
         "dimer-builder-step": {
             "description": "A SEAMM plug-in for building dimer structures exploring the angular and radial space.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.9"
+            "version": "2026.10.20"
         },
         "energy-scan-step": {
             "description": "A SEAMM plug-in for calculating energy profiles along coordinates",
             "type": "MolSSI plug-in",
-            "version": "2026.10.19"
+            "version": "2026.10.20"
         },
         "energy-step": {
             "description": "A SEAMM plug-in for calculating the energy and forces of many structures with a model chemistry served over MDI.",
@@ -348,7 +348,7 @@
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
             "type": "MolSSI plug-in",
-            "version": "2026.10.19.1"
+            "version": "2026.10.20.1"
         },
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
@@ -358,7 +358,7 @@
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.20.3"
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
@@ -368,7 +368,7 @@
         "molsystem": {
             "description": "The molecular/crystal data model for SEAMM",
             "type": "Core package",
-            "version": "2026.10.18"
+            "version": "2026.10.20"
         },
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
@@ -418,12 +418,12 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.18"
+            "version": "2026.10.20"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.19.3"
+            "version": "2026.10.20"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -448,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.19"
+            "version": "2026.10.20"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -468,12 +468,12 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.10.11"
+            "version": "2026.10.19"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
             "type": "Core package",
-            "version": "2026.10.10"
+            "version": "2026.10.20.1"
         },
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
@@ -573,9 +573,9 @@
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
             "type": "MolSSI plug-in",
-            "version": "2026.10.9"
+            "version": "2026.10.20"
         }
     },
     "python": "3.12",
-    "zenodo_id": 23495964
+    "zenodo_id": 23531204
 }
