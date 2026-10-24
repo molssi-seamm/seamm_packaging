@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-23T09:51:30.268675+00:00",
-    "doi": "10.5281/zenodo.23592232",
+    "date": "2026-10-24T09:22:09.070302+00:00",
+    "doi": "10.5281/zenodo.23614233",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -358,7 +358,7 @@
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.20.3"
+            "version": "2026.10.23"
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
@@ -383,7 +383,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.21"
+            "version": "2026.10.23.1"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -448,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.20"
+            "version": "2026.10.23"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -473,7 +473,7 @@
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
             "type": "Core package",
-            "version": "2026.10.20.1"
+            "version": "2026.10.23"
         },
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23592232
+    "zenodo_id": 23614233
 }
