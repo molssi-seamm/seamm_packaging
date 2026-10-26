@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-25T09:40:08.705263+00:00",
-    "doi": "10.5281/zenodo.23638842",
+    "date": "2026-10-26T10:54:16.714065+00:00",
+    "doi": "10.5281/zenodo.23663663",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -353,12 +353,12 @@
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.24.1"
+            "version": "2026.10.25"
         },
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.23"
+            "version": "2026.10.25"
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
@@ -418,7 +418,7 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.22"
+            "version": "2026.10.25"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
@@ -448,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.24"
+            "version": "2026.10.25"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -473,7 +473,7 @@
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
             "type": "Core package",
-            "version": "2026.10.23"
+            "version": "2026.10.25"
         },
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23638842
+    "zenodo_id": 23663663
 }
