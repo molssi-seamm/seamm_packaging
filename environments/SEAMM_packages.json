@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-29T11:23:15.246565+00:00",
-    "doi": "10.5281/zenodo.23763491",
+    "date": "2026-10-30T11:15:20.333170+00:00",
+    "doi": "10.5281/zenodo.23804219",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -248,7 +248,7 @@
         "active-learning-step": {
             "description": "A SEAMM plug-in for active learning of machine-learned force fields: scoring candidate structures with a committee, selecting them, and training committees",
             "type": "MolSSI plug-in",
-            "version": "2026.10.17"
+            "version": "2026.10.29.1"
         },
         "atomic-charges-step": {
             "description": "A SEAMM plug-in for calculation atomic charges using DDEC6, Bader, etc.",
@@ -323,7 +323,7 @@
         "gaussian-step": {
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29"
+            "version": "2026.10.29.1"
         },
         "geometry-analysis-step": {
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
@@ -353,12 +353,12 @@
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.25"
+            "version": "2026.10.30"
         },
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29"
+            "version": "2026.10.29.2"
         },
         "model-chemistry-step": {
             "description": "A SEAMM step for setting the model chemistry for subsequent steps.",
@@ -418,7 +418,7 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.25"
+            "version": "2026.10.29.1"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
@@ -473,7 +473,7 @@
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
             "type": "Core package",
-            "version": "2026.10.25"
+            "version": "2026.10.29"
         },
         "seamm-md-analysis": {
             "description": "A library for the analysis of molecular dynamics in SEAMM",
@@ -483,7 +483,7 @@
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
             "type": "Core package",
-            "version": "2026.10.28.1"
+            "version": "2026.10.29"
         },
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
@@ -498,7 +498,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.10.28.4"
+            "version": "2026.10.29.1"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -548,7 +548,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29"
+            "version": "2026.10.29.2"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23763491
+    "zenodo_id": 23804219
 }
