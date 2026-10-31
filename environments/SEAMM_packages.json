@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-10-30T11:15:20.333170+00:00",
-    "doi": "10.5281/zenodo.23804219",
+    "date": "2026-10-31T10:48:18.635689+00:00",
+    "doi": "10.5281/zenodo.23834899",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -258,7 +258,7 @@
         "control-parameters-step": {
             "description": "A SEAMM plug-in for defining command-line parameters for a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.20"
+            "version": "2026.10.30"
         },
         "crystal-builder-step": {
             "description": "A SEAMM plug-in for creating crystals from prototypes, including Strukturbericht designations.",
@@ -323,7 +323,7 @@
         "gaussian-step": {
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29.1"
+            "version": "2026.10.31"
         },
         "geometry-analysis-step": {
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
@@ -353,7 +353,7 @@
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.30"
+            "version": "2026.10.30.2"
         },
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
@@ -383,7 +383,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.28.1"
+            "version": "2026.10.30.1"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -418,12 +418,12 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29.1"
+            "version": "2026.10.30"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.28"
+            "version": "2026.10.30"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -438,7 +438,7 @@
         "seamm-dashboard-client": {
             "description": "The client for submitting jobs to and querying a SEAMM dashboard or web interface",
             "type": "Core package",
-            "version": "2026.10.19"
+            "version": "2026.10.30"
         },
         "seamm-datastore": {
             "description": "Manages the data in the datastore for the SEAMM Dashboard",
@@ -448,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.25"
+            "version": "2026.10.30.1"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -463,7 +463,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.19.2"
+            "version": "2026.10.30"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -498,17 +498,17 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.10.29.1"
+            "version": "2026.10.31"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
             "type": "Core package",
-            "version": "2026.10.28.1"
+            "version": "2026.10.30"
         },
         "seamm-widgets": {
             "description": "Specialized tkinter widgets for SEAMM",
             "type": "Core package",
-            "version": "2026.9.25.1"
+            "version": "2026.10.30"
         },
         "set-cell-step": {
             "description": "A SEAMM plug-in for setting the periodic (unit) cell.",
@@ -548,7 +548,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.10.29.2"
+            "version": "2026.10.30"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23804219
+    "zenodo_id": 23834899
 }
