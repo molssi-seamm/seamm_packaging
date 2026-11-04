@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-03T12:41:27.982098+00:00",
-    "doi": "10.5281/zenodo.23918023",
+    "date": "2026-11-04T12:51:27.331606+00:00",
+    "doi": "10.5281/zenodo.23949414",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -418,7 +418,7 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.30"
+            "version": "2026.10.31"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23918023
+    "zenodo_id": 23949414
 }
