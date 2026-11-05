@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-04T12:51:27.331606+00:00",
-    "doi": "10.5281/zenodo.23949414",
+    "date": "2026-11-05T12:59:32.364624+00:00",
+    "doi": "10.5281/zenodo.23980187",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -383,7 +383,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.10.30.1"
+            "version": "2026.11.4"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -448,7 +448,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.10.30.1"
+            "version": "2026.11.4"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -463,7 +463,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.10.30"
+            "version": "2026.11.4"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -488,7 +488,7 @@
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
             "type": "Core package",
-            "version": "2026.10.24.1"
+            "version": "2026.11.4"
         },
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
@@ -498,7 +498,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.10.31"
+            "version": "2026.11.4"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -577,5 +577,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 23949414
+    "zenodo_id": 23980187
 }
