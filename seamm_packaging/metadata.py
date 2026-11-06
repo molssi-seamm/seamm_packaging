@@ -285,6 +285,11 @@ metadata = {
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a " "planewave DFT code"
         },
+        "vibrational-analysis-step": {
+            "description": "A SEAMM plug-in for anharmonic vibrational "
+            "frequencies and zero-point energies by second-order vibrational "
+            "perturbation theory (VPT2), with any Model Chemistry"
+        },
         "viscosity-step": {
             "description": "A SEAMM plug-in for calculating the shear "
             "viscosity from molecular dynamics"
