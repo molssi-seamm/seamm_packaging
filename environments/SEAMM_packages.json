@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-05T12:59:32.364624+00:00",
-    "doi": "10.5281/zenodo.23980187",
+    "date": "2026-11-06T12:47:41.666912+00:00",
+    "doi": "10.5281/zenodo.24011144",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -198,6 +198,9 @@
             "vasp-step": {
                 "description": "A SEAMM plug-in for VASP, a planewave DFT code"
             },
+            "vibrational-analysis-step": {
+                "description": "A SEAMM plug-in for anharmonic vibrational frequencies and zero-point energies by second-order vibrational perturbation theory (VPT2), with any Model Chemistry"
+            },
             "viscosity-step": {
                 "description": "A SEAMM plug-in for calculating the shear viscosity from molecular dynamics"
             },
@@ -268,7 +271,7 @@
         "custom-step": {
             "description": "A SEAMM plug-in for custom Python scripts in a flowchart.",
             "type": "MolSSI plug-in",
-            "version": "2026.3.15"
+            "version": "2026.11.6"
         },
         "dftbplus-step": {
             "description": "A SEAMM plug-in for DFTB+, a fast quantum mechanical simulation code.",
@@ -343,7 +346,7 @@
         "lammps-step": {
             "description": "A SEAMM plug-in for LAMMPS, a forcefield-based molecular dynamics (MD) code.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.24"
+            "version": "2026.11.6"
         },
         "liquid-structure-step": {
             "description": "A SEAMM plug-in for the structure of liquids and solutions from molecular dynamics: radial distribution functions, coordination numbers, ion pairing and solvation shells",
@@ -373,17 +376,17 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.10.24"
+            "version": "2026.11.5"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.3.1"
+            "version": "2026.11.5"
         },
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.4"
+            "version": "2026.11.5"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -418,12 +421,12 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.10.31"
+            "version": "2026.11.6"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.10.30"
+            "version": "2026.11.6"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -448,7 +451,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.4"
+            "version": "2026.11.5"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -548,7 +551,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.10.30"
+            "version": "2026.11.5"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -559,6 +562,11 @@
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
             "type": "MolSSI plug-in",
             "version": "2026.10.18"
+        },
+        "vibrational-analysis-step": {
+            "description": "A SEAMM plug-in for anharmonic vibrational frequencies and zero-point energies by second-order vibrational perturbation theory (VPT2), with any Model Chemistry",
+            "type": "MolSSI plug-in",
+            "version": "2026.11.5.1"
         },
         "viscosity-step": {
             "description": "A SEAMM plug-in for calculating the shear viscosity from molecular dynamics",
@@ -573,9 +581,9 @@
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
             "type": "MolSSI plug-in",
-            "version": "2026.10.20"
+            "version": "2026.11.5"
         }
     },
     "python": "3.12",
-    "zenodo_id": 23980187
+    "zenodo_id": 24011144
 }
