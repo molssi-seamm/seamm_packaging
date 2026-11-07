@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-07T11:36:12.522666+00:00",
-    "doi": "10.5281/zenodo.24034505",
+    "date": "2026-11-07T22:49:10.638289+00:00",
+    "doi": "10.5281/zenodo.24045152",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -119,6 +119,9 @@
             },
             "golden-step": {
                 "description": "A SEAMM plug-in that snapshots the current system to a JSON file and optionally verifies it against a reference, for golden testing."
+            },
+            "interaction-eda-step": {
+                "description": "A SEAMM plug-in for energy decomposition analysis (second-generation ALMO-EDA) of the interactions between molecules, with many-body terms"
             },
             "ionic-conductivity-step": {
                 "description": "A SEAMM plug-in for the ionic conductivity of electrolytes from molecular dynamics: Einstein-Helfand, Nernst-Einstein and the ionicity"
@@ -338,6 +341,11 @@
             "type": "MolSSI plug-in",
             "version": "2026.7.28"
         },
+        "interaction-eda-step": {
+            "description": "A SEAMM plug-in for energy decomposition analysis (second-generation ALMO-EDA) of the interactions between molecules, with many-body terms",
+            "type": "MolSSI plug-in",
+            "version": "2026.11.7"
+        },
         "ionic-conductivity-step": {
             "description": "A SEAMM plug-in for the ionic conductivity of electrolytes from molecular dynamics: Einstein-Helfand, Nernst-Einstein and the ionicity",
             "type": "MolSSI plug-in",
@@ -396,7 +404,7 @@
         "psi4-step": {
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.10.24"
+            "version": "2026.11.7.1"
         },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
@@ -451,7 +459,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.5"
+            "version": "2026.11.7"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -585,5 +593,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24034505
+    "zenodo_id": 24045152
 }
