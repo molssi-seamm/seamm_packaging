@@ -172,6 +172,11 @@ metadata = {
             "optionally verifies it against a "
             "reference, for golden testing."
         },
+        "interaction-eda-step": {
+            "description": "A SEAMM plug-in for energy decomposition analysis "
+            "(second-generation ALMO-EDA) of the interactions between "
+            "molecules, with many-body terms"
+        },
         "ionic-conductivity-step": {
             "description": "A SEAMM plug-in for the ionic conductivity of "
             "electrolytes from molecular dynamics: Einstein-Helfand, "
