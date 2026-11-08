@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-07T22:49:10.638289+00:00",
-    "doi": "10.5281/zenodo.24045152",
+    "date": "2026-11-08T11:48:12.096673+00:00",
+    "doi": "10.5281/zenodo.24052866",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -404,7 +404,7 @@
         "psi4-step": {
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.11.7.1"
+            "version": "2026.11.7.2"
         },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
@@ -479,7 +479,7 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.10.19"
+            "version": "2026.11.8.1"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
@@ -593,5 +593,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24045152
+    "zenodo_id": 24052866
 }
