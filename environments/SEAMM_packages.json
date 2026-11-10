@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-09T13:43:23.365041+00:00",
-    "doi": "10.5281/zenodo.24084372",
+    "date": "2026-11-10T13:21:32.821168+00:00",
+    "doi": "10.5281/zenodo.24109831",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -344,7 +344,7 @@
         "interaction-eda-step": {
             "description": "A SEAMM plug-in for energy decomposition analysis (second-generation ALMO-EDA) of the interactions between molecules, with many-body terms",
             "type": "MolSSI plug-in",
-            "version": "2026.11.9"
+            "version": "2026.11.9.6"
         },
         "ionic-conductivity-step": {
             "description": "A SEAMM plug-in for the ionic conductivity of electrolytes from molecular dynamics: Einstein-Helfand, Nernst-Einstein and the ionicity",
@@ -384,7 +384,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.11.5"
+            "version": "2026.11.9"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -404,7 +404,7 @@
         "psi4-step": {
             "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4",
             "type": "MolSSI plug-in",
-            "version": "2026.11.9"
+            "version": "2026.11.9.1"
         },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
@@ -429,7 +429,7 @@
         "read-structure-step": {
             "description": "A SEAMM plug-in to read structures from file formats common in computational chemistry",
             "type": "MolSSI plug-in",
-            "version": "2026.11.6"
+            "version": "2026.11.9"
         },
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
@@ -479,7 +479,7 @@
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.11.8.2"
+            "version": "2026.11.9"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
@@ -593,5 +593,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24084372
+    "zenodo_id": 24109831
 }
