@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-10T13:21:32.821168+00:00",
-    "doi": "10.5281/zenodo.24109831",
+    "date": "2026-11-11T12:32:35.329733+00:00",
+    "doi": "10.5281/zenodo.24136013",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -344,7 +344,7 @@
         "interaction-eda-step": {
             "description": "A SEAMM plug-in for energy decomposition analysis (second-generation ALMO-EDA) of the interactions between molecules, with many-body terms",
             "type": "MolSSI plug-in",
-            "version": "2026.11.9.6"
+            "version": "2026.11.11"
         },
         "ionic-conductivity-step": {
             "description": "A SEAMM plug-in for the ionic conductivity of electrolytes from molecular dynamics: Einstein-Helfand, Nernst-Einstein and the ionicity",
@@ -394,7 +394,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.8.3"
+            "version": "2026.11.11"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -459,7 +459,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.8.1"
+            "version": "2026.11.11"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -474,7 +474,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.11.4"
+            "version": "2026.11.11"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -509,7 +509,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.8.3"
+            "version": "2026.11.11.2"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -559,7 +559,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.8.1"
+            "version": "2026.11.11.2"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -593,5 +593,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24109831
+    "zenodo_id": 24136013
 }
