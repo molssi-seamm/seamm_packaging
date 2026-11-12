@@ -94,6 +94,12 @@ metadata = {
             "calculation atomic charges "
             "using DDEC6, Bader, etc."
         },
+        "composite-step": {
+            "description": "A SEAMM plug-in for composite model chemistries "
+            "(SEAMM:CMP@<recipe>): energies combined from several calculations, "
+            "e.g. CBS extrapolation with core-valence and relativistic "
+            "corrections"
+        },
         "control-parameters-step": {
             "description": "A SEAMM plug-in for "
             "defining command-line "
