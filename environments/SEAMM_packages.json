@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-13T12:56:11.037074+00:00",
-    "doi": "10.5281/zenodo.24196873",
+    "date": "2026-11-14T11:59:36.020042+00:00",
+    "doi": "10.5281/zenodo.24220066",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -392,7 +392,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.11.11"
+            "version": "2026.11.13.1"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -402,7 +402,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.12.3"
+            "version": "2026.11.13"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -467,7 +467,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.12.1"
+            "version": "2026.11.13"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -507,7 +507,7 @@
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
             "type": "Core package",
-            "version": "2026.11.8"
+            "version": "2026.11.14"
         },
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
@@ -517,7 +517,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.13"
+            "version": "2026.11.13.4"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -567,7 +567,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.13"
+            "version": "2026.11.13.4"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -601,5 +601,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24196873
+    "zenodo_id": 24220066
 }
