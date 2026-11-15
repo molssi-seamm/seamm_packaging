@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-14T11:59:36.020042+00:00",
-    "doi": "10.5281/zenodo.24220066",
+    "date": "2026-11-15T12:35:28.720580+00:00",
+    "doi": "10.5281/zenodo.24246457",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -467,7 +467,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.13"
+            "version": "2026.11.14"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -482,7 +482,7 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.11.11"
+            "version": "2026.11.14"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
@@ -601,5 +601,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24220066
+    "zenodo_id": 24246457
 }
