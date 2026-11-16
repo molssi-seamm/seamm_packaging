@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-15T12:35:28.720580+00:00",
-    "doi": "10.5281/zenodo.24246457",
+    "date": "2026-11-16T13:27:26.188663+00:00",
+    "doi": "10.5281/zenodo.24281789",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -392,7 +392,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.11.13.1"
+            "version": "2026.11.15"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -442,7 +442,7 @@
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.11.6"
+            "version": "2026.11.15"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
@@ -517,7 +517,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.13.4"
+            "version": "2026.11.16"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -567,7 +567,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.13.4"
+            "version": "2026.11.15.3"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -601,5 +601,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24246457
+    "zenodo_id": 24281789
 }
