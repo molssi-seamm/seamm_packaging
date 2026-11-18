@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-17T14:13:17.152340+00:00",
-    "doi": "10.5281/zenodo.24313662",
+    "date": "2026-11-18T13:44:13.671255+00:00",
+    "doi": "10.5281/zenodo.24343232",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -517,7 +517,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.16.1"
+            "version": "2026.11.18"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -601,5 +601,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24313662
+    "zenodo_id": 24343232
 }
