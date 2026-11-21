@@ -238,6 +238,11 @@ metadata = {
             "analyze quantum chemistry "
             "calculations using Psi4"
         },
+        "pyscf-step": {
+            "description": "A SEAMM plug-in for PySCF: the molecular spin-orbit "
+            "correction for thermochemistry (two-component minus scalar SCF "
+            "with spin-orbit pseudopotentials)"
+        },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting " "with QCArchive"
         },
