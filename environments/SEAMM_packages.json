@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-20T13:54:36.371389+00:00",
-    "doi": "10.5281/zenodo.24398256",
+    "date": "2026-11-21T02:44:51.485792+00:00",
+    "doi": "10.5281/zenodo.24410264",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -158,6 +158,9 @@
             },
             "psi4-step": {
                 "description": "A SEAMM plug-in to setup, run and analyze quantum chemistry calculations using Psi4"
+            },
+            "pyscf-step": {
+                "description": "A SEAMM plug-in for PySCF: the molecular spin-orbit correction for thermochemistry (two-component minus scalar SCF with spin-orbit pseudopotentials)"
             },
             "qcarchive-step": {
                 "description": "A SEAMM plug-in for connecting with QCArchive"
@@ -414,6 +417,11 @@
             "type": "MolSSI plug-in",
             "version": "2026.11.18"
         },
+        "pyscf-step": {
+            "description": "A SEAMM plug-in for PySCF: the molecular spin-orbit correction for thermochemistry (two-component minus scalar SCF with spin-orbit pseudopotentials)",
+            "type": "MolSSI plug-in",
+            "version": "2026.11.20"
+        },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
             "type": "MolSSI plug-in",
@@ -482,12 +490,12 @@
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
             "type": "Core package",
-            "version": "2026.11.14"
+            "version": "2026.11.20"
         },
         "seamm-manager": {
             "description": "The manager for SEAMM (Simulation Environment for Atomistic and Molecular Simulations): installs, updates and configures SEAMM in a uv-managed environment.",
             "type": "Core package",
-            "version": "2026.11.9"
+            "version": "2026.11.20"
         },
         "seamm-mbe": {
             "description": "A library for many-body expansion (MBE) corrections in SEAMM",
@@ -507,7 +515,7 @@
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
             "type": "Core package",
-            "version": "2026.11.14"
+            "version": "2026.11.20"
         },
         "seamm-slurm": {
             "description": "SLURM back-end (submit/poll/cancel) for SEAMM, with local and SSH transports.",
@@ -517,7 +525,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.19.1"
+            "version": "2026.11.20.1"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -601,5 +609,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24398256
+    "zenodo_id": 24410264
 }
