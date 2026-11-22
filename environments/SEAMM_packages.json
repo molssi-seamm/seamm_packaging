@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-21T02:44:51.485792+00:00",
-    "doi": "10.5281/zenodo.24410264",
+    "date": "2026-11-22T13:10:34.267412+00:00",
+    "doi": "10.5281/zenodo.24441822",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -420,7 +420,7 @@
         "pyscf-step": {
             "description": "A SEAMM plug-in for PySCF: the molecular spin-orbit correction for thermochemistry (two-component minus scalar SCF with spin-orbit pseudopotentials)",
             "type": "MolSSI plug-in",
-            "version": "2026.11.20"
+            "version": "2026.11.20.1"
         },
         "qcarchive-step": {
             "description": "A SEAMM plug-in for connecting with QCArchive",
@@ -475,7 +475,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.14"
+            "version": "2026.11.21"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -575,7 +575,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.19.1"
+            "version": "2026.11.21"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -605,9 +605,9 @@
         "xtb-step": {
             "description": "A SEAMM plug-in for the xTB family of extended tight-binding methods",
             "type": "MolSSI plug-in",
-            "version": "2026.11.11"
+            "version": "2026.11.21"
         }
     },
     "python": "3.12",
-    "zenodo_id": 24410264
+    "zenodo_id": 24441822
 }
