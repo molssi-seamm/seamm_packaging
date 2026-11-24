@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-24T15:39:23.469774+00:00",
-    "doi": "10.5281/zenodo.24506121",
+    "date": "2026-11-24T18:10:09.416662+00:00",
+    "doi": "10.5281/zenodo.24510422",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -48,6 +48,9 @@
             },
             "seamm-mdi": {
                 "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps."
+            },
+            "seamm-optimizer": {
+                "description": "A robust geometry optimizer for SEAMM: internal coordinates, model or cheap-level Hessians, and a check for a minimum."
             },
             "seamm-scheduler": {
                 "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports."
@@ -475,7 +478,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.23"
+            "version": "2026.11.24"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -510,7 +513,12 @@
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
             "type": "Core package",
-            "version": "2026.11.23"
+            "version": "2026.11.24"
+        },
+        "seamm-optimizer": {
+            "description": "A robust geometry optimizer for SEAMM: internal coordinates, model or cheap-level Hessians, and a check for a minimum.",
+            "type": "Core package",
+            "version": "2026.11.24"
         },
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
@@ -550,7 +558,7 @@
         "structure-step": {
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2026.10.19"
+            "version": "2026.11.24"
         },
         "subflowchart-step": {
             "description": "A SEAMM plug-in for subflowcharts",
@@ -609,5 +617,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24506121
+    "zenodo_id": 24510422
 }
