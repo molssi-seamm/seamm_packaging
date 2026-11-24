@@ -64,6 +64,11 @@ metadata = {
             "(MDI) facility for driving engines "
             "from SEAMM steps."
         },
+        "seamm-optimizer": {
+            "description": "A robust geometry optimizer for SEAMM: internal "
+            "coordinates, model or cheap-level Hessians, and a check "
+            "for a minimum."
+        },
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: "
             "submit, poll and cancel jobs and tasks, with local "
