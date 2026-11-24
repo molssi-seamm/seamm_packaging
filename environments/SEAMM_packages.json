@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-23T15:47:44.559690+00:00",
-    "doi": "10.5281/zenodo.24471269",
+    "date": "2026-11-24T15:39:23.469774+00:00",
+    "doi": "10.5281/zenodo.24506121",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -340,7 +340,7 @@
         "gaussian-step": {
             "description": "A SEAMM plug-in for Gaussian",
             "type": "MolSSI plug-in",
-            "version": "2026.10.31"
+            "version": "2026.11.23"
         },
         "geometry-analysis-step": {
             "description": "A SEAMM plug-in for analysis of the geometry of (small) molecules",
@@ -375,7 +375,7 @@
         "loop-step": {
             "description": "A SEAMM plug-in which provides loops in flowcharts.",
             "type": "MolSSI plug-in",
-            "version": "2026.10.30.2"
+            "version": "2026.11.23"
         },
         "mbe-step": {
             "description": "A SEAMM plug-in for many-body expansion (MBE) corrections of energies and forces.",
@@ -395,7 +395,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.11.15"
+            "version": "2026.11.23"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -405,7 +405,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.13"
+            "version": "2026.11.23.2"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -450,12 +450,12 @@
         "seamm": {
             "description": "The core of the SEAMM environment and graphical interface.",
             "type": "Core package",
-            "version": "2026.11.15"
+            "version": "2026.11.23"
         },
         "seamm-ase": {
             "description": "Connector between SEAMM and ASE",
             "type": "Core package",
-            "version": "2026.10.14.1"
+            "version": "2026.11.24"
         },
         "seamm-bsse": {
             "description": "A library for the common code for n-body BSSE calculations",
@@ -475,7 +475,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.21"
+            "version": "2026.11.23"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -485,7 +485,7 @@
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
             "type": "Core package",
-            "version": "2026.10.19"
+            "version": "2026.11.24"
         },
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
@@ -510,7 +510,7 @@
         "seamm-mdi": {
             "description": "A reusable MolSSI Driver Interface (MDI) facility for driving engines from SEAMM steps.",
             "type": "Core package",
-            "version": "2026.11.11"
+            "version": "2026.11.23"
         },
         "seamm-scheduler": {
             "description": "Queueing systems (SLURM, PBS) for SEAMM: submit, poll and cancel jobs and tasks, with local and SSH transports.",
@@ -525,7 +525,7 @@
         "seamm-thermochemistry": {
             "description": "A library for standardizing the quantum chemsitry energy reference.",
             "type": "Core package",
-            "version": "2026.11.23"
+            "version": "2026.11.23.1"
         },
         "seamm-util": {
             "description": "Utility methods for the SEAMM environment",
@@ -575,7 +575,7 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.21"
+            "version": "2026.11.23.1"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
@@ -609,5 +609,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24471269
+    "zenodo_id": 24506121
 }
