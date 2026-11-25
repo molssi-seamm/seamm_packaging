@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-25T15:23:42.929628+00:00",
-    "doi": "10.5281/zenodo.24536575",
+    "date": "2026-11-25T21:43:44.882334+00:00",
+    "doi": "10.5281/zenodo.24544083",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -207,6 +207,9 @@
             "thermomechanical-step": {
                 "description": "A SEAMM plug-in for calculating thermomechanical properties"
             },
+            "training-structures-step": {
+                "description": "A SEAMM plug-in that makes distorted structures of a molecule for training machine-learned potentials: normal-mode samples, torsion scans and bond stretches."
+            },
             "vasp-step": {
                 "description": "A SEAMM plug-in for VASP, a planewave DFT code"
             },
@@ -403,12 +406,12 @@
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
             "type": "MolSSI plug-in",
-            "version": "2026.11.5"
+            "version": "2026.11.25"
         },
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.23.2"
+            "version": "2026.11.25"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -478,7 +481,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.25"
+            "version": "2026.11.25.1"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -583,12 +586,17 @@
         "thermochemistry-step": {
             "description": "A SEAMM plug-in for calculating thermochemical functions",
             "type": "MolSSI plug-in",
-            "version": "2026.11.25"
+            "version": "2026.11.25.1"
         },
         "thermomechanical-step": {
             "description": "A SEAMM plug-in for calculating thermomechanical properties",
             "type": "MolSSI plug-in",
             "version": "2026.3.1"
+        },
+        "training-structures-step": {
+            "description": "A SEAMM plug-in that makes distorted structures of a molecule for training machine-learned potentials: normal-mode samples, torsion scans and bond stretches.",
+            "type": "MolSSI plug-in",
+            "version": "2026.11.25"
         },
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
@@ -617,5 +625,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24536575
+    "zenodo_id": 24544083
 }
