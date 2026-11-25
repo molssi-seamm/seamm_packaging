@@ -303,6 +303,11 @@ metadata = {
             "thermomechanical "
             "properties"
         },
+        "training-structures-step": {
+            "description": "A SEAMM plug-in that makes distorted structures of a "
+            "molecule for training machine-learned potentials: normal-mode "
+            "samples, torsion scans and bond stretches."
+        },
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a " "planewave DFT code"
         },
