@@ -1,7 +1,7 @@
 {
     "conceptdoi": "10.5281/zenodo.22970126",
-    "date": "2026-11-25T21:43:44.882334+00:00",
-    "doi": "10.5281/zenodo.24544083",
+    "date": "2026-11-26T14:53:07.154493+00:00",
+    "doi": "10.5281/zenodo.24563893",
     "format": 2,
     "lock": "seamm.lock.txt",
     "metadata": {
@@ -321,7 +321,7 @@
         "energy-step": {
             "description": "A SEAMM plug-in for calculating the energy and forces of many structures with a model chemistry served over MDI.",
             "type": "MolSSI plug-in",
-            "version": "2026.11.8"
+            "version": "2026.11.25"
         },
         "extract-clusters-step": {
             "description": "A SEAMM plug-in for extracting molecular clusters (n-mers) from bulk or trajectory structures.",
@@ -401,7 +401,7 @@
         "mopac-step": {
             "description": "A SEAMM plug-in to setup, run and analyze semiempirical calculations with MOPAC",
             "type": "MolSSI plug-in",
-            "version": "2026.11.23"
+            "version": "2026.11.25"
         },
         "normal-mode-sampling-step": {
             "description": "A SEAMM plug-in for Wigner/thermal normal-mode sampling of the Hessian to generate displaced structures.",
@@ -411,7 +411,7 @@
         "orca-step": {
             "description": "A SEAMM plug-in for ORCA (accurate molecular QM, incl. DLPNO-CCSD(T))",
             "type": "MolSSI plug-in",
-            "version": "2026.11.25"
+            "version": "2026.11.25.1"
         },
         "packmol-step": {
             "description": "A SEAMM plug-in for building periodic boxes of fluid using Packmol",
@@ -481,7 +481,7 @@
         "seamm-exec": {
             "description": "Classes to execute background codes for SEAMM",
             "type": "Core package",
-            "version": "2026.11.25.1"
+            "version": "2026.11.25.3"
         },
         "seamm-ff-util": {
             "description": "Utility routines for handling forcefields in SEAMM",
@@ -491,7 +491,7 @@
         "seamm-geometric": {
             "description": "Connector between geomeTRIC and SEAMM",
             "type": "Core package",
-            "version": "2026.11.24.1"
+            "version": "2026.11.25"
         },
         "seamm-jobserver": {
             "description": "The JobServer for the SEAMM environment.",
@@ -561,7 +561,7 @@
         "structure-step": {
             "description": "A SEAMM plug-in for optimizing structures based on energy",
             "type": "MolSSI plug-in",
-            "version": "2026.11.25"
+            "version": "2026.11.25.1"
         },
         "subflowchart-step": {
             "description": "A SEAMM plug-in for subflowcharts",
@@ -596,7 +596,7 @@
         "training-structures-step": {
             "description": "A SEAMM plug-in that makes distorted structures of a molecule for training machine-learned potentials: normal-mode samples, torsion scans and bond stretches.",
             "type": "MolSSI plug-in",
-            "version": "2026.11.25"
+            "version": "2026.11.25.2"
         },
         "vasp-step": {
             "description": "A SEAMM plug-in for VASP, a planewave DFT code",
@@ -625,5 +625,5 @@
         }
     },
     "python": "3.12",
-    "zenodo_id": 24544083
+    "zenodo_id": 24563893
 }
